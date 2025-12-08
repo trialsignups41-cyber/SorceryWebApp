@@ -6,20 +6,11 @@
       "destination": "/api/index"
     }
   ],
-  "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.9" // <-- Specify runtime here
-      }
-    }
-  ],
   "functions": {
     "api/index.py": {
       "memory": 1024,
       "maxDuration": 30,
-      "includeFiles": "card_data/master_cards.json" // <-- Keep environment settings here
+      "includeFiles": "card_data/master_cards.json"
     }
   }
 }
