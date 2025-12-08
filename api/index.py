@@ -184,13 +184,76 @@ def home():
         "api_ready": len(CARD_DB) > 0 
     })
 
+# --- Data Enrichment & Matching (Task 2.2.4 - 2.2.5) ---
 
+def enrich_and_match_data(decklist: list, owned_collection: list, card_db: dict) -> list:
+    """
+    Combines the decklist, user's collection, and master metadata to calculate 
+    net status and enrich the decklist for the UI.
+    
+    Returns a list of enriched deck cards.
+    """
+    
+    # 1. Convert Owned Collection to a dictionary for O(1) lookup efficiency
+    owned_quantities = {card['name']: card['quantity'] for card in owned_collection}
+    
+    enriched_decklist = []
+    
+    # 2. Iterate through the target decklist and perform matching
+    for deck_card in decklist:
+        card_name = deck_card['name']
+        required_quantity = deck_card['quantity']
+        
+        # Get master card metadata (S3 URL, Rarity, Price)
+        master_data = card_db.get(card_name)
+        
+        # Determine owned quantity
+        owned_quantity = owned_quantities.get(card_name, 0)
+        
+        # Calculate net status
+        net_needed = required_quantity - owned_quantity
+        
+        # --- REVISED STATUS LOGIC ---
+        final_status = 'Error_NotFound' # Default to error if not found in DB
+        
+        if master_data:
+            # Card exists in the master database (DB)
+            if net_needed <= 0:
+                final_status = 'Complete' 
+            elif owned_quantity > 0:
+                final_status = 'Proxy_Needed' # Own some, but need more for this deck
+            else:
+                final_status = 'Missing' # Own none, need some/all
+        # ---------------------------
+        
+        # 3. Create the enriched object
+        enriched_card = {
+            'name': card_name,
+            'required_quantity': required_quantity,
+            'owned_quantity': owned_quantity,
+            'net_needed_quantity': max(0, net_needed), 
+            'status': final_status,
+        }
+        
+        if master_data:
+            # Add all essential master data for filtering and image fetching
+            enriched_card.update({
+                'image_url': master_data.get('image_url'),
+                'rarity': master_data.get('rarity'),
+                'price_usd': master_data.get('price_usd'),
+                'mana_cost': master_data.get('mana_cost'),
+                'slug': master_data.get('image_file', '').replace('.png', '') 
+            })
+            
+        enriched_decklist.append(enriched_card)
+        
+    return enriched_decklist
 # --- Primary API Endpoint (Phase 2.2 Implementation) ---
 
 @app.route('/api/generate-proxies', methods=['POST'])
 def generate_proxies_endpoint():
     """
-    Handles file upload, decklink, parsing, and triggers proxy generation.
+    Handles file upload, decklink, parsing, and performs data matching/enrichment.
     """
     if len(CARD_DB) == 0:
         return jsonify({"error": "Service is initializing or card data failed to load."}), 503
@@ -201,33 +264,37 @@ def generate_proxies_endpoint():
     # 1. Handle Curiosa Collection Export (File Upload)
     if 'curiosa_export' in request.files:
         file = request.files['curiosa_export']
-        
-        # Read the file stream as text, ensuring UTF-8 decoding
         try:
             file_stream = io.StringIO(file.read().decode('utf-8'))
             user_owned_collection = parse_curiosa_export(file_stream)
-            print(f"Parsed collection: {len(user_owned_collection)} unique cards found.")
         except UnicodeDecodeError:
-            return jsonify({"error": "Could not decode file. Ensure it is a valid UTF-8 CSV."}), 400
-        
-    else:
-        # Require the collection file for the app to function
-        return jsonify({"error": "Missing required 'curiosa_export' file upload."}), 400
+            return jsonify({"error": "Could not decode collection file. Ensure it is a valid UTF-8 CSV."}), 400
+    
+    # Require collection data to proceed, as proxies depend on ownership
+    if not user_owned_collection:
+         return jsonify({"error": "Collection data is missing or empty. Please upload your Curiosa export."}), 400
         
     # 2. Handle Deck Import Link (Form Data)
     deck_url = request.form.get('deck_link', '').strip()
     if deck_url:
         deck_list = resolve_decklist_from_url(deck_url)
-        print(f"Resolved decklist: {len(deck_list)} unique cards found.")
-        
-    # --- Data Enrichment & Matching (Task 2.2.4 - 2.2.6) GOES HERE ---
     
-    # Placeholder response to confirm input handling is working
+    # Require a resolved decklist to proceed
+    if not deck_list:
+        return jsonify({"error": "Decklink could not be resolved or the decklist is empty."}), 400
+        
+    # 3. Data Enrichment and Matching (Task 2.2.4 - 2.2.5)
+    final_enriched_deck = enrich_and_match_data(deck_list, user_owned_collection, CARD_DB)
+    
+    print(f"Enrichment Complete. Returned {len(final_enriched_deck)} deck entries with status.")
+    
+    # 4. Return the enriched data to the Frontend UI (Phase 4.2.2)
+    # The Frontend will use this data to populate the interactive editor.
     return jsonify({
-        "status": "Inputs parsed successfully.",
-        "owned_cards_count": sum(c['quantity'] for c in user_owned_collection),
-        "decklist_cards_count": sum(c['quantity'] for c in deck_list),
-        "next_step": "Implement Data Enrichment and Matching (Task 2.2.4)"
+        "status": "Success",
+        "message": "Deck enrichment and ownership calculation complete.",
+        "decklist": final_enriched_deck,
+        "next_step": "Frontend UI or Proxy Filtering (Task 2.2.6)"
     }), 200
 
 # Vercel requires the app instance to be exported
