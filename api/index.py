@@ -5,6 +5,13 @@ import csv
 import requests
 import re #For Regex matching the deck ID
 from urllib.parse import quote #for safe url encoding
+import uuid
+
+#PDF generation imports
+from PIL import Image, ImageDraw, ImageFont # Pillow for image manipulation
+from fpdf import FPDF # <--- NEW IMPORT
+from io import BytesIO
+
 
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS 
@@ -248,7 +255,187 @@ def enrich_and_match_data(decklist: list, owned_collection: list, card_db: dict)
         enriched_decklist.append(enriched_card)
         
     return enriched_decklist
+
+def fetch_and_tag_image(image_url: str, tag_text: str, card_db: dict) -> str | None:
+    """Fetches image, applies IOU tag, and saves to /tmp as a unique file path."""
+    
+    # 1. Generate unique temporary path
+    temp_filename = os.path.join('/tmp', f"{uuid.uuid4()}.png")
+
+    try:
+        # Fetch Image
+        img_response = requests.get(image_url, stream=True, timeout=10)
+        img_response.raise_for_status()
+
+        # Load image into Pillow
+        img = Image.open(io.BytesIO(img_response.content))
+        
+        # --- Apply IOU Tag (Simplified Pillow Logic) ---
+        draw = ImageDraw.Draw(img)
+        
+        # Placeholder Font (ensure a standard font name is used)
+        try:
+            # We use a simple path for a standard font
+            font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 40)
+        except IOError:
+            font = ImageFont.load_default()
+            
+        # Draw text onto the image
+        draw.text((10, img.height - 50), tag_text, fill=(255, 0, 0, 255), font=font) # Red tag
+        
+        # Save to temporary file
+        img.save(temp_filename, format="PNG")
+        
+        return temp_filename
+        
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to fetch image: {e}")
+    except Exception as e:
+        print(f"Pillow/Saving error: {e}")
+        
+    return None
+
+# --- PDF & Image Generation (Final FPDF Logic) ---
+
+def create_pdf_from_cards(card_list_to_print: list, deck_name: str, card_db: dict) -> io.BytesIO:
+    """
+    Fetches images, applies IOU tags via Pillow, and generates a print-ready PDF via FPDF.
+    """
+    
+    # FPDF Setup (Standard US Letter size, Portrait)
+    pdf = FPDF(orientation="P", unit="mm", format="Letter")
+    
+    # Define Card Layout Constants (in mm)
+    CARD_WIDTH_MM, CARD_HEIGHT_MM = 63, 88
+    MARGIN_X, MARGIN_Y = 10, 10
+    COLS, ROWS = 3, 3 # 3 columns x 3 rows per page = 9 cards per page
+    SPACING = 0.5 # Small spacing between cards in mm
+
+    # List to hold temporary file paths for cleanup
+    temp_files_to_cleanup = []
+    
+    pdf.add_page()
+    x_pos, y_pos = MARGIN_X, MARGIN_Y
+    card_counter = 0
+    
+    # 1. Image Processing and Drawing
+    for card_entry in card_list_to_print:
+        name = card_entry['name']
+        quantity_to_print = card_entry['quantity']
+        
+        master_data = card_db.get(name, {})
+        image_url = master_data.get('image_url')
+        
+        if not image_url:
+            print(f"Skipping card '{name}': Image URL not found.")
+            continue
+            
+        # 2. Fetch Image and Apply IOU Tag ONCE
+        tag_text = f"IOU | {deck_name}"
+        
+        try:
+            # Fetch Image
+            img_data = requests.get(image_url, timeout=20).content
+            img = Image.open(BytesIO(img_data)).convert("RGB")
+            
+            # Apply IOU Tag (Pillow Logic)
+            draw = ImageDraw.Draw(img)
+            # Use a safe, standard font and draw a visible red tag
+            try:
+                font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 40)
+            except IOError:
+                font = ImageFont.load_default()
+            
+            # Draw text near the bottom left
+            draw.text((10, img.height - 70), tag_text, fill=(255, 0, 0, 255), font=font) 
+            
+            # Resize for printing standard TCG size (300 DPI conversion)
+            img_resized = img.resize(
+                (int(CARD_WIDTH_MM / 25.4 * 300), int(CARD_HEIGHT_MM / 25.4 * 300))
+            )
+            
+            # Save the processed image to a temporary file path
+            temp_path = os.path.join('/tmp', f"{uuid.uuid4()}_{name}.png")
+            img_resized.save(temp_path, "PNG")
+            temp_files_to_cleanup.append(temp_path)
+            
+        except Exception as e:
+            print(f"Error processing image for {name}: {e}")
+            continue # Skip to next card if processing fails
+
+
+        # 3. Add to PDF based on quantity
+        for i in range(quantity_to_print):
+            
+            # Check for page break (after 9 cards)
+            if card_counter > 0 and card_counter % (COLS * ROWS) == 0:
+                pdf.add_page()
+                x_pos, y_pos = MARGIN_X, MARGIN_Y
+            
+            # Draw the image using the file path string (FPDF requirement)
+            pdf.image(temp_path, x_pos, y_pos, CARD_WIDTH_MM, CARD_HEIGHT_MM)
+
+            # Move cursor to the next column
+            x_pos += CARD_WIDTH_MM + SPACING
+            
+            # Check if we finished a row
+            if (card_counter + 1) % COLS == 0:
+                x_pos = MARGIN_X
+                y_pos += CARD_HEIGHT_MM + SPACING
+                
+            card_counter += 1
+
+    # 4. Final Output and Cleanup
+    
+    # Save PDF output to the in-memory buffer
+    pdf_output_buffer = BytesIO()
+    pdf.output(pdf_output_buffer)
+    pdf_output_buffer.seek(0)
+    
+    # Clean up all temporary files
+    for temp_path in temp_files_to_cleanup:
+        try:
+            os.remove(temp_path)
+        except OSError:
+            pass 
+
+    return pdf_output_buffer
+
 # --- Primary API Endpoint (Phase 2.2 Implementation) ---
+# --- PDF Generation Endpoint (Task 3.1.1 - 3.4.1) ---
+
+@app.route('/api/print-bucket', methods=['POST'])
+def print_bucket_endpoint():
+    """
+    Receives a final list of cards to print and streams the PDF file.
+    """
+    if len(CARD_DB) == 0:
+        return jsonify({"error": "Service is down or data failed to load."}), 503
+
+    try:
+        # Expect the frontend to send a JSON body containing the list of cards and the deck name
+        data = request.get_json()
+        
+        cards_to_print = data.get('cards', []) # List of {'name': 'X', 'quantity': Y}
+        deck_name = data.get('deck_name', 'Proxy Deck')
+        
+        if not cards_to_print:
+            return jsonify({"error": "No cards provided for printing."}), 400
+
+        # Generate the PDF buffer
+        pdf_buffer = create_pdf_from_cards(cards_to_print, deck_name, CARD_DB)
+
+        # 4. Stream the PDF back to the client (Task 3.4.1)
+        return send_file(
+            pdf_buffer,
+            as_attachment=True,
+            download_name=f"{deck_name}_Proxy_Sheet.pdf",
+            mimetype='application/pdf'
+        )
+        
+    except Exception as e:
+        print(f"Error during PDF generation: {e}")
+        return jsonify({"error": f"An error occurred during PDF processing: {e}"}), 500
 
 @app.route('/api/generate-proxies', methods=['POST'])
 def generate_proxies_endpoint():
