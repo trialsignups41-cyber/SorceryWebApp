@@ -109,11 +109,20 @@ def resolve_decklist_from_url(url: str) -> list:
 
     # 4. Execute the API Request
     try:
-        # Use standard headers to mimic a web browser and avoid quick blocks
+        # Enhanced headers to mimic a detailed browser session and bypass WAF/CSRF checks
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+            # General headers
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            "Referer": "https://curiosa.io/",
+            "Origin": "https://curiosa.io",
+                
+            # CRITICAL: Headers WAFs often check for AJAX/data requests
+            "Accept": "*/*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Dest": "empty"
         }
-        
+            
         response = requests.get(api_url, headers=headers, timeout=10)
         response.raise_for_status() # Raise exception for 4xx or 5xx status codes
         raw_response = response.json()
@@ -121,14 +130,21 @@ def resolve_decklist_from_url(url: str) -> list:
     except requests.exceptions.RequestException as e:
         print(f"API Request failed for {deck_id}: {e}")
         return []
+    
     # 5. Parse the Decklist from the tRPC Response
     decklist = []
     try:
-        # Navigate the nested JSON structure to get the list of card objects:
-        decklist_entries = raw_response[0]['result']['data']['json']['decklist']
+        # 1. Access the first (and only) element of the list response: raw_response[0]
+        # 2. Navigate the nested keys to get the list of card entries (the value of 'json'):
+        decklist_entries = raw_response[0]['result']['data']['json'] 
         
+        # Ensure the result is actually a list before iterating (it should be)
+        if not isinstance(decklist_entries, list):
+            print("ERROR: Decklist data found but is not a list. Skipping.")
+            return []
+
         for entry in decklist_entries:
-            # Check if the card object is present and not null
+            # The structure of each entry is: {id: ..., quantity: X, card: {name: Y, ...}}
             card_info = entry.get('card')
             quantity = entry.get('quantity', 0)
             
@@ -142,8 +158,9 @@ def resolve_decklist_from_url(url: str) -> list:
                     })
                 
     except (KeyError, IndexError, TypeError) as e:
-        print(f"ERROR: Failed to parse decklist structure from response: {e}")
-        # Print the problematic response portion to debug if this fails again
+        # The KeyError/TypeError catch handles cases where 'result', 'data', or 'json' are missing/corrupt
+        print(f"CRITICAL ERROR: Final decklist parsing failed with KeyError/TypeError: {e}")
+        # Print the response header for quick inspection of why navigation failed
         print(json.dumps(raw_response[0], indent=2)[:500]) 
         return []
 

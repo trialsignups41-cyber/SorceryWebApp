@@ -32,7 +32,6 @@ try:
     response.raise_for_status() # Raises HTTPError if status is 4xx or 5xx
 
     raw_response = response.json()
-    print(raw_response)
     
     # 5. Output Success Data
     decklist_data = raw_response[0]['result']['data']['json']['decklist']
