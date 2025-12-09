@@ -35,11 +35,6 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (!collectionFile) {
-      onError('Please upload your collection file')
-      return
-    }
-
     if (!deckUrl.trim()) {
       onError('Please enter a deck URL')
       return
@@ -52,9 +47,12 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
         deckUrl,
         deckName || 'Unnamed Deck'
       )
-      onSuccess(result, {
+      onSuccess(result, collectionFile ? {
         filename: collectionFile.name,
         content: await collectionFile.text(),
+      } : {
+        filename: 'no_collection.csv',
+        content: '',
       })
     } catch (err) {
       console.error('Form submission error:', err)
@@ -70,7 +68,8 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
       
       <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
         <p className="text-gray-700 text-sm leading-relaxed">
-          Upload your collection and a deck list to organize cards for printing. Select and drag cards between buckets to organize your proxy sheets. 
+          Enter a deck list to organize cards for printing. Optionally upload your collection to track owned vs. unowned cards. 
+          Select and drag cards between buckets to organize your proxy sheets. 
           Generate PDFs with your custom organization, or export as text. Your progress is automatically saved in your browser.
         </p>
       </div>
@@ -111,7 +110,7 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
         {/* Collection File Upload */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Collection File (Curiosa Export CSV)
+            Collection File (Optional - Curiosa Export CSV)
           </label>
           <input
             type="file"
@@ -120,15 +119,17 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             disabled={isLoading}
           />
-          {collectionFile && (
+          {collectionFile ? (
             <p className="text-sm text-green-600 mt-1">✓ {collectionFile.name}</p>
+          ) : (
+            <p className="text-sm text-gray-500 mt-1">If no file is provided, all cards will be marked as unowned</p>
           )}
         </div>
 
         {/* Submit Button */}
         <button
           type="submit"
-          disabled={isLoading || !collectionFile}
+          disabled={isLoading}
           className="w-full bg-blue-600 text-white font-medium py-2 rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
         >
           {isLoading ? 'Processing...' : 'Open Organizer'}
