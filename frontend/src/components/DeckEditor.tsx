@@ -456,36 +456,8 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
   }
 
   return (
-    <div className="w-full flex flex-col bg-gray-100">
-      {/* Instructions Section */}
-      <div className="flex-shrink-0 bg-blue-50 border-b-2 border-blue-200 p-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-lg font-bold text-blue-900 mb-2">How to Use This Organizer</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-800">
-            <div>
-              <p className="font-semibold mb-1">Card Management:</p>
-              <ul className="list-disc list-inside space-y-1 text-xs">
-                <li>Click cards to select them</li>
-                <li>Use filters to select multiple cards</li>
-                <li>Drag cards between buckets to organize them</li>
-                <li>Click the number badge to split a card into 2 copies (reduces stack by 1)</li>
-                <li>Drag a card onto another card of the same name to merge stacks</li>
-                
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold mb-1">Bucket Operations:</p>
-              <ul className="list-disc list-inside space-y-1 text-xs">
-                
-                <li>Create custom buckets by clicking the add button on the right</li>
-                <li>Delete custom buckets (cards move back to Owned/Unowned)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Filters - sticky header */}
+    <div className="h-screen w-full flex flex-col bg-gray-100">
+      {/* Filters - fixed header */}
       <div className="flex-shrink-0 border-b bg-white p-4">
         <FilterButtons
           filters={filters}
@@ -495,16 +467,57 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
         />
       </div>
 
-      {/* Main content area - flex-1 with overflow */}
-      <div className="flex-1 overflow-y-auto p-4 flex flex-col">
+      {/* Main content area - flex-1 with min-h-0 for proper scrolling */}
+      <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden p-4">
+        {/* Instructions Section */}
+        <div className="flex-shrink-0 bg-blue-50 border-2 border-blue-200 rounded-lg p-4 mb-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-lg font-bold text-blue-900 mb-2">How to Use This Organizer</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-800">
+              <div>
+                <p className="font-semibold mb-1">Card Management:</p>
+                <ul className="list-disc list-inside space-y-1 text-xs">
+                  <li>Click cards to select them</li>
+                  <li>Use filters to select multiple cards</li>
+                  <li>Drag cards between buckets to organize them</li>
+                  <li>Click the number badge to split a card into 2 copies (reduces stack by 1)</li>
+                  <li>Drag a card onto another card of the same name to merge stacks</li>
+                  
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold mb-1">Bucket Operations:</p>
+                <ul className="list-disc list-inside space-y-1 text-xs">
+                  
+                  <li>Create custom buckets by clicking the add button on the right</li>
+                  <li>Delete custom buckets (cards move back to Owned/Unowned)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Buckets Grid - Dynamic 2-column layout with add button on right */}
-        <div className="flex flex-col gap-4 w-full">
+        <div className="w-full space-y-4">
           {/* Main buckets container - 2-column grid */}
           <div className="grid grid-cols-2 gap-4 w-full">
-            {buckets.map((bucket) => {
+            {buckets.map((bucket, index) => {
               const bucketCardCount = bucket.cards.reduce((sum, c) => sum + c.owned + c.unowned, 0)
               const visibleCards = bucket.cards.filter((c) => filteredCardIds.has(c.id))
               const uniqueCardNames = new Set(bucket.cards.map((c) => c.name)).size
+
+              // Color gradient for bucket headers - cycles through different colors
+              const colors = [
+                'from-blue-500 to-indigo-600',
+                'from-purple-500 to-pink-600',
+                'from-green-500 to-teal-600',
+                'from-orange-500 to-red-600',
+                'from-cyan-500 to-blue-600',
+                'from-rose-500 to-pink-600',
+                'from-emerald-500 to-green-600',
+                'from-amber-500 to-orange-600',
+              ]
+              const headerColor = colors[index % colors.length]
 
               return (
                 <div
@@ -514,7 +527,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                   onDrop={(e) => handleDropToBucket(e, bucket.id)}
                 >
                   {/* Header */}
-                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 space-y-2 flex-shrink-0">
+                  <div className={`bg-gradient-to-r ${headerColor} text-white p-4 space-y-2 flex-shrink-0`}>
                     {renamingBucketId === bucket.id ? (
                       <div className="flex gap-2">
                         <input
@@ -535,34 +548,63 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                         </button>
                       </div>
                     ) : (
-                      <div className="flex justify-between items-start gap-2">
-                        <div
-                          onClick={() => {
-                            setRenamingBucketId(bucket.id)
-                            setRenameValue(bucket.name)
-                          }}
-                          className="cursor-pointer hover:opacity-80 transition-opacity flex-1"
-                        >
-                          <h3 className="text-lg font-bold">{bucket.name}</h3>
-                          <p className="text-xs opacity-90">
-                            {bucketCardCount} total cards ({uniqueCardNames} different names)
-                          </p>
-                        </div>
-                        {bucket.id !== 'owned' && bucket.id !== 'unowned' && (
-                          <button
-                            onClick={() => handleDeleteBucket(bucket.id, bucket.name)}
-                            className="px-2 py-1 bg-red-500 hover:bg-red-600 rounded font-semibold text-xs flex-shrink-0"
-                            title="Delete this bucket"
+                      <div className="space-y-2">
+                        <div className="flex justify-between items-start gap-2">
+                          <div
+                            onClick={() => {
+                              setRenamingBucketId(bucket.id)
+                              setRenameValue(bucket.name)
+                            }}
+                            className="cursor-pointer hover:opacity-80 transition-opacity flex-1"
                           >
-                            Delete
+                            <h3 className="text-lg font-bold">{bucket.name}</h3>
+                            <p className="text-xs opacity-90">
+                              {bucketCardCount} total cards ({uniqueCardNames} different names)
+                            </p>
+                          </div>
+                          {bucket.id !== 'owned' && bucket.id !== 'unowned' && (
+                            <button
+                              onClick={() => handleDeleteBucket(bucket.id, bucket.name)}
+                              className="px-2 py-1 bg-red-500 hover:bg-red-600 rounded font-semibold text-xs flex-shrink-0"
+                              title="Delete this bucket"
+                            >
+                              Delete
+                            </button>
+                          )}
+                        </div>
+                        {/* Export Buttons */}
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => handlePrintBucket(bucket.id, bucket.name)}
+                            disabled={bucket.cards.length === 0 || generatingPdfId === bucket.id}
+                            className="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 disabled:bg-opacity-10 disabled:cursor-not-allowed text-white px-3 py-1.5 rounded text-sm font-semibold transition-colors flex items-center justify-center gap-2"
+                          >
+                            {generatingPdfId === bucket.id ? (
+                              <>
+                                <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Generating...
+                              </>
+                            ) : (
+                              'Export PDF'
+                            )}
                           </button>
-                        )}
+                          <button
+                            onClick={() => handleExportText(bucket.id, bucket.name)}
+                            disabled={bucket.cards.length === 0}
+                            className="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 disabled:bg-opacity-10 disabled:cursor-not-allowed text-white px-3 py-1.5 rounded text-sm font-semibold transition-colors"
+                          >
+                            Export Text
+                          </button>
+                        </div>
                       </div>
                     )}
                   </div>
 
                   {/* Cards Grid */}
-                  <div className="flex-1 p-4 overflow-y-scroll bg-gray-50">
+                  <div className="flex-1 p-4 bg-gray-50">
                     {visibleCards.length === 0 ? (
                       <div className="flex items-center justify-center h-full text-gray-400 text-sm">
                         {filteredCardIds.size > 0 ? 'No matching cards' : 'Drop cards here'}
@@ -629,34 +671,6 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                         ))}
                       </div>
                     )}
-                  </div>
-
-                  {/* Footer Actions */}
-                  <div className="border-t p-3 flex gap-2 flex-shrink-0">
-                    <button
-                      onClick={() => handlePrintBucket(bucket.id, bucket.name)}
-                      disabled={bucket.cards.length === 0 || generatingPdfId === bucket.id}
-                      className="flex-1 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white px-2 py-1 rounded text-sm font-semibold transition-colors flex items-center justify-center gap-2"
-                    >
-                      {generatingPdfId === bucket.id ? (
-                        <>
-                          <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                          </svg>
-                          Generating...
-                        </>
-                      ) : (
-                        'PDF'
-                      )}
-                    </button>
-                    <button
-                      onClick={() => handleExportText(bucket.id, bucket.name)}
-                      disabled={bucket.cards.length === 0}
-                      className="flex-1 bg-gray-500 hover:bg-gray-600 disabled:bg-gray-300 text-white px-2 py-1 rounded text-sm font-semibold transition-colors"
-                    >
-                      Text
-                    </button>
                   </div>
                 </div>
               )

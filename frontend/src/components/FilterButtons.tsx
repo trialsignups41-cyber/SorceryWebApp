@@ -20,7 +20,7 @@ export function FilterButtons({
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4 mb-4">
-      <div className="flex flex-wrap gap-2 mb-3">
+      <div className="flex flex-wrap gap-2 mb-4 items-center">
         <span className="text-sm font-semibold text-gray-600">Rarity:</span>
         {RARITY_FILTERS.map((filter) => (
           <button
@@ -31,10 +31,8 @@ export function FilterButtons({
             {filter}
           </button>
         ))}
-      </div>
-
-      <div className="flex flex-wrap gap-2 mb-4">
-        <span className="text-sm font-semibold text-gray-600">Ownership:</span>
+        
+        <span className="text-sm font-semibold text-gray-600 ml-4">Ownership:</span>
         {OWNERSHIP_FILTERS.map((filter) => (
           <button
             key={filter}
