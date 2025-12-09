@@ -43,7 +43,7 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
     onLoadingChange(true)
     try {
       const result = await generateProxies(
-        collectionFile,
+        collectionFile ?? undefined,
         deckUrl,
         deckName || 'Unnamed Deck'
       )
