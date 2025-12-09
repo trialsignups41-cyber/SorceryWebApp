@@ -76,23 +76,6 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Collection File Upload */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Collection File (Curiosa Export CSV)
-          </label>
-          <input
-            type="file"
-            accept=".csv"
-            onChange={handleFileChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            disabled={isLoading}
-          />
-          {collectionFile && (
-            <p className="text-sm text-green-600 mt-1">✓ {collectionFile.name}</p>
-          )}
-        </div>
-
         {/* Deck URL */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -107,6 +90,7 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
             disabled={isLoading}
             required
           />
+          <p className="text-sm text-amber-600 mt-1">Remove any query parameters (everything after and including ?) from the URL</p>
         </div>
 
         {/* Deck Name */}
@@ -122,6 +106,23 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             disabled={isLoading}
           />
+        </div>
+
+        {/* Collection File Upload */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Collection File (Curiosa Export CSV)
+          </label>
+          <input
+            type="file"
+            accept=".csv"
+            onChange={handleFileChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            disabled={isLoading}
+          />
+          {collectionFile && (
+            <p className="text-sm text-green-600 mt-1">✓ {collectionFile.name}</p>
+          )}
         </div>
 
         {/* Submit Button */}

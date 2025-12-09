@@ -88,9 +88,13 @@ def extract_deck_id(url: str) -> str | None:
     """
     Extracts the unique Deck ID from various Curiosa URL formats.
     e.g., https://curiosa.io/decks/view/cmiwp5nmv6idr05eb8a09qm0d
+    or https://curiosa.io/decks/cmivz33ce59f505ebxa7v4g6j?tab=view
     """
+    # Strip query parameters first
+    url = url.split('?')[0]
+    
     # Regex to capture the ID after 'view/' or as the last path segment
-    match = re.search(r'view/([a-z0-9]+)|([a-z0-9]+)$', url)
+    match = re.search(r'view/([a-z0-9]+)|/([a-z0-9]+)$', url)
     if match:
         # The ID will be in group 1 or group 2
         return match.group(1) or match.group(2)
@@ -470,55 +474,83 @@ def print_bucket_endpoint():
 def generate_proxies_endpoint():
     """
     Handles file upload, decklink, parsing, and performs data matching/enrichment.
-    Expects multipart/form-data with: curiosa_export (file), deck_link (URL), deck_name (optional string)
+    Expects multipart/form-data with: deck_link (URL), deck_name (optional string), curiosa_export (optional file)
     """
-    if len(CARD_DB) == 0:
-        return jsonify({"error": "Service is initializing or card data failed to load."}), 503
+    try:
+        if len(CARD_DB) == 0:
+            return jsonify({"error": "Service is initializing or card data failed to load."}), 503
 
-    user_owned_collection = []
-    deck_list = []
-    
-    # 1. Handle Curiosa Collection Export (File Upload)
-    if 'curiosa_export' in request.files:
-        file = request.files['curiosa_export']
-        try:
-            file_stream = io.StringIO(file.read().decode('utf-8'))
-            user_owned_collection = parse_curiosa_export(file_stream)
-        except UnicodeDecodeError:
-            return jsonify({"error": "Could not decode collection file. Ensure it is a valid UTF-8 CSV."}), 400
-    
-    # Require collection data to proceed, as proxies depend on ownership
-    if not user_owned_collection:
-         return jsonify({"error": "Collection data is missing or empty. Please upload your Curiosa export."}), 400
+        user_owned_collection = []
+        deck_list = []
         
-    # 2. Handle Deck Import Link (Form Data)
-    deck_url = request.form.get('deck_link', '').strip()
-    if deck_url:
-        deck_list = resolve_decklist_from_url(deck_url)
-    
-    # Require a resolved decklist to proceed
-    if not deck_list:
-        return jsonify({"error": "Decklink could not be resolved or the decklist is empty."}), 400
-    
-    # 3. Capture Optional Deck Name (for tagging and display)
-    deck_name = request.form.get('deck_name', 'Unnamed Deck').strip()
-    if not deck_name or deck_name == 'Unnamed Deck':
-        # Try to extract deck name from URL if available
-        deck_name = 'Unnamed Deck'
+        # 1. Handle Curiosa Collection Export (File Upload) - Optional, may be empty
+        if 'curiosa_export' in request.files:
+            file = request.files['curiosa_export']
+            print(f"DEBUG: Received collection file: {file.filename}")
+            import sys
+            sys.stdout.flush()
+            try:
+                file_stream = io.StringIO(file.read().decode('utf-8'))
+                user_owned_collection = parse_curiosa_export(file_stream)
+                print(f"DEBUG: Parsed {len(user_owned_collection)} cards from collection")
+                sys.stdout.flush()
+            except UnicodeDecodeError:
+                return jsonify({"error": "Could not decode collection file. Ensure it is a valid UTF-8 CSV."}), 400
+        else:
+            print("DEBUG: No collection file provided")
+            import sys
+            sys.stdout.flush()
         
-    # 4. Data Enrichment and Matching (Task 2.2.4 - 2.2.5)
-    final_enriched_deck = enrich_and_match_data(deck_list, user_owned_collection, CARD_DB)
-    
-    print(f"Enrichment Complete. Returned {len(final_enriched_deck)} deck entries with status for deck '{deck_name}'.")
-    
-    # 5. Return the enriched data to the Frontend UI (Phase 4.2.2)
-    # The Frontend will use this data to populate the interactive editor.
-    return jsonify({
-        "status": "Success",
-        "message": "Deck enrichment and ownership calculation complete.",
-        "deck_name": deck_name,
-        "decklist": final_enriched_deck,
-        "next_step": "Frontend UI or Proxy Filtering (Task 2.2.6)"
-    }), 200
+        # If collection is empty, all cards will be treated as unowned
+        if not user_owned_collection:
+            print("DEBUG: No owned cards in collection. All deck cards will be treated as unowned.")
+            sys.stdout.flush()
+            
+        # 2. Handle Deck Import Link (Form Data)
+        deck_url = request.form.get('deck_link', '').strip()
+        # Strip query parameters from URL
+        deck_url = deck_url.split('?')[0]
+        print(f"DEBUG: Received deck_url: {deck_url}")
+        import sys
+        sys.stdout.flush()
+        
+        if deck_url:
+            print(f"DEBUG: Attempting to resolve deck URL: {deck_url}")
+            sys.stdout.flush()
+            deck_list = resolve_decklist_from_url(deck_url)
+            print(f"DEBUG: Resolved deck_list has {len(deck_list)} cards")
+            sys.stdout.flush()
+        
+        # Require a resolved decklist to proceed
+        if not deck_list:
+            error_msg = "Decklink could not be resolved or the decklist is empty. Please check the URL and try again."
+            print(f"ERROR: {error_msg} (URL: {deck_url})")
+            sys.stdout.flush()
+            return jsonify({"error": error_msg}), 400
+        
+        # 3. Capture Optional Deck Name (for tagging and display)
+        deck_name = request.form.get('deck_name', 'Unnamed Deck').strip()
+        if not deck_name or deck_name == 'Unnamed Deck':
+            # Try to extract deck name from URL if available
+            deck_name = 'Unnamed Deck'
+            
+        # 4. Data Enrichment and Matching (Task 2.2.4 - 2.2.5)
+        final_enriched_deck = enrich_and_match_data(deck_list, user_owned_collection, CARD_DB)
+        
+        print(f"Enrichment Complete. Returned {len(final_enriched_deck)} deck entries with status for deck '{deck_name}'.")
+        
+        # 5. Return the enriched data to the Frontend UI (Phase 4.2.2)
+        # The Frontend will use this data to populate the interactive editor.
+        return jsonify({
+            "status": "Success",
+            "message": "Deck enrichment and ownership calculation complete.",
+            "deck_name": deck_name,
+            "decklist": final_enriched_deck,
+            "next_step": "Frontend UI or Proxy Filtering (Task 2.2.6)"
+        }), 200
+        
+    except Exception as e:
+        print(f"UNHANDLED ERROR in generate_proxies_endpoint: {e}")
+        return jsonify({"error": f"An unexpected error occurred: {str(e)}"}), 500
 
 # Vercel requires the app instance to be exported

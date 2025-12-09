@@ -4,6 +4,7 @@ interface FilterButtonsProps {
   filters: FilterState
   onFilterChange: (filterKey: string) => void
   onBulkSelect: () => void
+  onDeselectAll: () => void
 }
 
 const RARITY_FILTERS = ['Unique', 'Elite', 'Exceptional', 'Ordinary']
@@ -13,6 +14,7 @@ export function FilterButtons({
   filters,
   onFilterChange,
   onBulkSelect,
+  onDeselectAll,
 }: FilterButtonsProps) {
   const hasActiveFilters = Object.values(filters).some((v) => v)
 
@@ -52,6 +54,13 @@ export function FilterButtons({
           Select All Matching
         </button>
       )}
+
+      <button
+        onClick={onDeselectAll}
+        className="text-sm bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors"
+      >
+        Deselect All
+      </button>
     </div>
   )
 }

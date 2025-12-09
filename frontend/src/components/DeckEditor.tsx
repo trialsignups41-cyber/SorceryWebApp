@@ -11,7 +11,18 @@ interface DeckEditorProps {
 
 export function DeckEditor({ cards, deckName }: DeckEditorProps) {
   const [filters, setFilters] = useState<{ [key: string]: boolean }>({})
-  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(() => {
+    // Try to load from localStorage first
+    const savedSelection = localStorage.getItem(`selectedIds_${deckName}`)
+    if (savedSelection) {
+      try {
+        return new Set(JSON.parse(savedSelection))
+      } catch (e) {
+        console.error('Failed to load saved selection:', e)
+      }
+    }
+    return new Set()
+  })
   const [draggedCardId, setDraggedCardId] = useState<string | null>(null)
   const [renamingBucketId, setRenamingBucketId] = useState<string | null>(null)
   const [renameValue, setRenameValue] = useState('')
@@ -55,6 +66,10 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
     localStorage.setItem(`buckets_${deckName}`, JSON.stringify(buckets))
   }, [buckets, deckName])
 
+  useEffect(() => {
+    localStorage.setItem(`selectedIds_${deckName}`, JSON.stringify(Array.from(selectedIds)))
+  }, [selectedIds, deckName])
+
   // Get all cards from all buckets
   const allBucketCards = useMemo(() => buckets.flatMap((b) => b.cards), [buckets])
 
@@ -88,6 +103,10 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
     }
   }
 
+  const handleDeselectAll = () => {
+    setSelectedIds(new Set())
+  }
+
   const handleSelectCard = (id: string) => {
     const newSelected = new Set(selectedIds)
     if (newSelected.has(id)) {
@@ -96,6 +115,82 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
       newSelected.add(id)
     }
     setSelectedIds(newSelected)
+  }
+
+  const handleInstantiateCard = (bucketId: string, cardId: string, e: React.MouseEvent) => {
+    e.stopPropagation() // Prevent card selection when clicking badge
+    
+    // Find the bucket and card
+    const bucketIndex = buckets.findIndex(b => b.id === bucketId)
+    if (bucketIndex === -1) return
+    
+    const cardIndex = buckets[bucketIndex].cards.findIndex(c => c.id === cardId)
+    if (cardIndex === -1) return
+    
+    const originalCard = buckets[bucketIndex].cards[cardIndex]
+    
+    // Calculate total stack size
+    const totalStack = originalCard.owned + originalCard.unowned
+    
+    // Don't split if stack is only 1 card
+    if (totalStack <= 1) return
+    
+    // Determine which count to decrement based on card ownership
+    let newCard: CardStack
+    if (originalCard.isOwned && originalCard.owned > 0) {
+      // Decrement owned count
+      newCard = {
+        ...originalCard,
+        owned: originalCard.owned - 1
+      }
+    } else if (!originalCard.isOwned && originalCard.unowned > 0) {
+      // Decrement unowned count
+      newCard = {
+        ...originalCard,
+        unowned: originalCard.unowned - 1
+      }
+    } else {
+      // Fallback: decrement whichever is non-zero
+      if (originalCard.owned > 0) {
+        newCard = {
+          ...originalCard,
+          owned: originalCard.owned - 1
+        }
+      } else if (originalCard.unowned > 0) {
+        newCard = {
+          ...originalCard,
+          unowned: originalCard.unowned - 1
+        }
+      } else {
+        return // Nothing to decrement
+      }
+    }
+    
+    // Update the original card to have decremented count
+    const updatedCard: CardStack = { ...originalCard }
+    if (originalCard.isOwned) {
+      updatedCard.owned = Math.max(0, originalCard.owned - 1)
+    } else {
+      updatedCard.unowned = Math.max(0, originalCard.unowned - 1)
+    }
+    
+    // Insert new card right after the original card (as a single card)
+    const newBuckets = [...buckets]
+    const newCards = [...newBuckets[bucketIndex].cards]
+    newCards[cardIndex] = updatedCard
+    newCards.splice(cardIndex + 1, 0, {
+      ...originalCard,
+      id: `${originalCard.id}-copy-${Date.now()}`,
+      owned: originalCard.isOwned ? 1 : 0,
+      unowned: originalCard.isOwned ? 0 : 1
+    })
+    
+    newBuckets[bucketIndex] = {
+      ...newBuckets[bucketIndex],
+      cards: newCards
+    }
+    
+    setBuckets(newBuckets)
   }
 
   const handleDragStart = (e: React.DragEvent, cardId: string) => {
@@ -178,6 +273,91 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
           }
         }
         return bucket
+      })
+    )
+
+    setDraggedCardId(null)
+  }
+
+  const handleDropToCard = (e: React.DragEvent, targetBucketId: string, targetCardId: string) => {
+    e.preventDefault()
+    e.stopPropagation()
+
+    // Parse the card IDs from dataTransfer
+    let cardIds: string[] = []
+    try {
+      const data = e.dataTransfer.getData('text/plain')
+      cardIds = JSON.parse(data)
+    } catch {
+      if (draggedCardId) {
+        cardIds = [draggedCardId]
+      } else {
+        console.error('No card ID found in drop event')
+        return
+      }
+    }
+
+    if (cardIds.length === 0 || cardIds.includes(targetCardId)) {
+      return // Don't merge if dropping same card
+    }
+
+    // Build a map of all cards
+    const cardMap = new Map<string, { card: CardStack; bucketId: string }>()
+    buckets.forEach((bucket) => {
+      bucket.cards.forEach((card) => {
+        cardMap.set(card.id, { card, bucketId: bucket.id })
+      })
+    })
+
+    const targetCardData = cardMap.get(targetCardId)
+    if (!targetCardData) return
+
+    const targetCard = targetCardData.card
+
+    // Get the cards being dropped
+    const sourceCards = cardIds
+      .map((id) => cardMap.get(id))
+      .filter((data): data is { card: CardStack; bucketId: string } => data !== undefined)
+
+    // Check if all source cards have the same name as target (for merging)
+    const allSameName = sourceCards.every((s) => s.card.name === targetCard.name)
+
+    if (!allSameName) {
+      // If names don't match, just move them to the bucket (original behavior)
+      handleDropToBucket(e, targetBucketId)
+      return
+    }
+
+    // Merge cards: combine counts and remove source cards
+    setBuckets((prev) =>
+      prev.map((bucket) => {
+        // Remove source cards from all buckets
+        const updatedCards = bucket.cards.filter((c) => !cardIds.includes(c.id))
+
+        // If this is the target bucket, update the target card with merged counts
+        if (bucket.id === targetBucketId) {
+          return {
+            ...bucket,
+            cards: updatedCards.map((card) => {
+              if (card.id === targetCardId) {
+                // Sum up the counts from all source cards
+                const totalOwned = sourceCards.reduce((sum, s) => sum + s.card.owned, card.owned)
+                const totalUnowned = sourceCards.reduce((sum, s) => sum + s.card.unowned, card.unowned)
+                return {
+                  ...card,
+                  owned: totalOwned,
+                  unowned: totalUnowned,
+                }
+              }
+              return card
+            }),
+          }
+        }
+
+        return {
+          ...bucket,
+          cards: updatedCards,
+        }
       })
     )
 
@@ -276,30 +456,60 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
   }
 
   return (
-    <div className="h-full w-full flex flex-col bg-gray-100">
+    <div className="w-full flex flex-col bg-gray-100">
+      {/* Instructions Section */}
+      <div className="flex-shrink-0 bg-blue-50 border-b-2 border-blue-200 p-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-lg font-bold text-blue-900 mb-2">How to Use This Organizer</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-800">
+            <div>
+              <p className="font-semibold mb-1">Card Management:</p>
+              <ul className="list-disc list-inside space-y-1 text-xs">
+                <li>Click cards to select them</li>
+                <li>Use filters to select multiple cards</li>
+                <li>Drag cards between buckets to organize them</li>
+                <li>Click the number badge to split a card into 2 copies (reduces stack by 1)</li>
+                <li>Drag a card onto another card of the same name to merge stacks</li>
+                
+              </ul>
+            </div>
+            <div>
+              <p className="font-semibold mb-1">Bucket Operations:</p>
+              <ul className="list-disc list-inside space-y-1 text-xs">
+                
+                <li>Create custom buckets by clicking the add button on the right</li>
+                <li>Delete custom buckets (cards move back to Owned/Unowned)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Filters - sticky header */}
       <div className="flex-shrink-0 border-b bg-white p-4">
         <FilterButtons
           filters={filters}
           onFilterChange={handleFilterChange}
           onBulkSelect={handleBulkSelect}
+          onDeselectAll={handleDeselectAll}
         />
       </div>
 
       {/* Main content area - flex-1 with overflow */}
-      <div className="flex-1 overflow-y-auto p-4">
+      <div className="flex-1 overflow-y-auto p-4 flex flex-col">
         {/* Buckets Grid - Dynamic 2-column layout with add button on right */}
         <div className="flex flex-col gap-4 w-full">
           {/* Main buckets container - 2-column grid */}
-          <div className="grid grid-cols-2 gap-4 auto-rows-max w-full">
+          <div className="grid grid-cols-2 gap-4 w-full">
             {buckets.map((bucket) => {
               const bucketCardCount = bucket.cards.reduce((sum, c) => sum + c.owned + c.unowned, 0)
               const visibleCards = bucket.cards.filter((c) => filteredCardIds.has(c.id))
+              const uniqueCardNames = new Set(bucket.cards.map((c) => c.name)).size
 
               return (
                 <div
                   key={bucket.id}
-                  className="bg-white rounded-lg shadow-md flex flex-col overflow-hidden border-2 border-gray-200 h-[600px]"
+                  className="bg-white rounded-lg shadow-md flex flex-col overflow-hidden border-2 border-gray-200 min-h-[600px]"
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDropToBucket(e, bucket.id)}
                 >
@@ -335,7 +545,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                         >
                           <h3 className="text-lg font-bold">{bucket.name}</h3>
                           <p className="text-xs opacity-90">
-                            {bucketCardCount} cards ({visibleCards.length} visible)
+                            {bucketCardCount} total cards ({uniqueCardNames} different names)
                           </p>
                         </div>
                         {bucket.id !== 'owned' && bucket.id !== 'unowned' && (
@@ -364,6 +574,8 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                             key={card.id}
                             draggable
                             onDragStart={(e) => handleDragStart(e, card.id)}
+                            onDragOver={handleDragOver}
+                            onDrop={(e) => handleDropToCard(e, bucket.id, card.id)}
                             onClick={() => handleSelectCard(card.id)}
                             className={`relative group cursor-pointer rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-110 flex-shrink-0 ${
                               selectedIds.has(card.id) ? 'ring-4 ring-blue-400' : ''
@@ -387,7 +599,12 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
 
                               {/* Quantity Badge */}
                               {(card.owned > 0 || card.unowned > 0) && (
-                                <div className="absolute top-[5%] right-[5%] bg-black bg-opacity-75 text-white px-[4%] py-[2%] rounded font-bold z-10 whitespace-nowrap" style={{ fontSize: '0.6em' }}>
+                                <div 
+                                  onClick={(e) => handleInstantiateCard(bucket.id, card.id, e)}
+                                  className="absolute top-[12%] right-[5%] bg-black bg-opacity-75 text-white px-[6%] py-[3%] rounded font-bold z-10 whitespace-nowrap cursor-pointer hover:bg-opacity-90 transition-all" 
+                                  style={{ fontSize: '0.85em' }}
+                                  title="Click to instantiate a new copy"
+                                >
                                   {card.owned > 0 && card.unowned > 0
                                     ? `${card.owned}+${card.unowned}`
                                     : card.owned > 0

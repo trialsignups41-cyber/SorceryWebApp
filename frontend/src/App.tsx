@@ -153,7 +153,7 @@ function App() {
             </div>
 
             {/* Deck Editor - flex-1 to take remaining space */}
-            <div className="flex-1 overflow-auto">
+            <div className="flex-1 h-0 overflow-auto">
               <DeckEditor
                 cards={deckData.decklist}
                 deckName={deckData.deck_name}

@@ -4,12 +4,23 @@ import { EnrichedDeckResponse } from '../types'
 const API_BASE = '/api'
 
 export async function generateProxies(
-  collectionFile: File,
+  collectionFile: File | undefined,
   deckUrl: string,
   deckName: string
 ): Promise<EnrichedDeckResponse> {
   const formData = new FormData()
-  formData.append('curiosa_export', collectionFile)
+  
+  // If no collection file provided, create an empty CSV with proper headers
+  if (collectionFile) {
+    formData.append('curiosa_export', collectionFile)
+  } else {
+    // Create a Curiosa-compatible CSV with headers but no cards
+    const emptyCSV = 'card name,quantity,set,finish\n'
+    const blob = new Blob([emptyCSV], { type: 'text/csv' })
+    const emptyFile = new File([blob], 'empty_collection.csv', { type: 'text/csv' })
+    formData.append('curiosa_export', emptyFile)
+  }
+  
   formData.append('deck_link', deckUrl)
   formData.append('deck_name', deckName)
 
