@@ -677,30 +677,17 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
             })}
           </div>
 
-          {/* Add Bucket Button - at bottom */}
-          <div className="flex justify-end w-full">
-            <button
-              onClick={handleAddBucket}
-              className="w-20 h-20 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-md border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-600 font-bold text-3xl transition-colors"
-            >
-              +
-            </button>
-          </div>
         </div>
       </div>
 
-      {/* Add Bucket Button - show if no buckets */}
-      {buckets.length === 0 && (
-        <div className="flex gap-4 p-4">
-          <div className="flex-1" />
-          <button
-            onClick={handleAddBucket}
-            className="w-20 h-20 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-md border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-600 font-bold text-3xl transition-colors"
-          >
-            +
-          </button>
-        </div>
-      )}
+      {/* Add Bucket Button - fixed overlay in bottom right */}
+      <button
+        onClick={handleAddBucket}
+        className="fixed bottom-6 right-6 w-16 h-16 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white font-bold text-3xl transition-all z-50"
+        title="Add New Bucket"
+      >
+        +
+      </button>
     </div>
   )
 }
