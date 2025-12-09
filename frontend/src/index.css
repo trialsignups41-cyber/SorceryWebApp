@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.grayscale-card {
+  filter: grayscale(50%) brightness(0.85);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.quantity-badge {
+  @apply absolute top-1 right-1 bg-black text-white px-2 py-1 rounded text-xs font-bold;
+}
+
+.card-checkbox {
+  @apply absolute top-2 left-2 w-5 h-5 cursor-pointer;
+}
+
+.bucket-pane {
+  @apply border border-gray-300 rounded-lg p-4 bg-gray-50 overflow-y-auto;
+  min-height: 400px;
+}
+
+.filter-button {
+  @apply px-3 py-2 rounded border-2 font-medium transition-all cursor-pointer;
+  border-color: #d1d5db;
+  color: #6b7280;
+}
+
+.filter-button.active {
+  @apply bg-blue-500 text-white;
+  border-color: #3b82f6;
+}

@@ -52,11 +52,16 @@ def load_card_db():
 def parse_curiosa_export(file_stream: io.StringIO) -> list:
     """
     Parses the Curiosa CSV export file stream into a list of owned cards.
+    Validates that the CSV has the expected column headers.
     """
     owned_collection = []
     
     # Use csv.DictReader to map the header row to dictionary keys
     reader = csv.DictReader(file_stream)
+    
+    # Validate that required columns exist
+    if reader.fieldnames and 'card name' not in reader.fieldnames:
+        print(f"WARNING: Expected 'card name' column not found. Available columns: {reader.fieldnames}")
     
     for row in reader:
         try:
@@ -319,6 +324,7 @@ def create_pdf_from_cards(card_list_to_print: list, deck_name: str, card_db: dic
     card_counter = 0
     
     # 1. Image Processing and Drawing
+    skipped_cards = []
     for card_entry in card_list_to_print:
         name = card_entry['name']
         quantity_to_print = card_entry['quantity']
@@ -328,6 +334,7 @@ def create_pdf_from_cards(card_list_to_print: list, deck_name: str, card_db: dic
         
         if not image_url:
             print(f"Skipping card '{name}': Image URL not found.")
+            skipped_cards.append({'name': name, 'reason': 'Image URL not found'})
             continue
             
         # 2. Fetch Image and Apply IOU Tag ONCE
@@ -336,31 +343,48 @@ def create_pdf_from_cards(card_list_to_print: list, deck_name: str, card_db: dic
         try:
             # Fetch Image
             img_data = requests.get(image_url, timeout=20).content
-            img = Image.open(BytesIO(img_data)).convert("RGB")
             
-            # Apply IOU Tag (Pillow Logic)
-            draw = ImageDraw.Draw(img)
-            # Use a safe, standard font and draw a visible red tag
+            # Open image and handle format detection
             try:
-                font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 40)
-            except IOError:
-                font = ImageFont.load_default()
-            
-            # Draw text near the bottom left
-            draw.text((10, img.height - 70), tag_text, fill=(255, 0, 0, 255), font=font) 
+                img = Image.open(BytesIO(img_data))
+                # Verify the image is valid by loading it
+                img.load()
+                # Convert to RGB (handles RGBA, L, etc.)
+                if img.mode != 'RGB':
+                    img = img.convert('RGB')
+            except Exception as e:
+                print(f"Failed to load/verify image for {name}: {e}")
+                skipped_cards.append({'name': name, 'reason': f'Invalid image format: {str(e)[:50]}'})
+                continue
             
             # Resize for printing standard TCG size (300 DPI conversion)
             img_resized = img.resize(
                 (int(CARD_WIDTH_MM / 25.4 * 300), int(CARD_HEIGHT_MM / 25.4 * 300))
             )
             
+            # Apply IOU Tag AFTER resizing (Pillow Logic) - ensures consistent font size
+            draw = ImageDraw.Draw(img_resized)
+            # Use a safe, standard font and draw a visible red tag
+            try:
+                font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 24)
+            except IOError:
+                font = ImageFont.load_default()
+            
+            # Draw text near the bottom left with consistent positioning
+            draw.text((10, img_resized.height - 40), tag_text, fill=(255, 0, 0, 255), font=font)
+            
             # Save the processed image to a temporary file path
             temp_path = os.path.join('/tmp', f"{uuid.uuid4()}_{name}.png")
             img_resized.save(temp_path, "PNG")
             temp_files_to_cleanup.append(temp_path)
             
+        except requests.exceptions.RequestException as e:
+            print(f"Failed to fetch image for {name} from {image_url}: {e}")
+            skipped_cards.append({'name': name, 'reason': f'Failed to fetch image: {str(e)[:50]}'})
+            continue
         except Exception as e:
             print(f"Error processing image for {name}: {e}")
+            skipped_cards.append({'name': name, 'reason': f'Image processing error: {str(e)[:50]}'})
             continue # Skip to next card if processing fails
 
 
@@ -398,6 +422,10 @@ def create_pdf_from_cards(card_list_to_print: list, deck_name: str, card_db: dic
             os.remove(temp_path)
         except OSError:
             pass 
+    
+    # Log skipped cards for debugging
+    if skipped_cards:
+        print(f"WARNING: {len(skipped_cards)} cards were skipped during PDF generation: {skipped_cards}")
 
     return pdf_output_buffer
 
@@ -441,6 +469,7 @@ def print_bucket_endpoint():
 def generate_proxies_endpoint():
     """
     Handles file upload, decklink, parsing, and performs data matching/enrichment.
+    Expects multipart/form-data with: curiosa_export (file), deck_link (URL), deck_name (optional string)
     """
     if len(CARD_DB) == 0:
         return jsonify({"error": "Service is initializing or card data failed to load."}), 503
@@ -469,17 +498,24 @@ def generate_proxies_endpoint():
     # Require a resolved decklist to proceed
     if not deck_list:
         return jsonify({"error": "Decklink could not be resolved or the decklist is empty."}), 400
+    
+    # 3. Capture Optional Deck Name (for tagging and display)
+    deck_name = request.form.get('deck_name', 'Unnamed Deck').strip()
+    if not deck_name or deck_name == 'Unnamed Deck':
+        # Try to extract deck name from URL if available
+        deck_name = 'Unnamed Deck'
         
-    # 3. Data Enrichment and Matching (Task 2.2.4 - 2.2.5)
+    # 4. Data Enrichment and Matching (Task 2.2.4 - 2.2.5)
     final_enriched_deck = enrich_and_match_data(deck_list, user_owned_collection, CARD_DB)
     
-    print(f"Enrichment Complete. Returned {len(final_enriched_deck)} deck entries with status.")
+    print(f"Enrichment Complete. Returned {len(final_enriched_deck)} deck entries with status for deck '{deck_name}'.")
     
-    # 4. Return the enriched data to the Frontend UI (Phase 4.2.2)
+    # 5. Return the enriched data to the Frontend UI (Phase 4.2.2)
     # The Frontend will use this data to populate the interactive editor.
     return jsonify({
         "status": "Success",
         "message": "Deck enrichment and ownership calculation complete.",
+        "deck_name": deck_name,
         "decklist": final_enriched_deck,
         "next_step": "Frontend UI or Proxy Filtering (Task 2.2.6)"
     }), 200
