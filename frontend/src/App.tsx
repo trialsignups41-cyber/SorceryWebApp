@@ -91,18 +91,52 @@ function App() {
     setIsEditingDeckName(false)
   }
 
+  const handleClearAllData = () => {
+    const confirmed = window.confirm(
+      'Are you sure you want to clear all saved data?\n\nThis will delete:\n- Your saved deck\n- Your collection file\n- All bucket configurations\n- All card selections\n\nThis action cannot be undone.'
+    )
+    
+    if (confirmed) {
+      // Clear all localStorage
+      localStorage.clear()
+      
+      // Reset app state
+      setDeckData(null)
+      setSavedCollection(undefined)
+      setCurrentScreen('input')
+      setError('')
+      
+      // Force InputForm to reset by clearing the savedCollectionData prop
+      // The InputForm will see undefined and clear its file state
+      
+      alert('All data has been cleared successfully.')
+    }
+  }
+
   return (
     <div className="h-full w-full bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden flex flex-col">
       {/* Input Form Screen - centered with full height */}
       {currentScreen === 'input' && (
-        <div className="flex-1 flex items-center justify-center overflow-auto p-4">
-          <InputForm
-            onSuccess={handleFormSuccess}
-            onError={handleFormError}
-            onLoadingChange={setIsLoading}
-            isLoading={isLoading}
-            savedCollectionData={savedCollection}
-          />
+        <div className="flex-1 flex flex-col overflow-auto">
+          {/* Clear Data Button - top right */}
+          <div className="flex justify-end p-4">
+            <button
+              onClick={handleClearAllData}
+              className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-semibold text-sm"
+            >
+              Clear All Saved Data
+            </button>
+          </div>
+          
+          <div className="flex-1 flex items-center justify-center p-4">
+            <InputForm
+              onSuccess={handleFormSuccess}
+              onError={handleFormError}
+              onLoadingChange={setIsLoading}
+              isLoading={isLoading}
+              savedCollectionData={savedCollection}
+            />
+          </div>
         </div>
       )}
 

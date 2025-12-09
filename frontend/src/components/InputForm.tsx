@@ -17,11 +17,14 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
 
   // Load saved collection if provided
   useEffect(() => {
-    if (savedCollectionData) {
+    if (savedCollectionData && savedCollectionData.content) {
       // Convert the saved collection data back to a File object
       const blob = new Blob([savedCollectionData.content], { type: 'text/csv' })
       const file = new File([blob], savedCollectionData.filename, { type: 'text/csv' })
       setCollectionFile(file)
+    } else {
+      // Clear the collection file if savedCollectionData is undefined or empty
+      setCollectionFile(null)
     }
   }, [savedCollectionData])
 
