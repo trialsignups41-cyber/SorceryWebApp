@@ -316,6 +316,75 @@ def fetch_and_tag_image(image_url: str, tag_text: str, card_db: dict) -> str | N
 
 # --- PDF & Image Generation (Final FPDF Logic) ---
 
+def create_placeholder_card(card_name: str, deck_name: str, width_mm: float = 63, height_mm: float = 88) -> str:
+    """
+    Creates a placeholder card image with the card name when no image URL is available.
+    Returns the temporary file path.
+    """
+    # Convert mm to pixels at 300 DPI
+    width_px = int(width_mm / 25.4 * 300)
+    height_px = int(height_mm / 25.4 * 300)
+    
+    # Create a white background image
+    img = Image.new('RGB', (width_px, height_px), color='white')
+    draw = ImageDraw.Draw(img)
+    
+    # Draw a border
+    border_width = 10
+    draw.rectangle(
+        [border_width, border_width, width_px - border_width, height_px - border_width],
+        outline='black',
+        width=5
+    )
+    
+    # Load font
+    try:
+        title_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial Bold.ttf", 48)
+        tag_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 24)
+    except IOError:
+        title_font = ImageFont.load_default()
+        tag_font = ImageFont.load_default()
+    
+    # Draw card name at the top (wrapped if needed)
+    name_y = 50
+    max_width = width_px - 40
+    
+    # Simple text wrapping
+    words = card_name.split()
+    lines = []
+    current_line = []
+    
+    for word in words:
+        test_line = ' '.join(current_line + [word])
+        bbox = draw.textbbox((0, 0), test_line, font=title_font)
+        if bbox[2] - bbox[0] <= max_width:
+            current_line.append(word)
+        else:
+            if current_line:
+                lines.append(' '.join(current_line))
+            current_line = [word]
+    
+    if current_line:
+        lines.append(' '.join(current_line))
+    
+    # Draw each line centered
+    for line in lines[:3]:  # Max 3 lines
+        bbox = draw.textbbox((0, 0), line, font=title_font)
+        text_width = bbox[2] - bbox[0]
+        x = (width_px - text_width) // 2
+        draw.text((x, name_y), line, fill='black', font=title_font)
+        name_y += 60
+    
+    # Draw deck name tag at bottom
+    display_name = deck_name if deck_name else "Playtest Only"
+    draw.text((10, height_px - 40), display_name, fill=(255, 0, 0, 255), font=tag_font)
+    
+    # Save to temporary file
+    temp_path = os.path.join('/tmp', f"{uuid.uuid4()}_placeholder.png")
+    img.save(temp_path, "PNG")
+    
+    return temp_path
+
 def create_pdf_from_cards(card_list_to_print: list, deck_name: str, card_db: dict) -> io.BytesIO:
     """
     Fetches images, applies IOU tags via Pillow, and generates a print-ready PDF via FPDF.
@@ -346,14 +415,50 @@ def create_pdf_from_cards(card_list_to_print: list, deck_name: str, card_db: dic
         master_data = card_db.get(name, {})
         image_url = master_data.get('image_url')
         
+        # Handle missing image URL by creating a placeholder
         if not image_url:
-            print(f"Skipping card '{name}': Image URL not found.")
-            skipped_cards.append({'name': name, 'reason': 'Image URL not found'})
-            continue
+            print(f"No image URL for '{name}': Creating placeholder card")
+            try:
+                temp_path = create_placeholder_card(name, deck_name, CARD_WIDTH_MM, CARD_HEIGHT_MM)
+                temp_files_to_cleanup.append(temp_path)
+                print(f"Created placeholder at: {temp_path}")
+                
+                # Add to PDF based on quantity
+                for i in range(quantity_to_print):
+                    # Check for page break (after 9 cards)
+                    if card_counter > 0 and card_counter % (COLS * ROWS) == 0:
+                        pdf.add_page()
+                        x_pos, y_pos = MARGIN_X, MARGIN_Y
+                    
+                    # Draw the placeholder image
+                    pdf.image(temp_path, x_pos, y_pos, CARD_WIDTH_MM, CARD_HEIGHT_MM)
+                    print(f"Added placeholder to PDF at position ({x_pos}, {y_pos})")
+
+                    # Move cursor to the next column
+                    x_pos += CARD_WIDTH_MM + SPACING
+                    
+                    # Check if we finished a row
+                    if (card_counter + 1) % COLS == 0:
+                        x_pos = MARGIN_X
+                        y_pos += CARD_HEIGHT_MM + SPACING
+                        
+                    card_counter += 1
+                
+                continue  # Skip to next card
+                
+            except Exception as e:
+                print(f"Failed to create placeholder for '{name}': {e}")
+                import traceback
+                traceback.print_exc()
+                skipped_cards.append({'name': name, 'reason': f'Placeholder creation failed: {str(e)[:50]}'})
+                continue
             
         # 2. Fetch Image and Apply Overlay Tag ONCE
         display_name = deck_name if deck_name else "Playtest Only"
         tag_text = display_name
+        
+        temp_path = None
+        use_placeholder = False
         
         try:
             # Fetch Image
@@ -368,40 +473,56 @@ def create_pdf_from_cards(card_list_to_print: list, deck_name: str, card_db: dic
                 if img.mode != 'RGB':
                     img = img.convert('RGB')
             except Exception as e:
-                print(f"Failed to load/verify image for {name}: {e}")
-                skipped_cards.append({'name': name, 'reason': f'Invalid image format: {str(e)[:50]}'})
-                continue
+                print(f"Failed to load/verify image for {name}: {e}. Using placeholder.")
+                use_placeholder = True
             
-            # Resize for printing standard TCG size (300 DPI conversion)
-            img_resized = img.resize(
-                (int(CARD_WIDTH_MM / 25.4 * 300), int(CARD_HEIGHT_MM / 25.4 * 300))
-            )
-            
-            # Apply IOU Tag AFTER resizing (Pillow Logic) - ensures consistent font size
-            draw = ImageDraw.Draw(img_resized)
-            # Use a safe, standard font and draw a visible red tag
-            try:
-                font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 24)
-            except IOError:
-                font = ImageFont.load_default()
-            
-            # Draw text near the bottom left with consistent positioning
-            draw.text((10, img_resized.height - 40), tag_text, fill=(255, 0, 0, 255), font=font)
-            
-            # Save the processed image to a temporary file path
-            temp_path = os.path.join('/tmp', f"{uuid.uuid4()}_{name}.png")
-            img_resized.save(temp_path, "PNG")
-            temp_files_to_cleanup.append(temp_path)
+            if not use_placeholder:
+                # Resize for printing standard TCG size (300 DPI conversion)
+                img_resized = img.resize(
+                    (int(CARD_WIDTH_MM / 25.4 * 300), int(CARD_HEIGHT_MM / 25.4 * 300))
+                )
+                
+                # Apply IOU Tag AFTER resizing (Pillow Logic) - ensures consistent font size
+                draw = ImageDraw.Draw(img_resized)
+                # Use a safe, standard font and draw a visible red tag
+                try:
+                    font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 24)
+                except IOError:
+                    font = ImageFont.load_default()
+                
+                # Draw text near the bottom left with consistent positioning
+                draw.text((10, img_resized.height - 40), tag_text, fill=(255, 0, 0, 255), font=font)
+                
+                # Save the processed image to a temporary file path
+                temp_path = os.path.join('/tmp', f"{uuid.uuid4()}_{name}.png")
+                img_resized.save(temp_path, "PNG")
+                temp_files_to_cleanup.append(temp_path)
             
         except requests.exceptions.RequestException as e:
-            print(f"Failed to fetch image for {name} from {image_url}: {e}")
-            skipped_cards.append({'name': name, 'reason': f'Failed to fetch image: {str(e)[:50]}'})
-            continue
+            print(f"Failed to fetch image for {name} from {image_url}: {e}. Using placeholder.")
+            use_placeholder = True
         except Exception as e:
-            print(f"Error processing image for {name}: {e}")
-            skipped_cards.append({'name': name, 'reason': f'Image processing error: {str(e)[:50]}'})
-            continue # Skip to next card if processing fails
-
+            print(f"Error processing image for {name}: {e}. Using placeholder.")
+            use_placeholder = True
+        
+        # Create placeholder if image fetch/processing failed
+        if use_placeholder:
+            print(f"Creating placeholder for '{name}' due to image failure")
+            try:
+                temp_path = create_placeholder_card(name, deck_name, CARD_WIDTH_MM, CARD_HEIGHT_MM)
+                temp_files_to_cleanup.append(temp_path)
+                print(f"Created placeholder at: {temp_path}")
+            except Exception as e:
+                print(f"Failed to create placeholder for '{name}': {e}")
+                import traceback
+                traceback.print_exc()
+                skipped_cards.append({'name': name, 'reason': f'Both image and placeholder failed: {str(e)[:50]}'})
+                continue
+        
+        # If we don't have a valid temp_path at this point, skip the card
+        if not temp_path:
+            skipped_cards.append({'name': name, 'reason': 'No valid image or placeholder'})
+            continue
 
         # 3. Add to PDF based on quantity
         for i in range(quantity_to_print):
