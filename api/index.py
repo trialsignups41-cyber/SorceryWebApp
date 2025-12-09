@@ -87,17 +87,27 @@ def parse_curiosa_export(file_stream: io.StringIO) -> list:
 def extract_deck_id(url: str) -> str | None:
     """
     Extracts the unique Deck ID from various Curiosa URL formats.
-    e.g., https://curiosa.io/decks/view/cmiwp5nmv6idr05eb8a09qm0d
-    or https://curiosa.io/decks/cmivz33ce59f505ebxa7v4g6j?tab=view
-    """
-    # Strip query parameters first
-    url = url.split('?')[0]
+    Searches for a long lowercase alphanumeric string (25+ chars) after a slash.
     
-    # Regex to capture the ID after 'view/' or as the last path segment
-    match = re.search(r'view/([a-z0-9]+)|/([a-z0-9]+)$', url)
+    Examples:
+    - https://curiosa.io/decks/view/cmiwp5nmv6idr05eb8a09qm0d
+    - https://curiosa.io/decks/cmivz33ce59f505ebxa7v4g6j?tab=view
+    - https://curiosa.io/decks/view/cmiwp5nmv6idr05eb8a09qm0d?foo=bar&baz=qux
+    - cmiwp5nmv6idr05eb8a09qm0d (just the ID)
+    """
+    # Strip query parameters and fragments
+    url = url.split('?')[0].split('#')[0]
+    
+    # Look for a long lowercase alphanumeric string after a slash
+    # Deck IDs are typically 25-30 characters long
+    match = re.search(r'/([a-z0-9]{25,})', url)
     if match:
-        # The ID will be in group 1 or group 2
-        return match.group(1) or match.group(2)
+        return match.group(1)
+    
+    # If no slash found, check if the entire string looks like a deck ID
+    if re.match(r'^[a-z0-9]{25,}$', url.strip()):
+        return url.strip()
+    
     return None
 
 def resolve_decklist_from_url(url: str) -> list:

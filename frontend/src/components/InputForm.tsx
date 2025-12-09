@@ -92,7 +92,7 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
             disabled={isLoading}
             required
           />
-          <p className="text-sm text-amber-600 mt-1">Remove any query parameters (everything after and including ?) from the URL</p>
+          <p className="text-sm text-gray-500 mt-1">Paste any Curiosa deck link</p>
         </div>
 
         {/* Deck Name */}
