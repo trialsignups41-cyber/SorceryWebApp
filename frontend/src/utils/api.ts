@@ -18,9 +18,25 @@ export async function generateProxies(
     body: formData,
   })
 
+  const contentType = response.headers.get('content-type')
+  
   if (!response.ok) {
-    const error = await response.json()
-    throw new Error(error.error || 'Failed to generate proxies')
+    let errorMessage = 'Failed to generate proxies'
+    if (contentType?.includes('application/json')) {
+      try {
+        const error = await response.json()
+        errorMessage = error.error || error.message || errorMessage
+      } catch {
+        errorMessage = `Server error: ${response.statusText}`
+      }
+    } else {
+      errorMessage = `Server error: ${response.statusText}`
+    }
+    throw new Error(errorMessage)
+  }
+
+  if (!contentType?.includes('application/json')) {
+    throw new Error('Invalid response format from server')
   }
 
   return response.json()
@@ -38,9 +54,21 @@ export async function printBucket(cards: Array<{ name: string; quantity: number 
     }),
   })
 
+  const contentType = response.headers.get('content-type')
+
   if (!response.ok) {
-    const error = await response.json()
-    throw new Error(error.error || 'Failed to generate PDF')
+    let errorMessage = 'Failed to generate PDF'
+    if (contentType?.includes('application/json')) {
+      try {
+        const error = await response.json()
+        errorMessage = error.error || error.message || errorMessage
+      } catch {
+        errorMessage = `Server error: ${response.statusText}`
+      }
+    } else {
+      errorMessage = `Server error: ${response.statusText}`
+    }
+    throw new Error(errorMessage)
   }
 
   return response.blob()

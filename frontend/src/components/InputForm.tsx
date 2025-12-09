@@ -1,17 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { generateProxies } from '../utils/api'
 import { EnrichedDeckResponse } from '../types'
 
 interface InputFormProps {
-  onSuccess: (data: EnrichedDeckResponse) => void
+  onSuccess: (data: EnrichedDeckResponse, collectionData: { filename: string; content: string }) => void
   onError: (error: string) => void
+  onLoadingChange: (loading: boolean) => void
   isLoading: boolean
+  savedCollectionData?: { filename: string; content: string }
 }
 
-export function InputForm({ onSuccess, onError, isLoading }: InputFormProps) {
+export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, savedCollectionData }: InputFormProps) {
   const [collectionFile, setCollectionFile] = useState<File | null>(null)
   const [deckUrl, setDeckUrl] = useState('')
   const [deckName, setDeckName] = useState('')
+
+  // Load saved collection if provided
+  useEffect(() => {
+    if (savedCollectionData) {
+      // Convert the saved collection data back to a File object
+      const blob = new Blob([savedCollectionData.content], { type: 'text/csv' })
+      const file = new File([blob], savedCollectionData.filename, { type: 'text/csv' })
+      setCollectionFile(file)
+    }
+  }, [savedCollectionData])
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -33,21 +45,35 @@ export function InputForm({ onSuccess, onError, isLoading }: InputFormProps) {
       return
     }
 
+    onLoadingChange(true)
     try {
       const result = await generateProxies(
         collectionFile,
         deckUrl,
         deckName || 'Unnamed Deck'
       )
-      onSuccess(result)
+      onSuccess(result, {
+        filename: collectionFile.name,
+        content: await collectionFile.text(),
+      })
     } catch (err) {
+      console.error('Form submission error:', err)
       onError(err instanceof Error ? err.message : 'An error occurred')
+    } finally {
+      onLoadingChange(false)
     }
   }
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">Sorcery Proxy Tool</h1>
+      <h1 className="text-3xl font-bold mb-2 text-gray-800">Sorcery Playtest Card Tool</h1>
+      
+      <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+        <p className="text-gray-700 text-sm leading-relaxed">
+          Upload your collection and a deck list to organize cards for printing. Select and drag cards between buckets to organize your proxy sheets. 
+          Generate PDFs with your custom organization, or export as text. Your progress is automatically saved in your browser.
+        </p>
+      </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Collection File Upload */}
@@ -61,7 +87,6 @@ export function InputForm({ onSuccess, onError, isLoading }: InputFormProps) {
             onChange={handleFileChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             disabled={isLoading}
-            required
           />
           {collectionFile && (
             <p className="text-sm text-green-600 mt-1">✓ {collectionFile.name}</p>
@@ -102,10 +127,10 @@ export function InputForm({ onSuccess, onError, isLoading }: InputFormProps) {
         {/* Submit Button */}
         <button
           type="submit"
-          disabled={isLoading}
+          disabled={isLoading || !collectionFile}
           className="w-full bg-blue-600 text-white font-medium py-2 rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
         >
-          {isLoading ? 'Processing...' : 'Generate Proxies'}
+          {isLoading ? 'Processing...' : 'Open Organizer'}
         </button>
       </form>
     </div>

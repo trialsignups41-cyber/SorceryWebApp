@@ -70,8 +70,16 @@ export function BucketPane({
   return (
     <div
       className="bucket-pane flex flex-col"
-      onDragOver={onDragOver}
-      onDrop={(e) => onDrop(e, bucket.id)}
+      onDragOver={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        onDragOver(e)
+      }}
+      onDrop={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        onDrop(e, bucket.id)
+      }}
     >
       {/* Header */}
       <div className="mb-4 pb-4 border-b">

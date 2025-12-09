@@ -337,8 +337,9 @@ def create_pdf_from_cards(card_list_to_print: list, deck_name: str, card_db: dic
             skipped_cards.append({'name': name, 'reason': 'Image URL not found'})
             continue
             
-        # 2. Fetch Image and Apply IOU Tag ONCE
-        tag_text = f"IOU | {deck_name}"
+        # 2. Fetch Image and Apply Overlay Tag ONCE
+        display_name = deck_name if deck_name else "Playtest Only"
+        tag_text = display_name
         
         try:
             # Fetch Image
