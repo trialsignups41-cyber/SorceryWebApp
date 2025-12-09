@@ -15,6 +15,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
   const [draggedCardId, setDraggedCardId] = useState<string | null>(null)
   const [renamingBucketId, setRenamingBucketId] = useState<string | null>(null)
   const [renameValue, setRenameValue] = useState('')
+  const [generatingPdfId, setGeneratingPdfId] = useState<string | null>(null)
 
   // Create initial card stacks
   const allStacks = useMemo(() => createCardStacks(cards), [cards])
@@ -203,10 +204,43 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
     setBuckets((prev) => [...prev, newBucket])
   }
 
+  const handleDeleteBucket = (bucketId: string, bucketName: string) => {
+    const bucket = buckets.find((b) => b.id === bucketId)
+    if (!bucket) return
+
+    // Confirm deletion
+    const confirmed = window.confirm(
+      `Delete "${bucketName}" bucket?\n\nThis will move all ${bucket.cards.length} cards back to their default Owned or Unowned buckets.`
+    )
+    if (!confirmed) return
+
+    // Move cards back to default buckets (owned/unowned)
+    const ownedBucket = buckets.find((b) => b.id === 'owned')
+    const unownedBucket = buckets.find((b) => b.id === 'unowned')
+
+    setBuckets((prev) => {
+      const updated = prev.filter((b) => b.id !== bucketId)
+      
+      // Add cards back to their default buckets
+      return updated.map((b) => {
+        if (b.id === 'owned' && ownedBucket) {
+          const cardsToAdd = bucket.cards.filter((c) => c.isOwned)
+          return { ...b, cards: [...b.cards, ...cardsToAdd] }
+        }
+        if (b.id === 'unowned' && unownedBucket) {
+          const cardsToAdd = bucket.cards.filter((c) => !c.isOwned)
+          return { ...b, cards: [...b.cards, ...cardsToAdd] }
+        }
+        return b
+      })
+    })
+  }
+
   const handlePrintBucket = async (bucketId: string, bucketName: string) => {
     const bucket = buckets.find((b) => b.id === bucketId)
     if (!bucket || bucket.cards.length === 0) return
 
+    setGeneratingPdfId(bucketId)
     try {
       const cardsForPdf = bucket.cards.map((card) => ({
         name: card.name,
@@ -217,6 +251,8 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
       downloadPDF(blob, `${bucketName}_${deckName}.pdf`)
     } catch (error) {
       alert(`Failed to generate PDF: ${error instanceof Error ? error.message : 'Unknown error'}`)
+    } finally {
+      setGeneratingPdfId(null)
     }
   }
 
@@ -240,7 +276,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
   }
 
   return (
-    <div className="h-full w-full flex flex-col bg-gray-100 overflow-hidden">
+    <div className="h-full w-full flex flex-col bg-gray-100">
       {/* Filters - sticky header */}
       <div className="flex-shrink-0 border-b bg-white p-4">
         <FilterButtons
@@ -250,30 +286,25 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
         />
       </div>
 
-      {/* Main content area - flex-1 to take remaining space */}
-      <div className="flex-1 overflow-auto p-4">
+      {/* Main content area - flex-1 with overflow */}
+      <div className="flex-1 overflow-y-auto p-4">
         {/* Buckets Grid - Dynamic 2-column layout with add button on right */}
-        <div className="flex gap-4">
-        {/* Main buckets container */}
-        <div className="flex-1 flex flex-col gap-4">
-          {/* Calculate rows for 2-column layout */}
-          {Array.from({ length: Math.ceil(buckets.length / 2) }).map((_, rowIdx) => (
-            <div key={`row-${rowIdx}`} className="flex gap-4 h-[600px]">
-              {/* Left bucket */}
-              {buckets[rowIdx * 2] && (() => {
-              const bucket = buckets[rowIdx * 2]
+        <div className="flex flex-col gap-4 w-full">
+          {/* Main buckets container - 2-column grid */}
+          <div className="grid grid-cols-2 gap-4 auto-rows-max w-full">
+            {buckets.map((bucket) => {
               const bucketCardCount = bucket.cards.reduce((sum, c) => sum + c.owned + c.unowned, 0)
               const visibleCards = bucket.cards.filter((c) => filteredCardIds.has(c.id))
 
               return (
                 <div
                   key={bucket.id}
-                  className="flex-1 bg-white rounded-lg shadow-md flex flex-col overflow-hidden border-2 border-gray-200"
+                  className="bg-white rounded-lg shadow-md flex flex-col overflow-hidden border-2 border-gray-200 h-[600px]"
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDropToBucket(e, bucket.id)}
                 >
                   {/* Header */}
-                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 space-y-2">
+                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 space-y-2 flex-shrink-0">
                     {renamingBucketId === bucket.id ? (
                       <div className="flex gap-2">
                         <input
@@ -288,23 +319,34 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                             handleRenameBucket(bucket.id, renameValue)
                             setRenamingBucketId(null)
                           }}
-                          className="px-2 py-1 bg-green-500 hover:bg-green-600 rounded font-semibold"
+                          className="px-2 py-1 bg-green-500 hover:bg-green-600 rounded font-semibold text-sm"
                         >
                           Save
                         </button>
                       </div>
                     ) : (
-                      <div
-                        onClick={() => {
-                          setRenamingBucketId(bucket.id)
-                          setRenameValue(bucket.name)
-                        }}
-                        className="cursor-pointer hover:opacity-80 transition-opacity"
-                      >
-                        <h3 className="text-lg font-bold">{bucket.name}</h3>
-                        <p className="text-xs opacity-90">
-                          {bucketCardCount} cards ({visibleCards.length} visible)
-                        </p>
+                      <div className="flex justify-between items-start gap-2">
+                        <div
+                          onClick={() => {
+                            setRenamingBucketId(bucket.id)
+                            setRenameValue(bucket.name)
+                          }}
+                          className="cursor-pointer hover:opacity-80 transition-opacity flex-1"
+                        >
+                          <h3 className="text-lg font-bold">{bucket.name}</h3>
+                          <p className="text-xs opacity-90">
+                            {bucketCardCount} cards ({visibleCards.length} visible)
+                          </p>
+                        </div>
+                        {bucket.id !== 'owned' && bucket.id !== 'unowned' && (
+                          <button
+                            onClick={() => handleDeleteBucket(bucket.id, bucket.name)}
+                            className="px-2 py-1 bg-red-500 hover:bg-red-600 rounded font-semibold text-xs flex-shrink-0"
+                            title="Delete this bucket"
+                          >
+                            Delete
+                          </button>
+                        )}
                       </div>
                     )}
                   </div>
@@ -322,7 +364,8 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                             key={card.id}
                             draggable
                             onDragStart={(e) => handleDragStart(e, card.id)}
-                            className={`relative group cursor-move rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-110 flex-shrink-0 ${
+                            onClick={() => handleSelectCard(card.id)}
+                            className={`relative group cursor-pointer rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-110 flex-shrink-0 ${
                               selectedIds.has(card.id) ? 'ring-4 ring-blue-400' : ''
                             }`}
                           >
@@ -372,13 +415,23 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                   </div>
 
                   {/* Footer Actions */}
-                  <div className="border-t p-3 flex gap-2">
+                  <div className="border-t p-3 flex gap-2 flex-shrink-0">
                     <button
                       onClick={() => handlePrintBucket(bucket.id, bucket.name)}
-                      disabled={bucket.cards.length === 0}
-                      className="flex-1 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white px-2 py-1 rounded text-sm font-semibold transition-colors"
+                      disabled={bucket.cards.length === 0 || generatingPdfId === bucket.id}
+                      className="flex-1 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white px-2 py-1 rounded text-sm font-semibold transition-colors flex items-center justify-center gap-2"
                     >
-                      PDF
+                      {generatingPdfId === bucket.id ? (
+                        <>
+                          <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Generating...
+                        </>
+                      ) : (
+                        'PDF'
+                      )}
                     </button>
                     <button
                       onClick={() => handleExportText(bucket.id, bucket.name)}
@@ -390,163 +443,24 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                   </div>
                 </div>
               )
-            })()}
-
-            {/* Right bucket */}
-            {buckets[rowIdx * 2 + 1] && (() => {
-              const bucket = buckets[rowIdx * 2 + 1]
-              const bucketCardCount = bucket.cards.reduce((sum, c) => sum + c.owned + c.unowned, 0)
-              const visibleCards = bucket.cards.filter((c) => filteredCardIds.has(c.id))
-
-              return (
-                <div
-                  key={bucket.id}
-                  className="flex-1 bg-white rounded-lg shadow-md flex flex-col overflow-hidden border-2 border-gray-200"
-                  onDragOver={handleDragOver}
-                  onDrop={(e) => handleDropToBucket(e, bucket.id)}
-                >
-                  {/* Header */}
-                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 space-y-2">
-                    {renamingBucketId === bucket.id ? (
-                      <div className="flex gap-2">
-                        <input
-                          type="text"
-                          value={renameValue}
-                          onChange={(e) => setRenameValue(e.target.value)}
-                          autoFocus
-                          className="flex-1 px-2 py-1 border rounded text-gray-800"
-                        />
-                        <button
-                          onClick={() => {
-                            handleRenameBucket(bucket.id, renameValue)
-                            setRenamingBucketId(null)
-                          }}
-                          className="px-2 py-1 bg-green-500 hover:bg-green-600 rounded font-semibold"
-                        >
-                          Save
-                        </button>
-                      </div>
-                    ) : (
-                      <div
-                        onClick={() => {
-                          setRenamingBucketId(bucket.id)
-                          setRenameValue(bucket.name)
-                        }}
-                        className="cursor-pointer hover:opacity-80 transition-opacity"
-                      >
-                        <h3 className="text-lg font-bold">{bucket.name}</h3>
-                        <p className="text-xs opacity-90">
-                          {bucketCardCount} cards ({visibleCards.length} visible)
-                        </p>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Cards Grid */}
-                  <div className="flex-1 p-4 overflow-y-scroll bg-gray-50">
-                    {visibleCards.length === 0 ? (
-                      <div className="flex items-center justify-center h-full text-gray-400 text-sm">
-                        {filteredCardIds.size > 0 ? 'No matching cards' : 'Drop cards here'}
-                      </div>
-                    ) : (
-                      <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
-                        {visibleCards.map((card) => (
-                          <div
-                            key={card.id}
-                            draggable
-                            onDragStart={(e) => handleDragStart(e, card.id)}
-                            className={`relative group cursor-move rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-110 flex-shrink-0 ${
-                              selectedIds.has(card.id) ? 'ring-4 ring-blue-400' : ''
-                            }`}
-                          >
-                            {/* Card Image */}
-                            <div className="relative w-full aspect-[63/88] bg-gray-300">
-                              {card.image_url ? (
-                                <img
-                                  src={card.image_url}
-                                  alt={card.name}
-                                  className={`w-full h-full object-cover ${
-                                    card.isOwned ? '' : 'opacity-60'
-                                  }`}
-                                />
-                              ) : (
-                                <div className="w-full h-full flex items-center justify-center text-xs text-gray-600 font-semibold bg-gray-400">
-                                  No Image
-                                </div>
-                              )}
-
-                              {/* Quantity Badge */}
-                              {(card.owned > 0 || card.unowned > 0) && (
-                                <div className="absolute top-[5%] right-[5%] bg-black bg-opacity-75 text-white px-[4%] py-[2%] rounded font-bold z-10 whitespace-nowrap" style={{ fontSize: '0.6em' }}>
-                                  {card.owned > 0 && card.unowned > 0
-                                    ? `${card.owned}+${card.unowned}`
-                                    : card.owned > 0
-                                      ? card.owned
-                                      : card.unowned}
-                                </div>
-                              )}
-
-                              {/* Selection Checkbox */}
-                              <input
-                                type="checkbox"
-                                checked={selectedIds.has(card.id)}
-                                onChange={() => handleSelectCard(card.id)}
-                                onClick={(e) => e.stopPropagation()}
-                                className="absolute top-[10%] left-[5%] w-[15%] h-[15%] min-w-3 min-h-3 cursor-pointer accent-blue-500 z-20"
-                              />
-
-                              {/* Drag Hint - only show on hover */}
-                              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all z-0" />
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Footer Actions */}
-                  <div className="border-t p-3 flex gap-2">
-                    <button
-                      onClick={() => handlePrintBucket(bucket.id, bucket.name)}
-                      disabled={bucket.cards.length === 0}
-                      className="flex-1 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white px-2 py-1 rounded text-sm font-semibold transition-colors"
-                    >
-                      PDF
-                    </button>
-                    <button
-                      onClick={() => handleExportText(bucket.id, bucket.name)}
-                      disabled={bucket.cards.length === 0}
-                      className="flex-1 bg-gray-500 hover:bg-gray-600 disabled:bg-gray-300 text-white px-2 py-1 rounded text-sm font-semibold transition-colors"
-                    >
-                      Text
-                    </button>
-                  </div>
-                </div>
-              )
-            })()}
-
-            {/* Add Bucket Button - only show in first row after last bucket */}
-            {rowIdx === Math.ceil(buckets.length / 2) - 1 && !buckets[rowIdx * 2 + 1] && (
-              <div className="w-20" />
-            )}
+            })}
           </div>
-        ))}
-        </div>
 
-        {/* Add Bucket Button - sticky on right side */}
-        <div className="flex items-start">
-          <button
-            onClick={handleAddBucket}
-            className="w-20 h-20 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-md border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-600 font-bold text-3xl transition-colors sticky top-0"
-          >
-            +
-          </button>
+          {/* Add Bucket Button - at bottom */}
+          <div className="flex justify-end w-full">
+            <button
+              onClick={handleAddBucket}
+              className="w-20 h-20 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-md border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-600 font-bold text-3xl transition-colors"
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Add Bucket Button - show if no buckets */}
       {buckets.length === 0 && (
-        <div className="flex gap-4">
+        <div className="flex gap-4 p-4">
           <div className="flex-1" />
           <button
             onClick={handleAddBucket}
@@ -556,7 +470,6 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
           </button>
         </div>
       )}
-      </div>
     </div>
   )
 }
