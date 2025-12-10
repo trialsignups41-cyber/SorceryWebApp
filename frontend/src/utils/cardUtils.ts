@@ -38,6 +38,7 @@ export function createCardStacks(cards: Card[]): CardStack[] {
         image_url: card.image_url,
         rarity: card.rarity,
         isOwned: true,
+        price: card.price_usd,
       })
     }
 
@@ -51,6 +52,7 @@ export function createCardStacks(cards: Card[]): CardStack[] {
         image_url: card.image_url,
         rarity: card.rarity,
         isOwned: false,
+        price: card.price_usd,
       })
     }
 

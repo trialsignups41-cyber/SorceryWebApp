@@ -7,10 +7,16 @@ import { printBucket, downloadPDF } from '../utils/api'
 interface DeckEditorProps {
   cards: Card[]
   deckName: string
+  onTotalValueChange?: (value: number) => void
 }
 
-export function DeckEditor({ cards, deckName }: DeckEditorProps) {
+export function DeckEditor({ cards, deckName, onTotalValueChange }: DeckEditorProps) {
   const [filters, setFilters] = useState<{ [key: string]: boolean }>({})
+  const [priceFilter, setPriceFilter] = useState<{ enabled: boolean; type: 'above' | 'below'; value: number }>({
+    enabled: false,
+    type: 'above',
+    value: 0
+  })
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => {
     // Try to load from localStorage first
     const savedSelection = localStorage.getItem(`selectedIds_${deckName}`)
@@ -30,6 +36,15 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
 
   // Create initial card stacks
   const allStacks = useMemo(() => createCardStacks(cards), [cards])
+
+  // Create a price lookup map from fresh card data
+  const priceMap = useMemo(() => {
+    const map = new Map<string, number | undefined>()
+    cards.forEach(card => {
+      map.set(card.name, card.price_usd)
+    })
+    return map
+  }, [cards])
 
   // Create default buckets or load from localStorage
   const [buckets, setBuckets] = useState<Bucket[]>(() => {
@@ -61,6 +76,19 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
     ]
   })
 
+  // Update prices in buckets whenever cards change
+  useEffect(() => {
+    setBuckets(prevBuckets => 
+      prevBuckets.map(bucket => ({
+        ...bucket,
+        cards: bucket.cards.map(card => ({
+          ...card,
+          price: priceMap.get(card.name) ?? card.price
+        }))
+      }))
+    )
+  }, [priceMap])
+
   // Save buckets to localStorage whenever they change
   useEffect(() => {
     localStorage.setItem(`buckets_${deckName}`, JSON.stringify(buckets))
@@ -75,9 +103,22 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
 
   // Filter cards based on active filters
   const filteredCardIds = useMemo(() => {
-    const filtered = filterCardStacks(allBucketCards, filters)
+    let filtered = filterCardStacks(allBucketCards, filters)
+    
+    // Apply price filter if enabled
+    if (priceFilter.enabled) {
+      filtered = filtered.filter(card => {
+        const price = card.price ?? 0
+        if (priceFilter.type === 'above') {
+          return price > priceFilter.value
+        } else {
+          return price < priceFilter.value
+        }
+      })
+    }
+    
     return new Set(filtered.map((c) => c.id))
-  }, [allBucketCards, filters])
+  }, [allBucketCards, filters, priceFilter])
 
   const handleFilterChange = (filterKey: string) => {
     setFilters((prev) => ({
@@ -87,7 +128,20 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
   }
 
   const handleBulkSelect = () => {
-    const filtered = filterCardStacks(allBucketCards, filters)
+    let filtered = filterCardStacks(allBucketCards, filters)
+    
+    // Apply price filter if enabled
+    if (priceFilter.enabled) {
+      filtered = filtered.filter(card => {
+        const price = card.price ?? 0
+        if (priceFilter.type === 'above') {
+          return price > priceFilter.value
+        } else {
+          return price < priceFilter.value
+        }
+      })
+    }
+    
     const filteredIds = new Set(filtered.map((c) => c.id))
     
     // Toggle: if all filtered are selected, deselect; otherwise select all
@@ -472,6 +526,22 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
     return `https://www.tcgplayer.com/massentry?c=${encodedCards}&productline=Sorcery%20Contested%20Realm`
   }
 
+  // Calculate total deck value
+  const totalDeckValue = useMemo(() => {
+    return buckets.reduce((total, bucket) => {
+      return total + bucket.cards.reduce((sum, card) => {
+        const quantity = card.owned + card.unowned
+        const price = card.price ?? 0
+        return sum + (quantity * price)
+      }, 0)
+    }, 0)
+  }, [buckets])
+
+  // Notify parent of total value changes
+  useEffect(() => {
+    onTotalValueChange?.(totalDeckValue)
+  }, [totalDeckValue, onTotalValueChange])
+
   return (
     <div className="h-screen w-full flex flex-col bg-gray-100 dark:bg-gray-800">
       {/* Filters - fixed header */}
@@ -481,6 +551,8 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
           onFilterChange={handleFilterChange}
           onBulkSelect={handleBulkSelect}
           onDeselectAll={handleDeselectAll}
+          priceFilter={priceFilter}
+          onPriceFilterChange={setPriceFilter}
         />
       </div>
 
@@ -522,6 +594,13 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
               const bucketCardCount = bucket.cards.reduce((sum, c) => sum + c.owned + c.unowned, 0)
               const visibleCards = bucket.cards.filter((c) => filteredCardIds.has(c.id))
               const uniqueCardNames = new Set(bucket.cards.map((c) => c.name)).size
+              
+              // Calculate total value of cards in bucket
+              const bucketValue = bucket.cards.reduce((sum, c) => {
+                const quantity = c.owned + c.unowned
+                const price = c.price ?? 0
+                return sum + (quantity * price)
+              }, 0)
 
               // Color gradient for bucket headers - cycles through different colors
               const colors = [
@@ -578,6 +657,11 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                             <p className="text-xs opacity-90">
                               {bucketCardCount} total cards ({uniqueCardNames} different names)
                             </p>
+                            {bucketValue > 0 && (
+                              <p className="text-sm font-semibold opacity-95 mt-1">
+                                💰 Total Value: ${bucketValue.toFixed(2)}
+                              </p>
+                            )}
                           </div>
                           {bucket.id !== 'owned' && bucket.id !== 'unowned' && (
                             <button
@@ -668,7 +752,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                               {(card.owned > 0 || card.unowned > 0) && (
                                 <div 
                                   onClick={(e) => handleInstantiateCard(bucket.id, card.id, e)}
-                                  className="absolute top-[12%] right-[5%] bg-black bg-opacity-75 text-white px-[6%] py-[3%] rounded font-bold z-10 whitespace-nowrap cursor-pointer hover:bg-opacity-90 transition-all" 
+                                  className="absolute top-[10%] right-[5%] bg-black bg-opacity-75 text-white px-[6%] py-[3%] rounded font-bold z-10 whitespace-nowrap cursor-pointer hover:bg-opacity-90 transition-all" 
                                   style={{ fontSize: '0.85em' }}
                                   title="Click to instantiate a new copy"
                                 >
@@ -677,6 +761,17 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                                     : card.owned > 0
                                       ? card.owned
                                       : card.unowned}
+                                </div>
+                              )}
+
+                              {/* Price Badge */}
+                              {card.price != null && (
+                                <div 
+                                  className="absolute top-[20%] right-[5%] bg-green-600 bg-opacity-90 text-white px-[6%] py-[3%] rounded font-bold z-10 whitespace-nowrap" 
+                                  style={{ fontSize: '0.75em' }}
+                                  title={`TCGPlayer Low: $${card.price.toFixed(2)}`}
+                                >
+                                  ${card.price.toFixed(2)}
                                 </div>
                               )}
 

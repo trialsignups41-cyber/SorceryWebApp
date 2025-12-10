@@ -19,6 +19,7 @@ export interface CardStack {
   image_url?: string
   rarity?: string
   isOwned: boolean
+  price?: number | null
 }
 
 export interface Bucket {

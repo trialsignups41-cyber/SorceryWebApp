@@ -23,6 +23,10 @@ update_*.py
 fix_*.py
 corrupted_images.json
 
+# Pricing data (used to update master_cards.json, not needed in deployment)
+card_data/prices.csv
+card_data/*.backup
+
 # Local scripts
 start.sh
 

@@ -21,6 +21,7 @@ function App() {
     const saved = localStorage.getItem('darkMode')
     return saved ? JSON.parse(saved) : true
   })
+  const [totalDeckValue, setTotalDeckValue] = useState(0)
 
   // Apply dark mode class to document
   useEffect(() => {
@@ -193,7 +194,14 @@ function App() {
             {/* Header with deck name and new deck button */}
             <div className="flex-shrink-0 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-4 flex items-center justify-between">
               <div className="flex-1 flex flex-col items-center">
-                <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">Deck Editor</h1>
+                <div className="flex items-center gap-4">
+                  <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">Deck Editor</h1>
+                  {totalDeckValue > 0 && (
+                    <span className="inline-block bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 px-3 py-1.5 rounded-lg font-semibold text-lg">
+                      💰 ${totalDeckValue.toFixed(2)}
+                    </span>
+                  )}
+                </div>
                 {isEditingDeckName ? (
                   <div className="flex gap-2 mt-2">
                     <input
@@ -255,6 +263,7 @@ function App() {
               <DeckEditor
                 cards={deckData.decklist}
                 deckName={deckData.deck_name}
+                onTotalValueChange={setTotalDeckValue}
               />
             </div>
           </div>

@@ -44,5 +44,8 @@ Thumbs.db
 # Backups
 *.backup
 
+# Card data backups
+card_data/*.backup
+
 # Vercel
 .vercel
