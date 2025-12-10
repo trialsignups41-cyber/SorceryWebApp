@@ -16,6 +16,7 @@ function App() {
   const [savedCollection, setSavedCollection] = useState<SavedCollectionData | undefined>()
   const [isEditingDeckName, setIsEditingDeckName] = useState(false)
   const [editingDeckName, setEditingDeckName] = useState('')
+  const [hasExistingDeck, setHasExistingDeck] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem('darkMode')
     return saved ? JSON.parse(saved) : true
@@ -81,11 +82,14 @@ function App() {
   }
 
   const handleReset = () => {
-    localStorage.removeItem('deckData')
+    setHasExistingDeck(true)
     setCurrentScreen('input')
-    setDeckData(null)
     setError('')
-    setIsEditingDeckName(false)
+  }
+
+  const handleReturnToDeck = () => {
+    setCurrentScreen('editor')
+    setError('')
   }
 
   const handleEditDeckName = () => {
@@ -136,7 +140,17 @@ function App() {
       {currentScreen === 'input' && (
         <div className="flex-1 flex flex-col overflow-auto">
           {/* Top bar with dark mode toggle and clear data button */}
-          <div className="flex justify-end items-center gap-2 p-4">
+          <div className="flex justify-between items-center gap-2 p-4">
+            {hasExistingDeck && (
+              <button
+                onClick={handleReturnToDeck}
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors font-semibold text-sm"
+              >
+                Take Me Back
+              </button>
+            )}
+            {!hasExistingDeck && <div></div>}
+            <div className="flex items-center gap-2">
             <button
               onClick={() => setIsDarkMode(!isDarkMode)}
               className="p-2 rounded-lg bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-all duration-200 border border-gray-200 dark:border-gray-600"
@@ -158,6 +172,7 @@ function App() {
             >
               Clear All Saved Data
             </button>
+            </div>
           </div>
           
           <div className="flex-1 flex items-center justify-center p-4">
@@ -177,7 +192,7 @@ function App() {
           <div className="flex-1 flex flex-col bg-white dark:bg-gray-900">
             {/* Header with deck name and new deck button */}
             <div className="flex-shrink-0 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-4 flex items-center justify-between">
-              <div className="flex-1">
+              <div className="flex-1 flex flex-col items-center">
                 <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">Deck Editor</h1>
                 {isEditingDeckName ? (
                   <div className="flex gap-2 mt-2">
@@ -210,7 +225,7 @@ function App() {
                   </p>
                 )}
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 absolute right-4">
                 <button
                   onClick={() => setIsDarkMode(!isDarkMode)}
                   className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 border border-gray-200 dark:border-gray-600"

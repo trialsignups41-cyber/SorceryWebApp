@@ -455,6 +455,23 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
     document.body.removeChild(a)
   }
 
+  const getTCGPlayerURL = (bucketId: string): string => {
+    const bucket = buckets.find((b) => b.id === bucketId)
+    if (!bucket || bucket.cards.length === 0) return ''
+
+    // Build the card list in format: "quantity CardName"
+    const cardEntries = bucket.cards.map((card) => {
+      const quantity = card.owned + card.unowned
+      return `${quantity} ${card.name}`
+    })
+
+    // Join with || and encode
+    const cardList = cardEntries.join('||')
+    const encodedCards = encodeURIComponent(cardList)
+    
+    return `https://www.tcgplayer.com/massentry?c=${encodedCards}&productline=Sorcery%20Contested%20Realm`
+  }
+
   return (
     <div className="h-screen w-full flex flex-col bg-gray-100 dark:bg-gray-800">
       {/* Filters - fixed header */}
@@ -488,7 +505,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
               <div>
                 <p className="font-semibold mb-1">Bucket Operations:</p>
                 <ul className="list-disc list-inside space-y-1 text-xs">
-                  
+                  <li>Rename buckets by clicking on them</li>
                   <li>Create custom buckets by clicking the add button on the right</li>
                   <li>Delete custom buckets (cards move back to Owned/Unowned)</li>
                 </ul>
@@ -599,6 +616,14 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                             Export Text
                           </button>
                         </div>
+                        <a
+                          href={getTCGPlayerURL(bucket.id)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`block w-full text-center bg-white bg-opacity-20 hover:bg-opacity-30 ${bucket.cards.length === 0 ? 'opacity-50 pointer-events-none' : ''} text-white px-3 py-1.5 rounded text-sm font-semibold transition-colors`}
+                        >
+                          Buy on TCGPlayer
+                        </a>
                       </div>
                     )}
                   </div>
