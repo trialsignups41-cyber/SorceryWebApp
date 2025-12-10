@@ -163,40 +163,4 @@ function App() {
                       Save
                     </button>
                     <button
-                      onClick={handleCancelEditDeckName}
-                      className="px-3 py-1 bg-gray-400 text-white rounded-md hover:bg-gray-500 font-semibold transition-colors"
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                ) : (
-                  <p
-                    onClick={handleEditDeckName}
-                    className="text-lg text-gray-600 cursor-pointer hover:text-gray-800 hover:underline transition-colors mt-1"
-                  >
-                    {deckData.deck_name} ✎
-                  </p>
-                )}
-              </div>
-              <button
-                onClick={handleReset}
-                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-semibold flex-shrink-0 ml-4"
-              >
-                + New Deck
-              </button>
-            </div>
-
-            {/* Deck Editor - flex-1 to take remaining space */}
-            <div className="flex-1 min-h-0">
-              <DeckEditor
-                cards={deckData.decklist}
-                deckName={deckData.deck_name}
-              />
-            </div>
-          </div>
-        )}
-    </div>
-  )
-}
-
-export default App
+                      onClick={handleCancelEditDeckNam

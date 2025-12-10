@@ -775,7 +775,7 @@
         "mana_cost": 5,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-whirling_blades-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-whirling_blades-b-f.png",
         "price_usd": 0.0,
         "rules_text": "An ally may take up to two steps, and then strikes each enemy along their entire path."
     },
@@ -1267,7 +1267,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sirian_templar-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sirian_templar-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Takes no damage from Demon, Spirit, or Undead minions."
     },
@@ -1291,7 +1291,7 @@
         "mana_cost": 3,
         "attack": 5,
         "defence": 5,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-slumbering_giantess-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-slumbering_giantess-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → Fall asleep. Slumbering Giantess is disabled until hurt."
     },
@@ -1579,7 +1579,7 @@
         "mana_cost": 1,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-star_seeds_of_uhr-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-star_seeds_of_uhr-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Fill up to thirteen voids with Rubble."
     },
@@ -1627,7 +1627,7 @@
         "mana_cost": 5,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-rest_in_peace-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-rest_in_peace-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Whenever a Spirit or Undead minion occupies affected land sites, burrow it."
     },
@@ -2395,7 +2395,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-warp_spasm-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-warp_spasm-b-f.png",
         "price_usd": 0.0,
         "rules_text": "This turn, double an allied minion's power, and whenever it attacks and kills a unit, it untaps. At the end of the turn, it dies."
     },
@@ -2431,7 +2431,7 @@
         "mana_cost": 1,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sandstorm-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sandstorm-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Affected sites and units atop them can't be attacked or intercepted.\n\nAt the start of your turn, dispel Sandstorm."
     },
@@ -2455,7 +2455,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-wildfire-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-wildfire-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Conjure Wildfire atop a single site nearby.\n\nAt the end of each turn, each unit here takes 3 damage, then move Wildfire to an adjacent location it hasn't visited before. If none remain, dispel Wildfire."
     },
@@ -2827,7 +2827,7 @@
         "mana_cost": 1,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sedge_crabs-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sedge_crabs-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Can only move themselves sideways."
     },
@@ -2947,7 +2947,7 @@
         "mana_cost": 2,
         "attack": 2,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-unland_eel-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-unland_eel-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Submerge\n\nWhenever Unland Eel submerges, it may drag another minion down with it."
     },
@@ -2959,7 +2959,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-yokai_kappas-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-yokai_kappas-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Discard a water site → Untap Yokai Kappas. Use only once per turn."
     },
@@ -3103,7 +3103,7 @@
         "mana_cost": 2,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-replication-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-replication-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Conjure a copy of an artifact carried by the caster."
     },
@@ -3163,7 +3163,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-twist_of_fate-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-twist_of_fate-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Exchange life totals with target opponent. (X) is the difference between your life totals."
     },
@@ -3175,7 +3175,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-upwelling-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-upwelling-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Target a nearby site. Return each artifact and minion there to its owner's hand."
     },
@@ -3259,7 +3259,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-silence-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-silence-b-f.png",
         "price_usd": 0.0,
         "rules_text": "UPDATED: Minions occupying affected sites are silenced."
     },
@@ -3739,7 +3739,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-rolling_boulder-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-rolling_boulder-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Units here have “Tap → Give Rolling Boulder a push. It rolls as far as possible and deals 4 damage to each other unit along its path.”"
     },
@@ -4099,7 +4099,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-rustic_village-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-rustic_village-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → You may pay ① to summon a Foot Soldier token here."
     },
@@ -4111,7 +4111,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-secret_tunnel-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-secret_tunnel-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Burrowed allies can move as if this were adjacent to your other sites."
     },
@@ -4243,7 +4243,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-vesuvius-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-vesuvius-b-f.png",
         "price_usd": 0.0,
         "rules_text": "(F)(F)(F) — Sacrifice Vesuvius → Each unit occupying nearby sites takes 3 damage."
     },
@@ -4327,7 +4327,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-summer_river-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-summer_river-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → Look at your next spell. You may put it on the bottom of your spellbook."
     },
@@ -4663,7 +4663,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sinkhole-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sinkhole-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Sacrifice Sinkhole → Destroy a nearby site."
     },
@@ -4687,7 +4687,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-the_geistwood-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-the_geistwood-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis abilities here are also Deathrite abilities."
     },
@@ -4723,7 +4723,7 @@
         "mana_cost": null,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-avatar_of_earth-pd-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-avatar_of_earth-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Tap → Play or draw a site.\n\nYou have +1 power for each nearby earth site."
     },
@@ -4735,7 +4735,7 @@
         "mana_cost": null,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-avatar_of_fire-pd-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-avatar_of_fire-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Tap → Play or draw a site.\n\nTap → This turn, fire sites in your hand are also Fireballs."
     },
@@ -4939,7 +4939,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/pro-stream-dk-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/pro-stream-d-f.png",
         "price_usd": 0.0,
         "rules_text": "Your atlas may include any number of Streams."
     },
@@ -4999,7 +4999,7 @@
         "mana_cost": 1,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-amulet_of_niniane-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-amulet_of_niniane-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Bearer can't be targeted or damaged by magic."
     },
@@ -5047,7 +5047,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-arc_lightning-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-arc_lightning-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Deal 4 damage to target nearby unit."
     },
@@ -5095,7 +5095,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-bailey-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-bailey-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Enemies can't move to here on the ground."
     },
@@ -5107,7 +5107,7 @@
         "mana_cost": 5,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-ball_lightning-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-ball_lightning-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Shoot a projectile. It deals 4 damage on impact, then changes direction. Its next impact deals 2, then it changes direction. Its final impact deals 1."
     },
@@ -5119,7 +5119,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-band_of_thieves-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-band_of_thieves-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Stealth"
     },
@@ -5179,7 +5179,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-blue_knight-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-blue_knight-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Lance"
     },
@@ -5191,7 +5191,7 @@
         "mana_cost": 5,
         "attack": 5,
         "defence": 5,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-blunderbore-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-blunderbore-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Allied Giants banish the minions they kill to permanently gain +1 power."
     },
@@ -5251,7 +5251,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-briar_patch-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-briar_patch-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Whenever an enemy unit enters or leaves this site, it takes 1 damage."
     },
@@ -5275,7 +5275,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-brother_knight-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-brother_knight-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → You may search your spellbook or hand for another Brother Knight and summon it here. Shuffle if needed."
     },
@@ -5287,7 +5287,7 @@
         "mana_cost": 4,
         "attack": 4,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-brown_bears-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-brown_bears-b-f.png",
         "price_usd": 0.0,
         "rules_text": ""
     },
@@ -5299,7 +5299,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-burning_hands-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-burning_hands-b-f.png",
         "price_usd": 0.0,
         "rules_text": "May be cast by an allied Mortal. Choose two different cardinal directions and deal damage to each unit at locations in the area of effect:"
     },
@@ -5371,7 +5371,7 @@
         "mana_cost": 2,
         "attack": 2,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-castle_servants-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-castle_servants-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Provides (A)"
     },
@@ -5407,7 +5407,7 @@
         "mana_cost": 2,
         "attack": 2,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-common_cottagers-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-common_cottagers-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Provides (E)"
     },
@@ -5419,7 +5419,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-common_village-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-common_village-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → You may pay (1) to summon a Foot Soldier token here."
     },
@@ -5443,7 +5443,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-cursed_land-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-cursed_land-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Whenever another site is played nearby, its controller loses 2 life."
     },
@@ -5467,7 +5467,7 @@
         "mana_cost": 2,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-degradation-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-degradation-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Transform a Mortal into a Foot Soldier token."
     },
@@ -5479,7 +5479,7 @@
         "mana_cost": 7,
         "attack": 6,
         "defence": 6,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-dirium_fomorians-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-dirium_fomorians-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Burrowing, Submerge"
     },
@@ -5503,7 +5503,7 @@
         "mana_cost": null,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-druid-bt-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-druid-bt-s-r.png",
         "price_usd": 0.0,
         "rules_text": "UPDATED: Tap → Play or draw a site. If this is your first turn, summon Tawny here.\n\nTap → Summon Bruin here. Flip this card."
     },
@@ -5515,7 +5515,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-duel-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-duel-b-f.png",
         "price_usd": 0.0,
         "rules_text": "An ally fights target enemy adjacent to it."
     },
@@ -5563,7 +5563,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-feast_for_crows-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-feast_for_crows-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Name a spell. Search an opponent's hand, spellbook and cemetery for cards with that name, and banish them. They shuffle."
     },
@@ -5575,7 +5575,7 @@
         "mana_cost": 3,
         "attack": 2,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-field_laborers-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-field_laborers-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Tap → Gain (2) this turn."
     },
@@ -5599,7 +5599,7 @@
         "mana_cost": 2,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-fine_courser-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-fine_courser-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Charge, Movement +1\n\nMay carry an ally."
     },
@@ -5635,7 +5635,7 @@
         "mana_cost": 2,
         "attack": 2,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-fishermans_family-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-fishermans_family-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Provides (W)"
     },
@@ -5647,7 +5647,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-forge-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-forge-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → You may pay (1) to conjure a Lance token here."
     },
@@ -5671,7 +5671,7 @@
         "mana_cost": 2,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-four_waters_of_paradise-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-four_waters_of_paradise-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Sacrifice Four Waters → This turn, bearer's next elemental spell requires no threshold and costs (4) less to cast."
     },
@@ -5731,7 +5731,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-golden_harp-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-golden_harp-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Strike damage and life loss caused by nearby units is reduced to 2."
     },
@@ -5743,7 +5743,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-goswhit_helmet-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-goswhit_helmet-b-f.png",
         "price_usd": 0.0,
         "rules_text": "If bearer would take strike damage, prevent it and return this helmet to hand."
     },
@@ -5767,7 +5767,7 @@
         "mana_cost": 5,
         "attack": 5,
         "defence": 5,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-grand_old_boar-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-grand_old_boar-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Has Charge if there are dead Squeakers."
     },
@@ -5779,7 +5779,7 @@
         "mana_cost": 2,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-grievous_insult-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-grievous_insult-b-f.png",
         "price_usd": 0.0,
         "rules_text": "May be cast by any ally. Silence target nearby minion this turn and tap it. Draw a spell."
     },
@@ -5791,7 +5791,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-grim_guisarme-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-grim_guisarme-b-f.png",
         "price_usd": 0.0,
         "rules_text": "UPDATED: Bearer takes and deals double strike damage against units."
     },
@@ -5815,7 +5815,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-hamlet-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-hamlet-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Ordinary minions cost (1) less to cast to this site."
     },
@@ -5863,7 +5863,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-horn_of_caerleon-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-horn_of_caerleon-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Nearby minions have Charge."
     },
@@ -5875,7 +5875,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-hunters_lodge-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-hunters_lodge-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → Enemies lose Stealth."
     },
@@ -5887,7 +5887,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-hunting_party-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-hunting_party-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Ranged\n\nNearby enemies lose Stealth."
     },
@@ -5911,7 +5911,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-impenetrable_copse-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-impenetrable_copse-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Projectiles can't enter this site from the outside."
     },
@@ -5959,7 +5959,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-joyous_garde-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-joyous_garde-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Only provides mana and threshold while in your back row."
     },
@@ -5971,7 +5971,7 @@
         "mana_cost": 1,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-just_a_rock-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-just_a_rock-b-f.png",
         "price_usd": 0.0,
         "rules_text": "May be cast into the hands of any unit already carrying an artifact to banish that artifact."
     },
@@ -5983,7 +5983,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-keening_banshee-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-keening_banshee-b-f.png",
         "price_usd": 0.0,
         "rules_text": "May be cast for (0) if an allied Mortal died this turn."
     },
@@ -5995,7 +5995,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-kelp_cavern-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-kelp_cavern-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → Look at your bottom three spells. Put one on top of your spellbook."
     },
@@ -6007,7 +6007,7 @@
         "mana_cost": 2,
         "attack": 2,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-kettletop_leprechaun-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-kettletop_leprechaun-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Deathrite → Draw a site."
     },
@@ -6019,7 +6019,7 @@
         "mana_cost": 4,
         "attack": 5,
         "defence": 5,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-king_arthur-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-king_arthur-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Players can't control cards owned by other players."
     },
@@ -6043,7 +6043,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-kingswood_poachers-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-kingswood_poachers-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Stealth\n\nGenesis → Search a spellbook for up to three Beasts, banish them, then shuffle."
     },
@@ -6055,7 +6055,7 @@
         "mana_cost": 1,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-knighthood-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-knighthood-b-f.png",
         "price_usd": 0.0,
         "rules_text": "If you control an Ordinary Mortal, you may summon a Knight, Sir, or Dame from your hand to their location."
     },
@@ -6079,7 +6079,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-lake_afanc-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-lake_afanc-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Lethal, Submerge"
     },
@@ -6127,7 +6127,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-lookout-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-lookout-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → Look at each opponent's hand."
     },
@@ -6151,7 +6151,7 @@
         "mana_cost": 3,
         "attack": 4,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-lugbog_cat-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-lugbog_cat-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Can and must be cast to any water site."
     },
@@ -6175,7 +6175,7 @@
         "mana_cost": 2,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-magic_missiles-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-magic_missiles-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Shoot three projectiles in the same direction, one at a time. Each deals 1 damage."
     },
@@ -6187,7 +6187,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-major_city-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-major_city-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Elite minions cost (1) less to cast to this site."
     },
@@ -6211,7 +6211,7 @@
         "mana_cost": 2,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-merlins_staff-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-merlins_staff-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Bearer has Spellcaster and +1 power for each magic spell they've cast this turn while holding Merlin's Staff."
     },
@@ -6223,7 +6223,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-merlins_tower-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-merlins_tower-b-f.png",
         "price_usd": 0.0,
         "rules_text": "(A)(A)(A) – Genesis → This turn, gains Spellcaster and its next magic costs (3) less."
     },
@@ -6235,7 +6235,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-mesmerism-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-mesmerism-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Gain control of target nearby minion."
     },
@@ -6247,7 +6247,7 @@
         "mana_cost": 6,
         "attack": 7,
         "defence": 7,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-mester_stoor_worm-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-mester_stoor_worm-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Submerge, Waterbound\n\nTap → Choose a direction from Mester Stoor Worm. Deal Lethal damage to each unit at a location in the area of effect:"
     },
@@ -6283,7 +6283,7 @@
         "mana_cost": 7,
         "attack": 6,
         "defence": 6,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-muirid_fomorians-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-muirid_fomorians-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Burrowing, Submerge"
     },
@@ -6295,7 +6295,7 @@
         "mana_cost": 3,
         "attack": 2,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-nelly_longarms-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-nelly_longarms-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Submerge\n\nTap → Shoot a projectile. If it hits a unit, drag it here. Nelly may submerge it."
     },
@@ -6355,7 +6355,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-pendragon_banner-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-pendragon_banner-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Nearby allies have +1 power while there are no enemies here."
     },
@@ -6391,7 +6391,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-pigs_of_the_sounder-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-pigs_of_the_sounder-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Deathrite → Reveal your next five spells, then summon all Grand Old Boars from among them to this site. Put the rest on the bottom in a random order."
     },
@@ -6403,7 +6403,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-poisoned_well-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-poisoned_well-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → Enemy Avatars lose 1 life for each nearby site they control."
     },
@@ -6415,7 +6415,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-pond-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-pond-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → This turn, the next Beast cast to this site costs (1) less, ignoring threshold."
     },
@@ -6427,7 +6427,7 @@
         "mana_cost": 3,
         "attack": 2,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-pookas-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-pookas-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Deathrite → Each opponent discards a random card."
     },
@@ -6487,7 +6487,7 @@
         "mana_cost": 5,
         "attack": 5,
         "defence": 5,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-questing_beast-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-questing_beast-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Lethal, Stealth\n\nAt the end of your turn, Questing Beast may take a step."
     },
@@ -6511,7 +6511,7 @@
         "mana_cost": 3,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-reckless_squire-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-reckless_squire-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Charge, Lance"
     },
@@ -6523,7 +6523,7 @@
         "mana_cost": 1,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-redbreast_robin-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-redbreast_robin-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Airborne\n\nAt the end of your turn, each other unit here takes 1 damage."
     },
@@ -6535,7 +6535,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-redcap_powries-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-redcap_powries-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Charge\n\nIf Redcap Powries haven't attacked by the end of your turn, they die."
     },
@@ -6571,7 +6571,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-rhongomyniad-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-rhongomyniad-b-f.png",
         "price_usd": 0.0,
         "rules_text": "UPDATED: Bearer strikes first and has \"Tap → Throw Rhongomyniad as a piercing projectile. Deal 3 damage to each hit unit.\""
     },
@@ -6583,7 +6583,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-ribble_boggart-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-ribble_boggart-b-f.png",
         "price_usd": 0.0,
         "rules_text": "At the start of your turn, Boggart gains a random mutation until the end of turn: Airborne, Ranged, Lethal, or +3 power."
     },
@@ -6595,7 +6595,7 @@
         "mana_cost": 1,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-ring_of_morrigan-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-ring_of_morrigan-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Bearer has \"Whenever this unit casts a spell, they may deal 1 damage to target nearby unit to have you gain 1 life.\""
     },
@@ -6607,7 +6607,7 @@
         "mana_cost": 3,
         "attack": 0,
         "defence": 0,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-salmon_of_knowledge-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-salmon_of_knowledge-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Submerge, Waterbound\n\nOther units at this site have \"Tap → Roll a d20. On a 14+, banish Salmon of Knowledge and draw three spells.\""
     },
@@ -6643,7 +6643,7 @@
         "mana_cost": 6,
         "attack": 5,
         "defence": 5,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-seelie_court-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-seelie_court-b-f.png",
         "price_usd": 0.0,
         "rules_text": "At the start of your turn, players draw a spell for each Faerie in the realm."
     },
@@ -6679,7 +6679,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-shatter_strike-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-shatter_strike-b-f.png",
         "price_usd": 0.0,
         "rules_text": "An ally targets an enemy adjacent to them, destroying an artifact they're carrying and then striking them."
     },
@@ -6715,7 +6715,7 @@
         "mana_cost": 4,
         "attack": 4,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-siege_giant-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-siege_giant-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Once on your turn, Siege Giant may throw a weaker ally here through the air to a nearby location."
     },
@@ -6727,7 +6727,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_agravaine-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_agravaine-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Stealth, Movement +1\nWhenever another ally attacks an enemy adjacent to Sir Agravaine, he strikes that enemy afterwards without losing Stealth."
     },
@@ -6739,7 +6739,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_balin-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_balin-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Lance\n\nWhenever Sir Balin strikes an Avatar, destroy that Avatar's site then burrow other minions and artifacts there."
     },
@@ -6751,7 +6751,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_bedivere-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_bedivere-b-f.png",
         "price_usd": 0.0,
         "rules_text": "If Sir Bedivere is carrying an artifact at the start of your turn, draw a card."
     },
@@ -6775,7 +6775,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 5,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_gaheris-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_gaheris-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Lance\n\nUntaps at the end of your turn."
     },
@@ -6787,7 +6787,7 @@
         "mana_cost": 5,
         "attack": 3,
         "defence": 6,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_galahad-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_galahad-b-f.png",
         "price_usd": 0.0,
         "rules_text": "UPDATED: Sir Galahad's strike damage against units heals you.\n\nNearby allies take no damage from Demons, Spirits, and Undead."
     },
@@ -6799,7 +6799,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_gareth-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_gareth-b-f.png",
         "price_usd": 0.0,
         "rules_text": "(A)(W) — Reveal from hand → Transform an allied Mortal into Sir Gareth."
     },
@@ -6835,7 +6835,7 @@
         "mana_cost": 4,
         "attack": 4,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_kay-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_kay-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Whenever Sir Kay targets a weaker minion, he untaps."
     },
@@ -6847,7 +6847,7 @@
         "mana_cost": 4,
         "attack": 4,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_lamorak-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_lamorak-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Deathrite → Strike each nearby enemy."
     },
@@ -6859,7 +6859,7 @@
         "mana_cost": 6,
         "attack": 4,
         "defence": 6,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_lancelot-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_lancelot-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Lance\n\nThe first time Sir Lancelot fights each turn, untap him."
     },
@@ -6883,7 +6883,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_morien-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_morien-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → Summon two Foot Soldier tokens here.\n\nEnemy projectiles can't enter here."
     },
@@ -6895,7 +6895,7 @@
         "mana_cost": 3,
         "attack": 4,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_pelleas-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_pelleas-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Submerge\n\nMoves freely between water locations."
     },
@@ -6955,7 +6955,7 @@
         "mana_cost": 5,
         "attack": 2,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_tristan-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_tristan-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Once on your turn, Sir Tristan may tap target nearby enemy minion. That enemy doesn't untap the next time it would."
     },
@@ -6979,7 +6979,7 @@
         "mana_cost": 2,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sisters_of_avalon-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sisters_of_avalon-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Spellcaster\n\nGenesis → Discard a spell. Draw a spell."
     },
@@ -7051,7 +7051,7 @@
         "mana_cost": 2,
         "attack": 2,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sugarplum_pixies-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sugarplum_pixies-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Airborne\n\nAt the end of your turn, untap another nearby ally."
     },
@@ -7075,7 +7075,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sword_and_shield-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sword_and_shield-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Bearer has +2 power."
     },
@@ -7147,7 +7147,7 @@
         "mana_cost": 4,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_black_plague-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_black_plague-b-f.png",
         "price_usd": 0.0,
         "rules_text": "At the end of your turn, the weakest minion occupying affected sites dies. If tied, choose one. Dispel if none die."
     },
@@ -7159,7 +7159,7 @@
         "mana_cost": 4,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_faerie_queene-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_faerie_queene-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Airborne, Spellcaster\n\nNearby allied Faeries take no damage from units with 4 or more power."
     },
@@ -7195,7 +7195,7 @@
         "mana_cost": 6,
         "attack": 3,
         "defence": 7,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_green_knight-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_green_knight-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Whenever an enemy minion can attack The Green Knight, it must.\n\nDeathrite → Strike target nearby enemy."
     },
@@ -7207,7 +7207,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_lady_of_the_lake-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_lady_of_the_lake-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Spellcaster, Submerge\n\nGenesis → You may summon a Mortal or artifact from your cemetery to Lady of the Lake's location. If you do, shuffle her into her owner's spellbook."
     },
@@ -7219,7 +7219,7 @@
         "mana_cost": 6,
         "attack": 6,
         "defence": 6,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_ninth_legion-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_ninth_legion-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Voidwalk. Must be cast to a corner.\n\nDeathrite → Return to hand."
     },
@@ -7231,7 +7231,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_round_table-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_round_table-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Must be cast to your back row.\n\nWhenever you summon King Arthur, or a Knight, Sir, or Dame to The Round Table, draw a card."
     },
@@ -7243,7 +7243,7 @@
         "mana_cost": 6,
         "attack": 5,
         "defence": 5,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_wild_hunt-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_wild_hunt-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Airborne\n\nOther nearby Spirits and Faeries have Charge."
     },
@@ -7255,7 +7255,7 @@
         "mana_cost": 1,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-thieving_magpie-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-thieving_magpie-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Airborne\n\nMay pick up carried artifacts with cost (1) or less."
     },
@@ -7267,7 +7267,7 @@
         "mana_cost": 6,
         "attack": 4,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-thundering_giant-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-thundering_giant-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Charge\n\nOnce on your turn, Thundering Giant may teleport to another nearby location. Tap all other units there on arrival."
     },
@@ -7279,7 +7279,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-tintagel-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-tintagel-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Only provides mana and threshold while in your back row."
     },
@@ -7327,7 +7327,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-town-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-town-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Exceptional minions cost (1) less to cast to this site."
     },
@@ -7339,7 +7339,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-treetop_hideout-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-treetop_hideout-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Genesis → You may give Stealth to a nearby allied minion."
     },
@@ -7351,7 +7351,7 @@
         "mana_cost": null,
         "attack": 3,
         "defence": 3,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-troll_bridge-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-troll_bridge-b-f.png",
         "price_usd": 0.0,
         "rules_text": "The first time a lone enemy enters here each turn, strike it unless they discard a card."
     },
@@ -7387,7 +7387,7 @@
         "mana_cost": 0,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-valor-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-valor-b-f.png",
         "price_usd": 0.0,
         "rules_text": "May be cast when an ally defends a site or another unit. The ally gains +4 power this turn."
     },
@@ -7435,7 +7435,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-verdant_knight-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-verdant_knight-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Lance"
     },
@@ -7447,7 +7447,7 @@
         "mana_cost": 5,
         "attack": 4,
         "defence": 4,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-vikings-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-vikings-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Tap → Deal 2 damage to each unit at target adjacent location."
     },
@@ -7459,7 +7459,7 @@
         "mana_cost": 5,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-vivien_the_enchantress-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-vivien_the_enchantress-b-f.png",
         "price_usd": 0.0,
         "rules_text": "UPDATED: Vivien has the other printed abilities of all Avatars and Spellcasters in the realm, wherever she is."
     },
@@ -7495,7 +7495,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-wedding_hall-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-wedding_hall-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Provides no mana, but if Arthur and Guinevere start your turn here, you win."
     },
@@ -7555,7 +7555,7 @@
         "mana_cost": null,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-witch-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-witch-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Tap → Play or draw a site.\n\nTap → Curse target Avatar, choose one: Their spells cost (1) more to cast on their next turn, they lose 2 life, or they have -3 power until your next turn."
     },
@@ -7579,7 +7579,7 @@
         "mana_cost": 4,
         "attack": 0,
         "defence": 0,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-wolpertinger-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-wolpertinger-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Has +1 power for each of your dead Beasts."
     },
@@ -7591,7 +7591,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-wormelow_tump-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-wormelow_tump-b-f.png",
         "price_usd": 0.0,
         "rules_text": "(E)(E)(E) – Opponents can't affect cards in your cemetery."
     },
@@ -7627,7 +7627,7 @@
         "mana_cost": 3,
         "attack": 3,
         "defence": 2,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-yellow_knight-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-yellow_knight-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Lance"
     },
@@ -7639,7 +7639,7 @@
         "mana_cost": null,
         "attack": 1,
         "defence": 1,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-dragonlord-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-dragonlord-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Tap → Play or draw a site.\n\nBefore setup, set aside a Unique Dragon. Once on your turn, if you meet its threshold, you may pay (3) to gain its abilities this turn."
     },
@@ -7783,7 +7783,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-dragonlords_lair-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-dragonlords_lair-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Dragons cast to this site require no threshold and cost (1) less."
     },
@@ -7927,7 +7927,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/pro-haystack-d-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/pro-haystack-d-f.png",
         "price_usd": 0.0,
         "rules_text": "If an opponent would search a deck, they search the top three cards instead."
     },
@@ -8011,7 +8011,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-lance-bt-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_lancelot-b-f.png",
         "price_usd": 0.0,
         "rules_text": "UPDATED: Bearer's next strike against units deals +1 damage and strikes first, then Lance breaks."
     },
@@ -8947,7 +8947,7 @@
         "mana_cost": null,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/pro-city_of_glass-scg-f.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-city_of_glass-b-s.png",
         "price_usd": 0.0,
         "rules_text": "(A) — Provides (2) instead but is destroyed when damaged."
     },
@@ -10795,7 +10795,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-kiss_of_judas-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-kiss_of_judas-b-f.png",
         "price_usd": 0.0,
         "rules_text": "This turn, attacks against target Avatar can't be defended and you draw a card whenever they are attacked."
     },
@@ -10903,7 +10903,7 @@
         "mana_cost": 6,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lifewish-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lifewish-b-f.png",
         "price_usd": 0.0,
         "rules_text": "Fully heal each Avatar."
     },
@@ -11491,7 +11491,7 @@
         "mana_cost": 3,
         "attack": null,
         "defence": null,
-        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-onslaught-b-s.png",
+        "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-onslaught-b-f.png",
         "price_usd": 0.0,
         "rules_text": "This turn, allies gain +1 power, Charge, and can't be immobilized, silenced, or disabled."
     },

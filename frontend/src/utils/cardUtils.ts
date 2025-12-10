@@ -10,13 +10,23 @@ export function createCardStacks(cards: Card[]): CardStack[] {
   for (const card of cards) {
     if (seen.has(card.name)) continue
 
-    const owned = card.status === 'Complete' ? card.required_quantity : 0
-    const unowned =
-      card.status === 'Complete'
-        ? 0
-        : card.status === 'Proxy_Needed'
-          ? card.net_needed_quantity
-          : card.required_quantity
+    // Calculate owned and unowned quantities based on status
+    let owned = 0
+    let unowned = 0
+
+    if (card.status === 'Complete') {
+      // User owns all required copies
+      owned = card.required_quantity
+      unowned = 0
+    } else if (card.status === 'Proxy_Needed') {
+      // User owns some but not all - split into separate stacks
+      owned = card.owned_quantity
+      unowned = card.net_needed_quantity
+    } else {
+      // Missing - user owns none
+      owned = 0
+      unowned = card.required_quantity
+    }
 
     // Add owned stack if exists
     if (owned > 0) {
