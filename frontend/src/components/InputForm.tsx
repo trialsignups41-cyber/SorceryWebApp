@@ -67,13 +67,13 @@ export function InputForm({ onSuccess, onError, onLoadingChange, isLoading, save
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-gray-100">Sorcery Playtest Card Tool</h1>
+      <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-gray-100">Sorcery Deck Assembler</h1>
       
       <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
         <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-          Enter a deck list to organize cards for printing. Optionally upload your collection to track owned vs. unowned cards. 
-          Select and drag cards between buckets to organize your proxy sheets. 
-          Generate PDFs with your custom organization, or export as text. Your progress is automatically saved in your browser.
+          Upload a Curiosa.io deck link. Optionally upload your collection to track owned vs. unowned cards. 
+          Select and drag cards between buckets to organize your deck. 
+          Based on your custom organization, generate PDFs of playtest cards, export as text, or buy on TCG Player. Your progress is automatically saved in your browser.
         </p>
       </div>
 
