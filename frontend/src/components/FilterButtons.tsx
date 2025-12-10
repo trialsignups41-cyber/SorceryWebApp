@@ -19,9 +19,9 @@ export function FilterButtons({
   const hasActiveFilters = Object.values(filters).some((v) => v)
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 mb-4">
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-4 mb-4">
       <div className="flex flex-wrap gap-2 mb-4 items-center">
-        <span className="text-sm font-semibold text-gray-600">Rarity:</span>
+        <span className="text-sm font-semibold text-gray-600 dark:text-gray-400">Rarity:</span>
         {RARITY_FILTERS.map((filter) => (
           <button
             key={filter}
@@ -32,7 +32,7 @@ export function FilterButtons({
           </button>
         ))}
         
-        <span className="text-sm font-semibold text-gray-600 ml-4">Ownership:</span>
+        <span className="text-sm font-semibold text-gray-600 dark:text-gray-400 ml-4">Ownership:</span>
         {OWNERSHIP_FILTERS.map((filter) => (
           <button
             key={filter}
@@ -47,7 +47,7 @@ export function FilterButtons({
       {hasActiveFilters && (
         <button
           onClick={onBulkSelect}
-          className="text-sm bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 transition-colors"
+          className="text-sm bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-600 transition-colors"
         >
           Select All Matching
         </button>
@@ -55,7 +55,7 @@ export function FilterButtons({
 
       <button
         onClick={onDeselectAll}
-        className="text-sm bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors"
+        className="text-sm bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600 transition-colors ml-2"
       >
         Deselect All
       </button>

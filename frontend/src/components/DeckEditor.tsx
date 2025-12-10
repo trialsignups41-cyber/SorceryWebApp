@@ -456,9 +456,9 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
   }
 
   return (
-    <div className="h-screen w-full flex flex-col bg-gray-100">
+    <div className="h-screen w-full flex flex-col bg-gray-100 dark:bg-gray-800">
       {/* Filters - fixed header */}
-      <div className="flex-shrink-0 border-b bg-white p-4">
+      <div className="flex-shrink-0 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-4">
         <FilterButtons
           filters={filters}
           onFilterChange={handleFilterChange}
@@ -470,10 +470,10 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
       {/* Main content area - flex-1 with min-h-0 for proper scrolling */}
       <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden p-4">
         {/* Instructions Section */}
-        <div className="flex-shrink-0 bg-blue-50 border-2 border-blue-200 rounded-lg p-4 mb-4">
+        <div className="flex-shrink-0 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-lg font-bold text-blue-900 mb-2">How to Use This Organizer</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-800">
+            <h2 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-2">How to Use This Organizer</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-800 dark:text-blue-200">
               <div>
                 <p className="font-semibold mb-1">Card Management:</p>
                 <ul className="list-disc list-inside space-y-1 text-xs">
@@ -522,7 +522,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
               return (
                 <div
                   key={bucket.id}
-                  className="bg-white rounded-lg shadow-md flex flex-col overflow-hidden border-2 border-gray-200 min-h-[600px]"
+                  className="bg-white dark:bg-gray-900 rounded-lg shadow-md flex flex-col overflow-hidden border-2 border-gray-200 dark:border-gray-700 min-h-[600px]"
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDropToBucket(e, bucket.id)}
                 >
@@ -535,7 +535,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                           value={renameValue}
                           onChange={(e) => setRenameValue(e.target.value)}
                           autoFocus
-                          className="flex-1 px-2 py-1 border rounded text-gray-800"
+                          className="flex-1 px-2 py-1 border rounded text-gray-800 dark:text-gray-200 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <button
                           onClick={() => {
@@ -604,9 +604,9 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                   </div>
 
                   {/* Cards Grid */}
-                  <div className="flex-1 p-4 bg-gray-50">
+                  <div className="flex-1 p-4 bg-gray-50 dark:bg-gray-800">
                     {visibleCards.length === 0 ? (
-                      <div className="flex items-center justify-center h-full text-gray-400 text-sm">
+                      <div className="flex items-center justify-center h-full text-gray-400 dark:text-gray-500 text-sm">
                         {filteredCardIds.size > 0 ? 'No matching cards' : 'Drop cards here'}
                       </div>
                     ) : (
@@ -624,7 +624,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                             }`}
                           >
                             {/* Card Image */}
-                            <div className="relative w-full aspect-[63/88] bg-gray-300">
+                            <div className="relative w-full aspect-[63/88] bg-gray-300 dark:bg-gray-600">
                               {card.image_url ? (
                                 <img
                                   src={card.image_url}
@@ -634,7 +634,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
                                   }`}
                                 />
                               ) : (
-                                <div className="w-full h-full flex items-center justify-center text-xs text-gray-600 font-semibold bg-gray-400">
+                                <div className="w-full h-full flex items-center justify-center text-xs text-gray-600 dark:text-gray-300 font-semibold bg-gray-400 dark:bg-gray-600">
                                   No Image
                                 </div>
                                 )}
@@ -683,7 +683,7 @@ export function DeckEditor({ cards, deckName }: DeckEditorProps) {
       {/* Add Bucket Button - fixed overlay in bottom right */}
       <button
         onClick={handleAddBucket}
-        className="fixed bottom-6 right-6 w-16 h-16 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white font-bold text-3xl transition-all z-50"
+        className="fixed bottom-6 right-6 w-16 h-16 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white font-bold text-3xl transition-all z-50"
         title="Add New Bucket"
       >
         +

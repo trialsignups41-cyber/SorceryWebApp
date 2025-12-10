@@ -21,6 +21,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+
+.dark body {
+  background-color: #111827;
+}
+
+/* Custom scrollbar styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.dark * {
+  scrollbar-color: #4b5563 #1f2937;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.dark *::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 6px;
+  border: 3px solid #f1f5f9;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border: 3px solid #1f2937;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+.dark *::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
 }
 
 code {
@@ -58,7 +105,17 @@ code {
   color: #6b7280;
 }
 
+.dark .filter-button {
+  border-color: #4b5563;
+  color: #9ca3af;
+}
+
 .filter-button.active {
   @apply bg-blue-500 text-white;
   border-color: #3b82f6;
+}
+
+.dark .filter-button.active {
+  @apply bg-blue-600 text-white;
+  border-color: #2563eb;
 }
