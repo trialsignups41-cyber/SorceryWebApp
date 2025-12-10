@@ -4,12 +4,12 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
+.venv/
 venv/
 env/
 
 # Node
-node_modules/
-.npm
+frontend/node_modules/
 
 # Development
 .vscode/
@@ -20,9 +20,19 @@ node_modules/
 test_*.py
 check_*.py
 update_*.py
+fix_*.py
+corrupted_images.json
 
 # Local scripts
 start.sh
 
 # Backup files
 *.backup
+
+# Old folders
+FrontendScaffolding/
+
+# Docs
+QUICKSTART.md
+SETUP.md
+Roadmap.md
