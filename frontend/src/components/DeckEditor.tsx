@@ -52,7 +52,15 @@ export function DeckEditor({ cards, deckName, onTotalValueChange }: DeckEditorPr
     const savedBuckets = localStorage.getItem(`buckets_${deckName}`)
     if (savedBuckets) {
       try {
-        return JSON.parse(savedBuckets)
+        const parsed = JSON.parse(savedBuckets)
+        // Refresh prices with latest data from priceMap
+        return parsed.map((bucket: Bucket) => ({
+          ...bucket,
+          cards: bucket.cards.map((card: CardStack) => ({
+            ...card,
+            price: priceMap.get(card.name) ?? card.price
+          }))
+        }))
       } catch (e) {
         console.error('Failed to load saved buckets:', e)
       }
@@ -76,7 +84,7 @@ export function DeckEditor({ cards, deckName, onTotalValueChange }: DeckEditorPr
     ]
   })
 
-  // Update prices in buckets whenever cards change
+  // Update prices in buckets whenever cards change (for live updates)
   useEffect(() => {
     setBuckets(prevBuckets => 
       prevBuckets.map(bucket => ({
