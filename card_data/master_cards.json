@@ -8,7 +8,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-apprentice_wizard-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.03,
     "rules_text": "Spellcaster\n\nGenesis \u2192 Draw a spell.",
     "price": 0.04
   },
@@ -99,7 +99,7 @@
     "attack": 0,
     "defence": 0,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-grandmaster_wizard-b-s.png",
-    "price_usd": 3.71,
+    "price_usd": 3.84,
     "rules_text": "Spellcaster\n\nGenesis \u2192 Draw three spells.",
     "price": 3.0
   },
@@ -112,7 +112,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-grim_reaper-b-s.png",
-    "price_usd": 5.04,
+    "price_usd": 5.54,
     "rules_text": "Lethal\n\nWhenever Grim Reaper kills a minion, banish that minion and all copies. Search its owner's cemetery, hand, and spellbook and banish any copies. They shuffle.",
     "price": 6.99
   },
@@ -268,7 +268,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-moon_clan_werewolf-b-s.png",
-    "price_usd": 0.08,
+    "price_usd": 0.06,
     "rules_text": "Sacrifice an allied Mortal \u2192 Summon Moon Clan Werewolf from your hand to the Mortal's location.",
     "price": 0.1
   },
@@ -320,7 +320,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-peregrine_apparition-b-s.png",
-    "price_usd": 0.14,
+    "price_usd": 0.12,
     "rules_text": "Airborne, Movement +3, Voidwalk",
     "price": 0.1
   },
@@ -333,7 +333,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-phantasmal_shade-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "When Phantasmal Shade is struck, destroy it.",
     "price": 0.14
   },
@@ -346,7 +346,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-phantom_steed-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Movement +2, Voidwalk\n\nMay carry an allied minion.",
     "price": 0.1
   },
@@ -359,7 +359,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-phase_assassin-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "Voidwalk\n\nWhenever Phase Assassin enters the void, he gains Stealth.",
     "price": 0.17
   },
@@ -411,7 +411,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-riddle_sphinx-b-s.png",
-    "price_usd": 0.45,
+    "price_usd": 0.5,
     "rules_text": "Airborne\n\nGenesis \u2192 Look at your topmost spell. You may put it on the bottom of your spellbook, then an opponent may exchange your top and bottommost spells. Draw a card.",
     "price": 0.51
   },
@@ -437,7 +437,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-skirmishers_of_mu-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Ranged\n\nDuring basic movement, Skirmishers of Mu may perform a ranged strike from any location along their path.",
     "price": 0.1
   },
@@ -450,7 +450,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sky_baron-b-s.png",
-    "price_usd": 0.35,
+    "price_usd": 0.22,
     "rules_text": "Airborne\n\nAll other minions lose Airborne.",
     "price": 0.33
   },
@@ -463,7 +463,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sling_pixies-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Airborne, Ranged\n\nTakes no damage from units with 4 or more power.",
     "price": 0.11
   },
@@ -502,7 +502,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-spire_lich-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "If Spire Lich is atop a Tower, it has +2 power, Ranged, and Spellcaster.",
     "price": 0.1
   },
@@ -528,7 +528,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-vril_revenant-b-s.png",
-    "price_usd": 0.5,
+    "price_usd": 0.48,
     "rules_text": "Voidwalk\n\n\u2460 \u2192 Gain +1 power this turn.",
     "price": 0.5
   },
@@ -541,7 +541,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-wind_sylph-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Airborne, Air Spellcaster\n\nAfter Wind Sylph casts a Magic spell, she may push a unit here one step.",
     "price": 0.11
   },
@@ -554,7 +554,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-witherwing_hero-b-s.png",
-    "price_usd": 1.5,
+    "price_usd": 1.45,
     "rules_text": "Airborne\n\nWhenever a weaker allied minion here is attacked, you may return it to its owner's hand.",
     "price": 1.5
   },
@@ -580,7 +580,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-blink-b-s.png",
-    "price_usd": 0.06,
+    "price_usd": 0.04,
     "rules_text": "An ally teleports to a location it\u2019s nearby. Draw a card.",
     "price": 0.08
   },
@@ -593,7 +593,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-browse-b-s.png",
-    "price_usd": 21.4,
+    "price_usd": 25.54,
     "rules_text": "Look at your next seven spells. Put one in your hand and the rest on the bottom of your spellbook in any order.",
     "price": 17.12
   },
@@ -606,7 +606,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-chain_lightning-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Deal 2 damage to target unit nearby. Any number of times, you may spend \u2461 to additionally target a new unit nearby the previous one.",
     "price": 0.1
   },
@@ -645,7 +645,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-dream_quest-b-s.png",
-    "price_usd": 5.53,
+    "price_usd": 5.75,
     "rules_text": "An allied Spellcaster falls asleep and is disabled until hurt. At the start of your next turn, if it's still asleep, you may wake it up to search your spellbook for a card and put it into your hand. Shuffle if needed.",
     "price": 6.47
   },
@@ -671,7 +671,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-flanking_maneuver-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "Teleport any number of allies at one location to another location a chess knight's move away. Draw a card.",
     "price": 0.14
   },
@@ -723,7 +723,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-occult_ritual-b-s.png",
-    "price_usd": 2.59,
+    "price_usd": 2.58,
     "rules_text": "Gain \u2461 this turn for each allied Spellcaster here.",
     "price": 2.96
   },
@@ -736,7 +736,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-psionic_blast-b-s.png",
-    "price_usd": 0.07,
+    "price_usd": 0.06,
     "rules_text": "Deal 1 damage to each minion here. They're disabled until your next turn.",
     "price": 0.08
   },
@@ -814,7 +814,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-unlikely_alliance-b-s.png",
-    "price_usd": 0.26,
+    "price_usd": 0.37,
     "rules_text": "Draw a card for each rarity among allied minions.",
     "price": 0.37
   },
@@ -827,7 +827,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-waypoint_portal-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "Choose two different sites. This turn, units can move between them as if they were adjacent.",
     "price": 0.03
   },
@@ -840,7 +840,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-whirling_blades-b-f.png",
-    "price_usd": 0.18,
+    "price_usd": 0.16,
     "rules_text": "An ally may take up to two steps, and then strikes each enemy along their entire path.",
     "price": 0.23
   },
@@ -853,7 +853,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-windblast-b-s.png",
-    "price_usd": 0.08,
+    "price_usd": 0.06,
     "rules_text": "Push everything atop sites one step in a cardinal direction.",
     "price": 0.09
   },
@@ -879,7 +879,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-summoning_sphere-b-s.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "You may summon minions to affected sites.",
     "price": 0.11
   },
@@ -918,7 +918,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-albespine_pikemen-b-s.png",
-    "price_usd": 0.08,
+    "price_usd": 0.06,
     "rules_text": "Strikes first while attacking.",
     "price": 0.09
   },
@@ -931,7 +931,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-alvalinne_dryads-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "\u00c4lvalinne Dryads provide \u2460.",
     "price": null
   },
@@ -944,7 +944,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-amazon_warriors-b-s.png",
-    "price_usd": 0.02,
+    "price_usd": 0.01,
     "rules_text": "",
     "price": 0.02
   },
@@ -970,7 +970,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-autumn_unicorn-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "",
     "price": 0.1
   },
@@ -1048,7 +1048,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-crown_prince-b-s.png",
-    "price_usd": 1.75,
+    "price_usd": 3.0,
     "rules_text": "Deathrite \u2192 If you control another Mortal, return Crown Prince to its owner's hand.",
     "price": 2.43
   },
@@ -1087,7 +1087,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-frontier_settlers-b-s.png",
-    "price_usd": 0.15,
+    "price_usd": 0.14,
     "rules_text": "Tap \u2192 Reveal the topmost site of your atlas. Play it adjacent to Frontier Settlers, if able, and they move there. They lose this ability.",
     "price": 0.17
   },
@@ -1165,7 +1165,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-mage_slayer-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "Genesis \u2192 Kill target Spellcaster minion nearby.",
     "price": 0.03
   },
@@ -1230,7 +1230,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-monster_hunter-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Genesis \u2192 Kill a nearby Monster.",
     "price": 0.1
   },
@@ -1243,7 +1243,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-mordric_druids-b-s.png",
-    "price_usd": 0.5,
+    "price_usd": 0.48,
     "rules_text": "Spellcaster\n\nWhenever you lose life due to an undefended attack nearby, the attacker's controller also loses that much life.",
     "price": 0.59
   },
@@ -1308,7 +1308,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-royal_bodyguard-b-s.png",
-    "price_usd": 1.0,
+    "price_usd": 1.06,
     "rules_text": "If a nearby Avatar or royalty (King, Queen, Prince, or Princess) would take damage, Royal Bodyguard may take that damage instead.",
     "price": 1.08
   },
@@ -1347,7 +1347,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-shield_maidens-b-s.png",
-    "price_usd": 0.17,
+    "price_usd": 0.16,
     "rules_text": "Nearby allies take 1 less damage.",
     "price": 0.17
   },
@@ -1360,7 +1360,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-silver_valkyries-b-s.png",
-    "price_usd": 0.3,
+    "price_usd": 0.28,
     "rules_text": "Airborne\n\nAt the end of your turn, untap all allies here.",
     "price": 0.33
   },
@@ -1373,7 +1373,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sirian_templar-b-f.png",
-    "price_usd": 0.08,
+    "price_usd": 0.06,
     "rules_text": "Takes no damage from Demon, Spirit, or Undead minions.",
     "price": 0.1
   },
@@ -1386,7 +1386,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sisters_of_silence-b-s.png",
-    "price_usd": 0.2,
+    "price_usd": 0.18,
     "rules_text": "UPDATED: Other nearby minions are silenced.",
     "price": 0.34
   },
@@ -1399,7 +1399,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-slumbering_giantess-b-f.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Genesis \u2192 Fall asleep. Slumbering Giantess is disabled until hurt.",
     "price": 0.11
   },
@@ -1451,7 +1451,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-vanguard_knights-b-s.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "Vanguard Knights have +2 power if they alone are the furthest forward of your units.",
     "price": 0.07
   },
@@ -1542,7 +1542,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-bury-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.03,
     "rules_text": "Burrow target minion or artifact, if able.",
     "price": 0.05
   },
@@ -1555,7 +1555,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-call_to_war-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Search your spellbook for an Exceptional Mortal, reveal it, and put it into your hand. Shuffle your spellbook.",
     "price": 0.09
   },
@@ -1568,7 +1568,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-cave_in-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Burrow all minions and artifacts occupying target land site.",
     "price": 0.14
   },
@@ -1659,7 +1659,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-gigantism-b-s.png",
-    "price_usd": 7.29,
+    "price_usd": 7.49,
     "rules_text": "Give an allied unit +6 power this turn.",
     "price": 6.6
   },
@@ -1672,7 +1672,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-minecart_madness-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "This turn, your units can move between any sites in a chosen span of land as if they were adjacent.",
     "price": 0.09
   },
@@ -1698,7 +1698,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-shield_wall-b-s.png",
-    "price_usd": 0.08,
+    "price_usd": 0.06,
     "rules_text": "Until your next turn, each ally takes 1 less damage for each other ally it's nearby.",
     "price": 0.1
   },
@@ -1711,7 +1711,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-star_seeds_of_uhr-b-f.png",
-    "price_usd": 7.6,
+    "price_usd": 6.59,
     "rules_text": "Fill up to thirteen voids with Rubble.",
     "price": 14.95
   },
@@ -1789,7 +1789,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-aramos_mercenaries-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "You may discard a random card rather than pay this spell's mana cost.",
     "price": 0.03
   },
@@ -1828,7 +1828,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-azuridge_caravan-b-s.png",
-    "price_usd": 0.02,
+    "price_usd": 0.01,
     "rules_text": "Has all elements and minion types.",
     "price": 0.02
   },
@@ -1841,7 +1841,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-bane_widow-b-s.png",
-    "price_usd": 0.07,
+    "price_usd": 0.08,
     "rules_text": "Genesis \u2192 May kill target minion here.",
     "price": 0.1
   },
@@ -1880,7 +1880,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-cauldron_crones-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "Spellcaster\n\nGenesis \u2192 You may sacrifice another minion here to draw a spell.",
     "price": 0.03
   },
@@ -1932,7 +1932,7 @@
     "attack": 0,
     "defence": 0,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-courtesan_thais-b-s.png",
-    "price_usd": 5.25,
+    "price_usd": 5.0,
     "rules_text": "Genesis \u2192 During their next turn, each player is controlled by the previous one.",
     "price": 6.0
   },
@@ -2101,7 +2101,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-panorama_manticore-b-s.png",
-    "price_usd": 0.5,
+    "price_usd": 0.48,
     "rules_text": "Airborne, Lethal\n\nAt the end of your turn, if you cast a non-fire spell this turn, untap Panorama Manticore.",
     "price": 0.73
   },
@@ -2192,7 +2192,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sand_worm-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "Burrowing, Landbound",
     "price": 0.03
   },
@@ -2205,7 +2205,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-scavenging_fiend-b-s.png",
-    "price_usd": 0.07,
+    "price_usd": 0.06,
     "rules_text": "Genesis \u2192 Conjure a broken artifact to this location.",
     "price": 0.1
   },
@@ -2283,7 +2283,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-wayfaring_pilgrim-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Whenever Wayfaring Pilgrim enters each corner of the realm for the first time, you may draw a card.",
     "price": 0.08
   },
@@ -2322,7 +2322,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-blaze-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "This turn, give an ally Movement +2, it can't be intercepted, and it leaves a trail of fire at departed locations. When it stops, each unit along the trail takes 2 damage.",
     "price": 0.1
   },
@@ -2387,7 +2387,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-fireball-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Shoot a projectile. It deals 4 damage on impact, and 2 damage to each other unit at that location.",
     "price": 0.1
   },
@@ -2400,7 +2400,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-firebolts-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.03,
     "rules_text": "Shoot three projectiles in the same direction, one at a time. Each deals 1 damage.",
     "price": 0.04
   },
@@ -2413,7 +2413,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-flame_wave-b-s.png",
-    "price_usd": 0.45,
+    "price_usd": 0.42,
     "rules_text": "Flame Wave flows horizontally, from one edge of the realm to the other. Deal damage to each unit atop sites in the area of effect:",
     "price": 0.46
   },
@@ -2439,7 +2439,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-immolation-b-s.png",
-    "price_usd": 7.5,
+    "price_usd": 6.95,
     "rules_text": "Deal 7 damage to target minion nearby.",
     "price": 5.0
   },
@@ -2491,7 +2491,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-mad_dash-b-s.png",
-    "price_usd": 0.02,
+    "price_usd": 0.01,
     "rules_text": "Draw a card, then give an ally Movement +1 this turn.",
     "price": 0.03
   },
@@ -2543,7 +2543,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-pact_with_the_devil-b-s.png",
-    "price_usd": 10.29,
+    "price_usd": 10.99,
     "rules_text": "Sacrifice the caster or lose half your life, rounding up. If you do, draw three cards.",
     "price": 10.0
   },
@@ -2556,7 +2556,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-poison_nova-b-s.png",
-    "price_usd": 0.14,
+    "price_usd": 0.12,
     "rules_text": "Lethal\n\nDeal 1 damage to each other nearby minion.",
     "price": 0.2
   },
@@ -2634,7 +2634,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sandstorm-b-f.png",
-    "price_usd": 0.04,
+    "price_usd": 0.03,
     "rules_text": "Affected sites and units atop them can't be attacked or intercepted.\n\nAt the start of your turn, dispel Sandstorm.",
     "price": 0.04
   },
@@ -2660,7 +2660,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-wildfire-b-f.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "Conjure Wildfire atop a single site nearby.\n\nAt the end of each turn, each unit here takes 3 damage, then move Wildfire to an adjacent location it hasn't visited before. If none remain, dispel Wildfire.",
     "price": 0.11
   },
@@ -2673,7 +2673,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-accursed_albatross-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Airborne\n\nWhen a unit kills Accursed Albatross, kill that unit's other allied minions it's nearby.",
     "price": 0.08
   },
@@ -2712,7 +2712,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-bridge_troll-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Whenever an enemy attacks Bridge Troll, they must spend all of their remaining mana to give to you on your next turn.",
     "price": 0.08
   },
@@ -2738,7 +2738,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-captain_baldassare-b-s.png",
-    "price_usd": 5.7,
+    "price_usd": 4.55,
     "rules_text": "Whenever Captain Baldassare attacks a unit or site, the defending player discards their topmost three spells. You may cast each of those spells once this turn, ignoring threshold requirements.",
     "price": 5.95
   },
@@ -2803,7 +2803,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-felbog_frog_men-b-s.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "Can leap entirely over adjacent sites in one step.",
     "price": 0.1
   },
@@ -2829,7 +2829,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-fey_changeling-b-s.png",
-    "price_usd": 0.16,
+    "price_usd": 0.14,
     "rules_text": "May be summoned to any site.\n\nGenesis \u2192 You may return a minion here to its owner\u2019s hand.",
     "price": 0.16
   },
@@ -2868,7 +2868,7 @@
     "attack": 16,
     "defence": 16,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-great_old_one-b-s.png",
-    "price_usd": 13.25,
+    "price_usd": 11.85,
     "rules_text": "Submerge\n\nGenesis \u2192 Permanently flood the entire realm, including voids.",
     "price": 5.0
   },
@@ -2894,7 +2894,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-lord_of_unland-b-s.png",
-    "price_usd": 5.0,
+    "price_usd": 5.08,
     "rules_text": "Submerge \n\nOther allies occupying Lord of Unland's body of water have +1 power.",
     "price": 5.16
   },
@@ -3024,7 +3024,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-ruler_of_thul-b-s.png",
-    "price_usd": 15.56,
+    "price_usd": 16.69,
     "rules_text": "Charge \n\nAllies can move as if the top and bottom edges of the realm were connected. Other allies occupying sites there have +1 power.",
     "price": 10.0
   },
@@ -3037,7 +3037,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-sea_raider-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Whenever Sea Raider attacks and kills an enemy, its controller discards their topmost spell. You may cast that spell once this turn, ignoring threshold.",
     "price": 0.09
   },
@@ -3076,7 +3076,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-seirawan_hydra-b-s.png",
-    "price_usd": 0.19,
+    "price_usd": 0.18,
     "rules_text": "UPDATED: Immediately heals from damage that doesn't kill it.",
     "price": 0.45
   },
@@ -3089,7 +3089,7 @@
     "attack": 0,
     "defence": 0,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-selfsame_simulacrum-b-s.png",
-    "price_usd": 1.88,
+    "price_usd": 1.89,
     "rules_text": "May be summoned as a basic copy of a nearby minion.",
     "price": 1.86
   },
@@ -3193,7 +3193,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-unland_eel-b-f.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Submerge\n\nWhenever Unland Eel submerges, it may drag another minion down with it.",
     "price": 0.15
   },
@@ -3271,7 +3271,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-font_of_life-b-s.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "Each ally heals an amount equal to the number of sites in its body of water.",
     "price": 0.1
   },
@@ -3284,7 +3284,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-frost_nova-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Freeze nearby enemy minions. They're disabled until your next turn.",
     "price": 0.1
   },
@@ -3323,7 +3323,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-marine_voyage-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "This turn, your units can move between any sites in a chosen body of water as if they were adjacent.",
     "price": 0.09
   },
@@ -3336,7 +3336,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-plague_of_frogs-b-s.png",
-    "price_usd": 13.96,
+    "price_usd": 16.01,
     "rules_text": "Summon seven Frog tokens.",
     "price": 16.19
   },
@@ -3388,7 +3388,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-shrink-b-s.png",
-    "price_usd": 0.14,
+    "price_usd": 0.12,
     "rules_text": "Set the base power of target nearby unit to 0 until your next turn.",
     "price": 0.13
   },
@@ -3440,7 +3440,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-upwelling-b-f.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Target a nearby site. Return each artifact and minion there to its owner's hand.",
     "price": 0.11
   },
@@ -3479,7 +3479,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-atlantean_fate-b-s.png",
-    "price_usd": 25.29,
+    "price_usd": 27.49,
     "rules_text": "Affected non-Ordinary sites are flooded. They are water sites, only provide Water threshold, and lose all other abilities.\nGenesis \u2192 Submerge all minions and artifacts atop affected sites.",
     "price": 16.01
   },
@@ -3492,7 +3492,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-blizzard-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "Affected sites and units atop them can't be attacked or intercepted. \n\nAt the start of your turn, dispel Blizzard.",
     "price": 0.03
   },
@@ -3505,7 +3505,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-flood-b-s.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "Affected sites are flooded. They're water sites.",
     "price": 0.12
   },
@@ -3518,7 +3518,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-mariners_curse-b-s.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "Whenever a minion enters an affected water site, submerge it and return Mariner's Curse to its owner's hand.",
     "price": 0.12
   },
@@ -3570,7 +3570,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-amethyst_core-b-s.png",
-    "price_usd": 53.99,
+    "price_usd": 54.56,
     "rules_text": "Provides (A) and \u2460 to its controller.",
     "price": 45.3
   },
@@ -3596,7 +3596,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-aquamarine_core-b-s.png",
-    "price_usd": 65.0,
+    "price_usd": 65.31,
     "rules_text": "Provides (W) and \u2460 to its controller.",
     "price": 67.5
   },
@@ -3661,7 +3661,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-buried_treasure-b-s.png",
-    "price_usd": 0.08,
+    "price_usd": 0.06,
     "rules_text": "If cast, conjure this under an allied land site of an opponent's choice.\n\nWhen Buried Treasure is carried to the surface, its controller sacrifices it and draws two cards.",
     "price": 0.08
   },
@@ -3700,7 +3700,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-crown_of_the_victor-b-s.png",
-    "price_usd": 4.75,
+    "price_usd": 4.5,
     "rules_text": "Bearer has +3 power if they've ever killed a minion.",
     "price": 5.06
   },
@@ -3726,7 +3726,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-doomsday_device-b-s.png",
-    "price_usd": 1.0,
+    "price_usd": 0.85,
     "rules_text": "Doomsday Device enters the realm with 6 counters. At the end of each player\u2019s turn, remove a counter. When the last is removed, it detonates!\n\nDeals damage to each unit at affected locations:",
     "price": 0.69
   },
@@ -3752,7 +3752,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-eriks_curiosa-b-s.png",
-    "price_usd": 297.99,
+    "price_usd": 289.99,
     "rules_text": "Rip Erik's Curiosa to pieces \u2192 Draw a card from your collection.",
     "price": 232.45
   },
@@ -3765,7 +3765,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-flaming_sword-b-s.png",
-    "price_usd": 0.11,
+    "price_usd": 0.1,
     "rules_text": "Bearer has +1 power, and its strikes splash full damage to each other enemy at a struck unit's location.",
     "price": 0.15
   },
@@ -3791,7 +3791,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-iron_shackles-b-s.png",
-    "price_usd": 0.07,
+    "price_usd": 0.08,
     "rules_text": "May be conjured to target enemy minion.\n\nBearer is disabled.",
     "price": 0.1
   },
@@ -3921,7 +3921,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-mix_ignis-b-s.png",
-    "price_usd": 3.2,
+    "price_usd": 3.44,
     "rules_text": "Sacrifice Mix Ignis \u2192 This turn, bearer's next Fire spell requires no threshold and costs \u2462 less to cast.",
     "price": 3.28
   },
@@ -3934,7 +3934,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-mix_terra-b-s.png",
-    "price_usd": 2.39,
+    "price_usd": 2.49,
     "rules_text": "Sacrifice Mix Terra \u2192 This turn, bearer's next Earth spell requires no threshold and costs \u2462 less to cast.",
     "price": 2.39
   },
@@ -3947,7 +3947,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-onyx_core-b-s.png",
-    "price_usd": 71.48,
+    "price_usd": 70.17,
     "rules_text": "Provides (E) and \u2460 to its controller.",
     "price": 50.0
   },
@@ -3986,7 +3986,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-pendulum_of_peril-b-s.png",
-    "price_usd": 1.6,
+    "price_usd": 1.85,
     "rules_text": "At the end of each player's turn, Pendulum of Peril kills all minions at its current location and another adjacent location of that player's choice.",
     "price": 1.47
   },
@@ -3999,7 +3999,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-philosophers_stone-b-s.png",
-    "price_usd": 119.99,
+    "price_usd": 119.49,
     "rules_text": "The first spell of each element cast by the bearer each turn costs \u2460 less.",
     "price": 86.56
   },
@@ -4025,7 +4025,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-poisonous_dagger-b-s.png",
-    "price_usd": 0.07,
+    "price_usd": 0.06,
     "rules_text": "Bearer has Lethal.",
     "price": 0.1
   },
@@ -4064,7 +4064,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-ruby_core-b-s.png",
-    "price_usd": 61.74,
+    "price_usd": 63.27,
     "rules_text": "Provides (F) and \u2460 to its controller.",
     "price": 50.63
   },
@@ -4103,7 +4103,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-seven_league_boots-b-s.png",
-    "price_usd": 4.3,
+    "price_usd": 4.01,
     "rules_text": "Bearer has Movement +7.",
     "price": 5.0
   },
@@ -4116,7 +4116,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-siege_ballista-b-s.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "Tap bearer and another ally here \u2192 Deal 3 damage to target unit up to two steps away.",
     "price": 0.08
   },
@@ -4129,7 +4129,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-spear_of_destiny-b-s.png",
-    "price_usd": 1.95,
+    "price_usd": 1.99,
     "rules_text": "Bearer has \u201cTap \u2192 Throw Spear of Destiny at any minion anywhere. It teleports to that minion\u2019s location and kills it.\u201d",
     "price": 1.5
   },
@@ -4207,7 +4207,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-wicker_manikin-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "Non-fire Spellcaster",
     "price": 0.04
   },
@@ -4220,7 +4220,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-wings_of_invention-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Bearer has Airborne and Movement +1, if it's a minion.",
     "price": 0.06
   },
@@ -4285,7 +4285,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-mountain_pass-b-s.png",
-    "price_usd": 0.11,
+    "price_usd": 0.1,
     "rules_text": "Minions can't enter this site on the ground if there's already a minion atop.",
     "price": 0.11
   },
@@ -4298,7 +4298,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-observatory-b-s.png",
-    "price_usd": 2.24,
+    "price_usd": 2.25,
     "rules_text": "Genesis \u2192 Look at your next three spells. Put them back in any order.",
     "price": 1.92
   },
@@ -4311,7 +4311,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-updraft_ridge-b-s.png",
-    "price_usd": 0.06,
+    "price_usd": 0.04,
     "rules_text": "UPDATED: Airborne minions atop Updraft Ridge move freely away.",
     "price": 0.1
   },
@@ -4324,7 +4324,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-watchtower-b-s.png",
-    "price_usd": 0.16,
+    "price_usd": 0.14,
     "rules_text": "Enemy units atop nearby sites permanently lose Stealth.",
     "price": 0.22
   },
@@ -4337,7 +4337,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-bedrock-b-s.png",
-    "price_usd": 0.15,
+    "price_usd": 0.14,
     "rules_text": "Can't be moved, destroyed, or modified.",
     "price": 0.17
   },
@@ -4402,7 +4402,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-pillar_of_zeiros-b-s.png",
-    "price_usd": 13.95,
+    "price_usd": 14.05,
     "rules_text": "Genesis \u2192 Banish all dead minions, and you heal 1 life for each.",
     "price": 12.0
   },
@@ -4454,7 +4454,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-secret_tunnel-b-f.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Burrowed allies can move as if this were adjacent to your other sites.",
     "price": 0.12
   },
@@ -4467,7 +4467,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-simple_village-b-s.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "Genesis \u2192 You may pay \u2460 to summon a Foot Soldier token here.",
     "price": 0.05
   },
@@ -4480,7 +4480,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-vantage_hills-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Ranged units atop this site have +1 range.",
     "price": 0.1
   },
@@ -4493,7 +4493,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-arid_desert-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.03,
     "rules_text": "Genesis \u2192 Deal 1 damage to each minion atop target nearby site.",
     "price": 0.07
   },
@@ -4558,7 +4558,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-river_of_flame-b-s.png",
-    "price_usd": 7.0,
+    "price_usd": 4.87,
     "rules_text": "Fire Spellcaster",
     "price": 7.0
   },
@@ -4571,7 +4571,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-shifting_sands-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "Genesis \u2192 Reactivate the Genesis abilities of your nearby Deserts.",
     "price": 0.1
   },
@@ -4584,7 +4584,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-smokestacks_of_gnaak-b-s.png",
-    "price_usd": 6.65,
+    "price_usd": 6.98,
     "rules_text": "Other nearby sites lose their abilities.",
     "price": 6.29
   },
@@ -4610,7 +4610,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-autumn_river-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "Genesis \u2192 Look at your next spell. You may put it on the bottom of your spellbook.",
     "price": 0.1
   },
@@ -4623,7 +4623,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-floodplain-b-s.png",
-    "price_usd": 0.15,
+    "price_usd": 0.14,
     "rules_text": "Once on your turn, you may flood an adjacent site this turn.",
     "price": 0.16
   },
@@ -4662,7 +4662,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-maelstrom-b-s.png",
-    "price_usd": 0.5,
+    "price_usd": 0.59,
     "rules_text": "At the start of your turn, you may pull in each minion in this body of water one step.",
     "price": null
   },
@@ -4675,7 +4675,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-spring_river-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "Genesis \u2192 Look at your next spell. You may put it on the bottom of your spellbook.",
     "price": 0.07
   },
@@ -4688,7 +4688,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-summer_river-b-f.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "Genesis \u2192 Look at your next spell. You may put it on the bottom of your spellbook.",
     "price": 0.07
   },
@@ -4714,7 +4714,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-undertow-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Genesis \u2192 Staying within this body of water, move target unit one step.",
     "price": 0.15
   },
@@ -4727,7 +4727,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-aqueduct-b-s.png",
-    "price_usd": 0.96,
+    "price_usd": 0.94,
     "rules_text": "",
     "price": 0.99
   },
@@ -4766,7 +4766,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-pristine_paradise-b-s.png",
-    "price_usd": 4.22,
+    "price_usd": 4.01,
     "rules_text": "Provides no mana or threshold unless completely empty.",
     "price": 5.0
   },
@@ -4792,7 +4792,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-steppe-b-s.png",
-    "price_usd": 1.39,
+    "price_usd": 1.36,
     "rules_text": "",
     "price": 1.39
   },
@@ -4805,7 +4805,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-the_colour_out_of_space-b-s.png",
-    "price_usd": 18.75,
+    "price_usd": 18.51,
     "rules_text": "Provides no mana or threshold if not adjacent to the void.",
     "price": 13.02
   },
@@ -4818,7 +4818,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-windmill-b-s.png",
-    "price_usd": 1.99,
+    "price_usd": 1.96,
     "rules_text": "",
     "price": 1.7
   },
@@ -4909,7 +4909,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-dome_of_osiros-b-s.png",
-    "price_usd": 1.64,
+    "price_usd": 2.6,
     "rules_text": "This site and minions here can't be attacked.",
     "price": 2.6
   },
@@ -4948,7 +4948,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-free_city-b-s.png",
-    "price_usd": 0.15,
+    "price_usd": 0.14,
     "rules_text": "Once per turn, may attack or defend against enemy units here.",
     "price": 0.24
   },
@@ -4961,7 +4961,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-great_wall-b-s.png",
-    "price_usd": 4.0,
+    "price_usd": 3.95,
     "rules_text": "Enemy ground minions can\u2019t move through this site\u2019s top border.",
     "price": 4.95
   },
@@ -4987,7 +4987,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-mirror_realm-b-s.png",
-    "price_usd": 26.49,
+    "price_usd": 26.5,
     "rules_text": "This site enters the realm as a copy of another nearby site.",
     "price": 23.72
   },
@@ -5000,7 +5000,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-mudflow-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.08,
     "rules_text": "At the start of your turn, surface or unburrow each minion occupying target site nearby.",
     "price": 0.12
   },
@@ -5026,7 +5026,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-primordial_spring-b-s.png",
-    "price_usd": 0.53,
+    "price_usd": 0.5,
     "rules_text": "Genesis \u2192 If you control fewer sites than any opponent, draw three sites.",
     "price": 0.74
   },
@@ -5065,7 +5065,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-standing_stones-b-s.png",
-    "price_usd": 0.5,
+    "price_usd": 0.48,
     "rules_text": "Minions here are Spellcasters.",
     "price": 0.55
   },
@@ -5078,7 +5078,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-the_geistwood-b-f.png",
-    "price_usd": 4.26,
+    "price_usd": 4.25,
     "rules_text": "Genesis abilities here are also Deathrite abilities.",
     "price": 5.25
   },
@@ -5091,7 +5091,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-vaults_of_zul-b-s.png",
-    "price_usd": 2.0,
+    "price_usd": 2.05,
     "rules_text": "The first time an Avatar stops here, they draw three cards and skip their next turn.",
     "price": 1.59
   },
@@ -5156,7 +5156,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-battlemage-b-s.png",
-    "price_usd": 0.78,
+    "price_usd": 0.68,
     "rules_text": "Tap \u2192 Play or draw a site.\n\nWhenever Battlemage attacks and kills an enemy, you may draw a spell.",
     "price": 0.71
   },
@@ -5169,7 +5169,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-deathspeaker-b-s.png",
-    "price_usd": 0.75,
+    "price_usd": 0.53,
     "rules_text": "UPDATED: Tap \u2192 Play or draw a site.\n\nYou may banish a dead minion each turn to cast a copy of it, and for (0) if you\u2019re on Death\u2019s Door. The copy enters the realm, uses its Genesis, then is banished.",
     "price": 0.77
   },
@@ -5260,7 +5260,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/alp-winter_river-bt-f.png",
-    "price_usd": 30.0,
+    "price_usd": 28.67,
     "rules_text": "Genesis \u2192 Look at your next spell. You may put it on the bottom of your spellbook.",
     "price": null
   },
@@ -5299,7 +5299,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/bet-flamecaller-b-s.png",
-    "price_usd": 0.05,
+    "price_usd": 0.04,
     "rules_text": "Tap \u2192 Play or draw a site.\n\nTap, Banish all your dead fire minions \u2192 Shoot a projectile. It deals damage equal to to the sum of their (F).",
     "price": 0.1
   },
@@ -5390,7 +5390,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-13_treasures_of_britain-b-s.png",
-    "price_usd": 5.0,
+    "price_usd": 4.68,
     "rules_text": "When picked up, bearer's controller draws a card. Teleport the Treasures to the top of a random site or void.",
     "price": 5.9
   },
@@ -5403,7 +5403,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-a_midsummer_nights_dream-b-s.png",
-    "price_usd": 5.74,
+    "price_usd": 4.74,
     "rules_text": "Mortals here are disabled and each give +1 power to all Faeries here. Dispel if there are no Faeries here.",
     "price": 9.1
   },
@@ -5416,7 +5416,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-amulet_of_niniane-b-f.png",
-    "price_usd": 17.95,
+    "price_usd": 17.67,
     "rules_text": "Bearer can't be targeted or damaged by magic.",
     "price": 19.5
   },
@@ -5442,7 +5442,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-arcane_barrage-b-s.png",
-    "price_usd": 0.77,
+    "price_usd": 0.88,
     "rules_text": "Shoot X projectiles in the same direction, one at a time. Each deals 1 damage.",
     "price": 0.77
   },
@@ -5494,7 +5494,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-avalon-b-s.png",
-    "price_usd": 5.0,
+    "price_usd": 4.79,
     "rules_text": "Provides mana and threshold for everyone.",
     "price": 5.2
   },
@@ -5624,7 +5624,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-blunderbore-b-f.png",
-    "price_usd": 5.0,
+    "price_usd": 3.85,
     "rules_text": "Allied Giants banish the minions they kill to permanently gain +1 power.",
     "price": 9.9
   },
@@ -5663,7 +5663,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-boudicca-b-s.png",
-    "price_usd": 23.99,
+    "price_usd": 22.85,
     "rules_text": "Other allies have +3 power while successfully attacking sites.",
     "price": 19.9
   },
@@ -5702,7 +5702,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-broceliande-b-s.png",
-    "price_usd": 4.5,
+    "price_usd": 4.1,
     "rules_text": "Genesis \u2192 Untap nearby Faeries. Tap nearby Mortals. Give nearby Beasts Stealth.",
     "price": null
   },
@@ -5754,7 +5754,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-caerleon_upon_usk-b-s.png",
-    "price_usd": 27.74,
+    "price_usd": 28.67,
     "rules_text": "Only provides mana and threshold while in your back row.",
     "price": 31.5
   },
@@ -5767,7 +5767,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-camelot-b-s.png",
-    "price_usd": 4.65,
+    "price_usd": 4.64,
     "rules_text": "Unique minions cost (1) less to cast to nearby sites.",
     "price": 5.39
   },
@@ -5949,7 +5949,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-dozmary_pool-b-s.png",
-    "price_usd": 5.51,
+    "price_usd": 5.47,
     "rules_text": "(W)(W)(W) \u2013 Genesis \u2192 You may submerge an artifact from your hand here.",
     "price": 9.84
   },
@@ -5988,7 +5988,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-excalibur-b-s.png",
-    "price_usd": 6.26,
+    "price_usd": 5.93,
     "rules_text": "Bearer has +1 power for each of their elements. If they have all four, they are also immune to damage.",
     "price": 6.41
   },
@@ -6014,7 +6014,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-fail_not_bow-b-s.png",
-    "price_usd": 5.95,
+    "price_usd": 5.3,
     "rules_text": "Bearer has Ranged 3.",
     "price": 6.0
   },
@@ -6027,7 +6027,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-feast_for_crows-b-f.png",
-    "price_usd": 11.2,
+    "price_usd": 10.18,
     "rules_text": "Name a spell. Search an opponent's hand, spellbook and cemetery for cards with that name, and banish them. They shuffle.",
     "price": 11.39
   },
@@ -6144,7 +6144,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-four_waters_of_paradise-b-f.png",
-    "price_usd": 27.42,
+    "price_usd": 26.48,
     "rules_text": "Sacrifice Four Waters \u2192 This turn, bearer's next elemental spell requires no threshold and costs (4) less to cast.",
     "price": 29.18
   },
@@ -6196,7 +6196,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-glastonbury_tor-b-s.png",
-    "price_usd": 50.0,
+    "price_usd": 49.15,
     "rules_text": "Only provides mana and threshold while in your back row.",
     "price": 30.01
   },
@@ -6209,7 +6209,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-golden_harp-b-f.png",
-    "price_usd": 0.21,
+    "price_usd": 0.14,
     "rules_text": "Strike damage and life loss caused by nearby units is reduced to 2.",
     "price": 0.14
   },
@@ -6456,7 +6456,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-joyous_garde-b-f.png",
-    "price_usd": 75.0,
+    "price_usd": 74.0,
     "rules_text": "Only provides mana and threshold while in your back row.",
     "price": 43.99
   },
@@ -6495,7 +6495,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-kelp_cavern-b-f.png",
-    "price_usd": 0.95,
+    "price_usd": 0.99,
     "rules_text": "Genesis \u2192 Look at your bottom three spells. Put one on top of your spellbook.",
     "price": 0.91
   },
@@ -6573,7 +6573,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-lady_iseult-b-s.png",
-    "price_usd": 15.0,
+    "price_usd": 15.74,
     "rules_text": "If another nearby allied minion would die, return it to hand.",
     "price": 7.0
   },
@@ -6729,7 +6729,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-merlins_staff-b-f.png",
-    "price_usd": 4.87,
+    "price_usd": 4.69,
     "rules_text": "Bearer has Spellcaster and +1 power for each magic spell they've cast this turn while holding Merlin's Staff.",
     "price": 6.99
   },
@@ -6742,7 +6742,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-merlins_tower-b-f.png",
-    "price_usd": 9.75,
+    "price_usd": 9.15,
     "rules_text": "(A)(A)(A) \u2013 Genesis \u2192 This turn, gains Spellcaster and its next magic costs (3) less.",
     "price": 9.0
   },
@@ -6755,7 +6755,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-mesmerism-b-f.png",
-    "price_usd": 20.99,
+    "price_usd": 20.23,
     "rules_text": "Gain control of target nearby minion.",
     "price": 9.0
   },
@@ -6768,7 +6768,7 @@
     "attack": 7,
     "defence": 7,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-mester_stoor_worm-b-f.png",
-    "price_usd": 0.38,
+    "price_usd": 0.37,
     "rules_text": "Submerge, Waterbound\n\nTap \u2192 Choose a direction from Mester Stoor Worm. Deal Lethal damage to each unit at a location in the area of effect:",
     "price": 0.33
   },
@@ -6794,7 +6794,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-morgana_le_fay-b-s.png",
-    "price_usd": 96.35,
+    "price_usd": 94.73,
     "rules_text": "Spellcaster, Stealth\n\nGenesis \u2192 Morgana draws her own hand of three spells, which only she can cast.",
     "price": 44.85
   },
@@ -6820,7 +6820,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-nelly_longarms-b-f.png",
-    "price_usd": 13.29,
+    "price_usd": 13.53,
     "rules_text": "Submerge\n\nTap \u2192 Shoot a projectile. If it hits a unit, drag it here. Nelly may submerge it.",
     "price": 15.99
   },
@@ -6859,7 +6859,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-peasant_revolt-b-s.png",
-    "price_usd": 5.43,
+    "price_usd": 4.93,
     "rules_text": "Destroy everything Unique or Elite in the realm.",
     "price": 7.95
   },
@@ -7028,7 +7028,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-questing_beast-b-f.png",
-    "price_usd": 13.96,
+    "price_usd": 14.81,
     "rules_text": "Lethal, Stealth\n\nAt the end of your turn, Questing Beast may take a step.",
     "price": 26.55
   },
@@ -7041,7 +7041,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-rebecks-b-s.png",
-    "price_usd": 4.9,
+    "price_usd": 3.95,
     "rules_text": "Nearby allied Giants have Charge.",
     "price": 5.9
   },
@@ -7106,7 +7106,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-rhitta_gawr_of_snowdonia-b-s.png",
-    "price_usd": 5.05,
+    "price_usd": 4.69,
     "rules_text": "Other minions can't untap.",
     "price": 5.18
   },
@@ -7431,7 +7431,7 @@
     "attack": 4,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_lancelot-b-f.png",
-    "price_usd": 5.25,
+    "price_usd": 4.25,
     "rules_text": "Lance\n\nThe first time Sir Lancelot fights each turn, untap him.",
     "price": 4.93
   },
@@ -7483,7 +7483,7 @@
     "attack": 5,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_pellinore-b-s.png",
-    "price_usd": 6.39,
+    "price_usd": 5.88,
     "rules_text": "Charge, Lance\n\nWhenever Sir Pellinore kills the strongest enemy minion, draw a card.",
     "price": 6.83
   },
@@ -7535,7 +7535,7 @@
     "attack": 2,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-sir_tristan-b-f.png",
-    "price_usd": 0.15,
+    "price_usd": 0.17,
     "rules_text": "Once on your turn, Sir Tristan may tap target nearby enemy minion. That enemy doesn't untap the next time it would.",
     "price": 0.17
   },
@@ -7743,7 +7743,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_black_plague-b-f.png",
-    "price_usd": 27.49,
+    "price_usd": 27.13,
     "rules_text": "At the end of your turn, the weakest minion occupying affected sites dies. If tied, choose one. Dispel if none die.",
     "price": 29.0
   },
@@ -7756,7 +7756,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_faerie_queene-b-f.png",
-    "price_usd": 6.01,
+    "price_usd": 5.81,
     "rules_text": "Airborne, Spellcaster\n\nNearby allied Faeries take no damage from units with 4 or more power.",
     "price": 8.0
   },
@@ -7782,7 +7782,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_great_famine-b-s.png",
-    "price_usd": 18.49,
+    "price_usd": 18.23,
     "rules_text": "At the end of your turn, the strongest minion occupying affected sites dies. If tied, choose one. Dispel if none die.",
     "price": 23.29
   },
@@ -7795,7 +7795,7 @@
     "attack": 3,
     "defence": 7,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_green_knight-b-f.png",
-    "price_usd": 14.95,
+    "price_usd": 17.29,
     "rules_text": "Whenever an enemy minion can attack The Green Knight, it must.\n\nDeathrite \u2192 Strike target nearby enemy.",
     "price": 8.0
   },
@@ -7847,7 +7847,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-the_wild_hunt-b-f.png",
-    "price_usd": 0.37,
+    "price_usd": 0.35,
     "rules_text": "Airborne\n\nOther nearby Spirits and Faeries have Charge.",
     "price": 0.37
   },
@@ -7886,7 +7886,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-tintagel-b-f.png",
-    "price_usd": 39.64,
+    "price_usd": 38.5,
     "rules_text": "Only provides mana and threshold while in your back row.",
     "price": 34.55
   },
@@ -7899,7 +7899,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-tithe-b-s.png",
-    "price_usd": 20.0,
+    "price_usd": 19.99,
     "rules_text": "Draw three sites.",
     "price": 7.0
   },
@@ -7990,7 +7990,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-valley_of_delight-b-s.png",
-    "price_usd": 4.01,
+    "price_usd": 3.99,
     "rules_text": "Genesis \u2192 Choose one: (A), (E), (F), (W). This site provides that permanently.",
     "price": 3.4
   },
@@ -8003,7 +8003,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-valor-b-f.png",
-    "price_usd": 0.25,
+    "price_usd": 0.39,
     "rules_text": "May be cast when an ally defends a site or another unit. The ally gains +4 power this turn.",
     "price": 0.31
   },
@@ -8159,7 +8159,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-white_hart-b-s.png",
-    "price_usd": 9.99,
+    "price_usd": 8.68,
     "rules_text": "Other minions and locations nearby can't be attacked.",
     "price": 9.56
   },
@@ -8185,7 +8185,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-witch-b-f.png",
-    "price_usd": 18.74,
+    "price_usd": 18.49,
     "rules_text": "Tap \u2192 Play or draw a site.\n\nTap \u2192 Curse target Avatar, choose one: Their spells cost (1) more to cast on their next turn, they lose 2 life, or they have -3 power until your next turn.",
     "price": 13.0
   },
@@ -8211,7 +8211,7 @@
     "attack": 0,
     "defence": 0,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-wolpertinger-b-f.png",
-    "price_usd": 0.25,
+    "price_usd": 0.24,
     "rules_text": "Has +1 power for each of your dead Beasts.",
     "price": 0.25
   },
@@ -8224,7 +8224,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-wormelow_tump-b-f.png",
-    "price_usd": 10.8,
+    "price_usd": 10.85,
     "rules_text": "(E)(E)(E) \u2013 Opponents can't affect cards in your cemetery.",
     "price": 11.84
   },
@@ -8250,7 +8250,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/art-year_of_the_blaze-b-s.png",
-    "price_usd": 5.0,
+    "price_usd": 4.6,
     "rules_text": "At the start of your turn, destroy affected sites and everything here, including Year of the Blaze.",
     "price": 5.58
   },
@@ -8276,7 +8276,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-dragonlord-b-f.png",
-    "price_usd": 12.5,
+    "price_usd": 12.0,
     "rules_text": "Tap \u2192 Play or draw a site.\n\nBefore setup, set aside a Unique Dragon. Once on your turn, if you meet its threshold, you may pay (3) to gain its abilities this turn.",
     "price": 13.64
   },
@@ -8302,7 +8302,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-caelestis-b-s.png",
-    "price_usd": 6.01,
+    "price_usd": 5.75,
     "rules_text": "Airborne, Voidwalk\n\nTap \u2192 The next Dragon you cast to this location costs (0) this turn.",
     "price": 5.0
   },
@@ -8315,7 +8315,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-xeraphine_konrul-b-s.png",
-    "price_usd": 17.0,
+    "price_usd": 12.0,
     "rules_text": "Airborne\n\nAt the end of your turn, you may choose three of your dead minions. Banish two to return the remaining one to hand.",
     "price": 3.71
   },
@@ -8328,7 +8328,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-draco_corvus-b-s.png",
-    "price_usd": 22.0,
+    "price_usd": 17.0,
     "rules_text": "Airborne, Stealth\n\nTap \u2192 Teleport to target tapped minion to burrow it.",
     "price": 4.88
   },
@@ -8341,7 +8341,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-moonsong_talagelum-b-s.png",
-    "price_usd": 14.5,
+    "price_usd": 9.0,
     "rules_text": "Airborne\n\nCounts as a Grey Wolves and has +1 power for each other Grey Wolves nearby.",
     "price": 6.89
   },
@@ -8354,7 +8354,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-adtonitum-b-s.png",
-    "price_usd": 12.0,
+    "price_usd": 8.0,
     "rules_text": "Airborne, Movement +1\n\nWhenever Adtonitum stops, she may deal 3 damage to another random unit there.",
     "price": 7.24
   },
@@ -8367,7 +8367,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-talamh_dreig-b-s.png",
-    "price_usd": 8.5,
+    "price_usd": 7.0,
     "rules_text": "Can't be moved by force.\n\nHas +1 power for each adjacent site.",
     "price": 5.9
   },
@@ -8380,7 +8380,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-ignis_rex-b-s.png",
-    "price_usd": 14.0,
+    "price_usd": 10.0,
     "rules_text": "Airborne, Immune to fire damage\n\nOnce on your turn, discard a fire card \u2192 Deal 3 damage to units at target adjacent location.",
     "price": 8.57
   },
@@ -8393,7 +8393,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-vatn_draconis-b-s.png",
-    "price_usd": 21.0,
+    "price_usd": 16.0,
     "rules_text": "Submerge\n\nAt the end of your turn, you may submerge all minions and artifacts here.",
     "price": 9.54
   },
@@ -8406,7 +8406,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-cradle_of_etherrum-b-s.png",
-    "price_usd": 7.5,
+    "price_usd": 6.0,
     "rules_text": "Any time during your turn, you may look at your next spell.\n\nYou may cast Dragons from the top of your spellbook here for (1) less.",
     "price": 6.06
   },
@@ -8419,7 +8419,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-shrine_of_the_dragonlord-b-s.png",
-    "price_usd": 25.6,
+    "price_usd": 28.0,
     "rules_text": "Genesis \u2192 Teleport all Dragons here.\n\nThis site provides an additional (1) and (E)(F)(W)(A).",
     "price": 25.22
   },
@@ -8432,7 +8432,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/dra-dragonlords_lair-b-f.png",
-    "price_usd": 10.0,
+    "price_usd": 9.5,
     "rules_text": "Dragons cast to this site require no threshold and cost (1) less.",
     "price": 7.48
   },
@@ -8549,7 +8549,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/pro-day_of_judgment-op-f.png",
-    "price_usd": 4.05,
+    "price_usd": 5.0,
     "rules_text": "Place the cross anywhere in the realm. Banish Evil and damage units occupying affected squares.",
     "price": 15.45
   },
@@ -8692,7 +8692,7 @@
     "attack": 0,
     "defence": 0,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-aaj_kegon_ghost_crabs-b-s.png",
-    "price_usd": 0.32,
+    "price_usd": 0.33,
     "rules_text": "Submerge, Voidwalk\n\nHas +1 power for each void in their row.",
     "price": 0.45
   },
@@ -8783,7 +8783,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-active_volcano-b-s.png",
-    "price_usd": 0.31,
+    "price_usd": 0.3,
     "rules_text": "",
     "price": 0.45
   },
@@ -8822,7 +8822,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-alabaster_box-b-s.png",
-    "price_usd": 0.46,
+    "price_usd": 0.45,
     "rules_text": "Whenever a minion dies nearby, you heal 1.",
     "price": 0.75
   },
@@ -8835,7 +8835,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-algae_bloom-b-s.png",
-    "price_usd": 0.07,
+    "price_usd": 0.06,
     "rules_text": "Genesis \u2192 Provides (A)(E)(F) this turn.",
     "price": 0.15
   },
@@ -8848,7 +8848,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-algor_omphalos-b-s.png",
-    "price_usd": 25.39,
+    "price_usd": 24.99,
     "rules_text": "Earth and Water Spellcaster\n\nAt the end of your turn, this Omphalos draws a spell, which only it can cast. Minions it casts must be summoned here.",
     "price": 23.39
   },
@@ -8861,7 +8861,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-all_mortals_gone-b-s.png",
-    "price_usd": 6.42,
+    "price_usd": 5.5,
     "rules_text": "Kill all Mortals.",
     "price": 14.94
   },
@@ -8874,7 +8874,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-altar_of_malachai-b-s.png",
-    "price_usd": 7.0,
+    "price_usd": 4.84,
     "rules_text": "Once per game, if you would die, you may sacrifice a minion atop this Altar instead.",
     "price": 9.68
   },
@@ -8887,7 +8887,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-angel_ascendant-b-s.png",
-    "price_usd": 0.41,
+    "price_usd": 0.4,
     "rules_text": "Has Airborne and +1 power while Warded.",
     "price": 0.9
   },
@@ -8913,7 +8913,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-animist-b-s.png",
-    "price_usd": 0.55,
+    "price_usd": 0.5,
     "rules_text": "Tap \u2192 Play or draw a site.\n\nYou may cast magics in your hand as Spirits with power equal to their cost.",
     "price": 1.25
   },
@@ -8965,7 +8965,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-archangel_gabriel-b-s.png",
-    "price_usd": 8.13,
+    "price_usd": 7.85,
     "rules_text": "Airborne, Ward\n\nGenesis -> Choose another allied minion. They draw a spell, which only they can cast.",
     "price": 6.79
   },
@@ -8991,7 +8991,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-archangel_raphael-b-s.png",
-    "price_usd": 13.0,
+    "price_usd": 12.94,
     "rules_text": "Airborne, Ward\n\nGenesis \u2192 Strike or Ward a nearby Avatar.",
     "price": 5.76
   },
@@ -9017,7 +9017,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-arjaro_exorcist-b-s.png",
-    "price_usd": 0.29,
+    "price_usd": 0.31,
     "rules_text": "Spellcaster\n\nGenesis \u2192 Banish target adjacent Demon, Spirit, or aura.",
     "price": 0.9
   },
@@ -9043,7 +9043,7 @@
     "attack": 8,
     "defence": 8,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-army_of_the_dead-b-s.png",
-    "price_usd": 7.5,
+    "price_usd": 6.5,
     "rules_text": "Whenever this Army moves or takes damage, it leaves a Skeleton token behind.",
     "price": 27.82
   },
@@ -9095,7 +9095,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-avenging_angel-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "Airborne\n\nHas Charge and Lethal if an ally died on your opponent's last turn.",
     "price": 0.21
   },
@@ -9108,7 +9108,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-baba_yagas_hut-b-s.png",
-    "price_usd": 3.25,
+    "price_usd": 3.4,
     "rules_text": "Once on your turn, this may swap positions with an empty site in your back row.",
     "price": 15.74
   },
@@ -9121,7 +9121,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-balor_of_the_evil_eye-b-s.png",
-    "price_usd": 7.77,
+    "price_usd": 6.46,
     "rules_text": "Once on your turn, Balor may deal 2 damage to one unit at each other location in a cardinal direction.",
     "price": 12.95
   },
@@ -9134,7 +9134,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-bane_of_aventis-b-s.png",
-    "price_usd": 13.74,
+    "price_usd": 12.44,
     "rules_text": "Genesis \u2192 Gain control of nearby Warded minions.",
     "price": 5.89
   },
@@ -9199,7 +9199,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-betrayal-b-s.png",
-    "price_usd": 0.78,
+    "price_usd": 0.25,
     "rules_text": "Gain control of target enemy minion this turn and untap it.",
     "price": 1.24
   },
@@ -9251,7 +9251,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-black_cat-b-s.png",
-    "price_usd": 0.82,
+    "price_usd": 0.78,
     "rules_text": "Has nine lives.\n\nDetermine opponent's random outcomes.",
     "price": 1.25
   },
@@ -9264,7 +9264,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-black_mass-b-s.png",
-    "price_usd": 16.2,
+    "price_usd": 15.69,
     "rules_text": "Search your top seven spells. You may reveal and draw three different Evil minions from among them. Put the rest at the bottom of your spellbook.",
     "price": 8.75
   },
@@ -9290,7 +9290,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-bladedancer-b-s.png",
-    "price_usd": 0.39,
+    "price_usd": 0.38,
     "rules_text": "Tap \u2192 Play or draw a site.\n\nAfter her first attack each turn, Bladedancer may take a step. When she does, she may attack a unit there.",
     "price": 1.59
   },
@@ -9329,7 +9329,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-blaze_of_glory-b-s.png",
-    "price_usd": 4.18,
+    "price_usd": 4.01,
     "rules_text": "An ally fights each enemy near it, one at a time. It doesn't die until it's done.",
     "price": 21.33
   },
@@ -9342,7 +9342,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-bleeding_skull-b-s.png",
-    "price_usd": 0.68,
+    "price_usd": 0.64,
     "rules_text": "Whenever a minion dies nearby, your opponent loses 1 life.",
     "price": 0.99
   },
@@ -9394,7 +9394,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-blightstone-b-s.png",
-    "price_usd": 0.49,
+    "price_usd": 0.45,
     "rules_text": "This site is disabled.",
     "price": 1.5
   },
@@ -9407,7 +9407,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-blood_mana-b-s.png",
-    "price_usd": 13.73,
+    "price_usd": 12.95,
     "rules_text": "The next spell you cast this turn costs life instead of mana.",
     "price": 14.99
   },
@@ -9420,7 +9420,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-bodach_bogeyman-b-s.png",
-    "price_usd": 3.64,
+    "price_usd": 3.49,
     "rules_text": "Can pick up and drop weaker enemy minions at adjacent locations. They're disabled while carried.",
     "price": 6.84
   },
@@ -9459,7 +9459,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-book_burners-b-s.png",
-    "price_usd": 0.56,
+    "price_usd": 0.55,
     "rules_text": "Once on your turn, Book Burners may banish a Document from the realm or a magic from a cemetery.",
     "price": 0.99
   },
@@ -9472,7 +9472,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-book_of_blessings-b-s.png",
-    "price_usd": 8.0,
+    "price_usd": 6.17,
     "rules_text": "Whenever bearer casts magic that chooses a single allied minion, Ward that ally.",
     "price": 18.49
   },
@@ -9485,7 +9485,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-book_of_the_dead-b-s.png",
-    "price_usd": 8.35,
+    "price_usd": 8.1,
     "rules_text": "Once on your turn, Spellcaster bearer may cast a dead minion. It becomes Undead instead and is banished if it dies.",
     "price": 11.21
   },
@@ -9550,7 +9550,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-bureau_of_occult_control-b-s.png",
-    "price_usd": 0.63,
+    "price_usd": 0.61,
     "rules_text": "Players must pay (2) to access a collection or cemetery.",
     "price": 1.25
   },
@@ -9576,7 +9576,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-cage_of_sidrak-b-s.png",
-    "price_usd": 7.11,
+    "price_usd": 4.95,
     "rules_text": "Genesis \u2192 Lock all minions with 2 or less power in this cage, tapped and disabled.",
     "price": 21.19
   },
@@ -9589,7 +9589,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-call_of_the_sea-b-s.png",
-    "price_usd": 0.37,
+    "price_usd": 0.39,
     "rules_text": "Minions adjacent to target Water site step towards it. Then submerge all minions there.",
     "price": 0.89
   },
@@ -9641,7 +9641,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-chaoswish-b-s.png",
-    "price_usd": 4.22,
+    "price_usd": 3.98,
     "rules_text": "Cast a copy of a random spell for free, ignoring threshold, then the next player may copy Chaoswish.",
     "price": 6.88
   },
@@ -9654,7 +9654,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-char_omphalos-b-s.png",
-    "price_usd": 27.83,
+    "price_usd": 23.94,
     "rules_text": "Air and Fire Spellcaster\n\nAt the end of your turn, this Omphalos draws a spell, which only it can cast. Minions it casts must be summoned here.",
     "price": 21.99
   },
@@ -9693,7 +9693,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-city_of_glass-b-s.png",
-    "price_usd": 10.35,
+    "price_usd": 9.99,
     "rules_text": "(A) \u2014 Provides (2) instead but is destroyed when damaged.",
     "price": 18.0
   },
@@ -9706,7 +9706,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-city_of_plenty-b-s.png",
-    "price_usd": 4.46,
+    "price_usd": 4.9,
     "rules_text": "(W) \u2014 Provides (2) instead but also provides (1) for your opponent.",
     "price": 2.79
   },
@@ -9719,7 +9719,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-city_of_souls-b-s.png",
-    "price_usd": 21.45,
+    "price_usd": 23.99,
     "rules_text": "(E) \u2014 Provides (2) instead but enemies can redirect damage dealt to this site to any unit.",
     "price": 19.97
   },
@@ -9732,7 +9732,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-city_of_traitors-b-s.png",
-    "price_usd": 4.99,
+    "price_usd": 4.74,
     "rules_text": "(F) \u2014 Provides (2) instead but your opponent can cast minions to this site Stealthed.",
     "price": 4.88
   },
@@ -9810,7 +9810,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-corpse_explosion-b-s.png",
-    "price_usd": 0.39,
+    "price_usd": 0.4,
     "rules_text": "Deal a dead minion to each site in a two-by-two area. Deal damage equal to each corpse's power to units there, then banish the corpses.",
     "price": 0.85
   },
@@ -9836,7 +9836,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-corruptor_freak-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "At the end of your turn, deal 2 damage to this site.",
     "price": 0.21
   },
@@ -9849,7 +9849,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-cranky_overseer-b-s.png",
-    "price_usd": 0.49,
+    "price_usd": 0.47,
     "rules_text": "Once on your turn, the Overseer may deal 1 damage to target adjacent Ordinary minion to untap it.",
     "price": 1.25
   },
@@ -9875,7 +9875,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-crawling_congregation-b-s.png",
-    "price_usd": 0.46,
+    "price_usd": 0.45,
     "rules_text": "Projectiles fly over this and other adjacent allies.",
     "price": 1.05
   },
@@ -9940,7 +9940,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-dank_omphalos-b-s.png",
-    "price_usd": 29.37,
+    "price_usd": 32.0,
     "rules_text": "Air and Water Spellcaster\n\nAt the end of your turn, this Omphalos draws a spell, which only it can cast. Minions it casts must be summoned here.",
     "price": 44.99
   },
@@ -9966,7 +9966,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-darkest_dungeon-b-s.png",
-    "price_usd": 3.68,
+    "price_usd": 3.67,
     "rules_text": "Genesis \u2192 The next time an ally strikes an Avatar this turn, drag both here if able.",
     "price": 3.5
   },
@@ -9979,7 +9979,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-death_knight-b-s.png",
-    "price_usd": 0.16,
+    "price_usd": 0.15,
     "rules_text": "Other nearby Undead allies have +1 power.",
     "price": 0.21
   },
@@ -9992,7 +9992,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-deathwish-b-s.png",
-    "price_usd": 2.9,
+    "price_usd": 2.89,
     "rules_text": "Halve each Avatar's maximum life.",
     "price": 5.18
   },
@@ -10018,7 +10018,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-defiler_spire-b-s.png",
-    "price_usd": 7.59,
+    "price_usd": 6.47,
     "rules_text": "Sites occupied by Evil have \"At the end of your turn, you lose 1 life.\"",
     "price": 20.49
   },
@@ -10096,7 +10096,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-desecrated_ground-b-s.png",
-    "price_usd": 0.14,
+    "price_usd": 0.1,
     "rules_text": "Evil units here have +1 power.",
     "price": 0.23
   },
@@ -10148,7 +10148,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-de_vermis_mysteriis-b-s.png",
-    "price_usd": 7.27,
+    "price_usd": 6.41,
     "rules_text": "Spellcaster bearer may cast minion spells for (5), ignoring threshold.",
     "price": 8.67
   },
@@ -10200,7 +10200,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-divine_lance-b-s.png",
-    "price_usd": 0.41,
+    "price_usd": 0.39,
     "rules_text": "Deal 1 damage to each minion at target site. You may break any number of allied Wards to increase the damage by 1 for each.",
     "price": 0.99
   },
@@ -10213,7 +10213,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-doctor_demetrius-b-s.png",
-    "price_usd": 11.75,
+    "price_usd": 13.31,
     "rules_text": "Once on your turn, Demetrius may Ward another adjacent minion.",
     "price": 13.74
   },
@@ -10239,7 +10239,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-dormant_monstrosity-b-s.png",
-    "price_usd": 0.48,
+    "price_usd": 0.45,
     "rules_text": "Voidwalk\n\nMust be cast to a corner void, costing (2) less for each unit in an adjacent square.",
     "price": 0.75
   },
@@ -10252,7 +10252,7 @@
     "attack": 7,
     "defence": 7,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-draconian_bonekite-b-s.png",
-    "price_usd": 4.28,
+    "price_usd": 3.7,
     "rules_text": "Airborne\n\nTap \u2192 Deal 3 damage to each other unit at target nearby location. Summon a Skeleton token there for each unit that died.",
     "price": 9.18
   },
@@ -10330,7 +10330,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-duplicator-b-s.png",
-    "price_usd": 8.01,
+    "price_usd": 8.36,
     "rules_text": "Your spellbook and atlas can only contain matching pairs of Uniques and you start with only two spells and two sites in hand.\n\nTap \u2192 Play or draw a site.",
     "price": 19.49
   },
@@ -10356,7 +10356,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-eclipse-b-s.png",
-    "price_usd": 26.0,
+    "price_usd": 25.7,
     "rules_text": "You may cast Evil minions to affected sites.\n\nEvil allies occupying affected sites have +1 power.",
     "price": 13.75
   },
@@ -10382,7 +10382,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-elder_ruins-b-s.png",
-    "price_usd": 0.79,
+    "price_usd": 0.85,
     "rules_text": "Sacrifice a minion here \u2192 Cast a Shoggoth submerged here from your collection.",
     "price": 1.45
   },
@@ -10408,7 +10408,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-endless_fence-b-s.png",
-    "price_usd": 4.0,
+    "price_usd": 4.8,
     "rules_text": "Minions can't enter this span of land from the void.",
     "price": 10.03
   },
@@ -10460,7 +10460,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-ersatz_platz-b-s.png",
-    "price_usd": 0.98,
+    "price_usd": 0.99,
     "rules_text": "You can play an Exceptional site from your collection here, banishing this site.",
     "price": 1.55
   },
@@ -10486,7 +10486,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-ether_core-b-s.png",
-    "price_usd": 43.82,
+    "price_usd": 43.74,
     "rules_text": "Provides (3) while in the void.",
     "price": 85.99
   },
@@ -10525,7 +10525,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-failed_mutation-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "Can't be targeted or damaged by magic.",
     "price": 0.21
   },
@@ -10551,7 +10551,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-fallen_angel-b-s.png",
-    "price_usd": 0.14,
+    "price_usd": 0.1,
     "rules_text": "Airborne\n\nNearby allied Demons have +1 power.",
     "price": 0.27
   },
@@ -10577,7 +10577,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-false_idol-b-s.png",
-    "price_usd": 0.29,
+    "price_usd": 0.35,
     "rules_text": "Whenever a nearby minion taps, its opponent draws a spell.",
     "price": 0.99
   },
@@ -10629,7 +10629,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-fertile_earth-b-s.png",
-    "price_usd": 0.49,
+    "price_usd": 0.44,
     "rules_text": "",
     "price": 0.64
   },
@@ -10655,7 +10655,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-flame_of_the_first_ones-b-s.png",
-    "price_usd": 3.21,
+    "price_usd": 3.19,
     "rules_text": "Whenever the flame stops at a new site, you heal 1 and your opponent loses 1 life.",
     "price": 9.18
   },
@@ -10694,7 +10694,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-flayer-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.02,
     "rules_text": "Genesis \u2192 Deal 1 damage to each other nearby unit.",
     "price": 0.15
   },
@@ -10707,7 +10707,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-forgotten_tomb-b-s.png",
-    "price_usd": 0.74,
+    "price_usd": 0.73,
     "rules_text": "Genesis \u2192 Search your top five spells for a minion to discard. Bottom the rest.",
     "price": 1.5
   },
@@ -10759,7 +10759,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-four_fat_frogs-b-s.png",
-    "price_usd": 0.16,
+    "price_usd": 0.15,
     "rules_text": "Summon four Frog tokens to an allied site.",
     "price": 0.23
   },
@@ -10811,7 +10811,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-garden_of_eden-b-s.png",
-    "price_usd": 17.3,
+    "price_usd": 18.0,
     "rules_text": "Players can't draw more than one spell each turn.",
     "price": 22.67
   },
@@ -10837,7 +10837,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-ghostfire-b-s.png",
-    "price_usd": 0.02,
+    "price_usd": 0.01,
     "rules_text": "Shoot a 1-damage projectile.\n\nYou may cast this spell from your cemetery, banishing it afterward.",
     "price": 0.15
   },
@@ -10876,7 +10876,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-gibbous_nightgaunts-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "Airborne, Voidwalk",
     "price": 0.21
   },
@@ -10928,7 +10928,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-gift_of_the_wolf-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.02,
     "rules_text": "Give an allied minion +2 power this turn. Draw a spell.",
     "price": 0.14
   },
@@ -10941,7 +10941,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-gilman_house-b-s.png",
-    "price_usd": 7.25,
+    "price_usd": 7.81,
     "rules_text": "(W)(W)(W)(W) \u2192 Transform a minion here into a Horrible Hybrids from your collection.",
     "price": 11.88
   },
@@ -10980,7 +10980,7 @@
     "attack": 0,
     "defence": 0,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-goat_for_azazel-b-s.png",
-    "price_usd": 16.0,
+    "price_usd": 10.25,
     "rules_text": "Takes damage for other allies.",
     "price": 6.96
   },
@@ -11019,7 +11019,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-gossamer_ghost-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.02,
     "rules_text": "Stealth\n\nCan't be immobilized or disabled.",
     "price": 0.15
   },
@@ -11032,7 +11032,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-granary_rats-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.03,
     "rules_text": "This site doesn't provide threshold.",
     "price": 0.15
   },
@@ -11045,7 +11045,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-grasping_ground-b-s.png",
-    "price_usd": 0.41,
+    "price_usd": 0.45,
     "rules_text": "Each burrowed ally may drag down a target minion or artifact above them.",
     "price": 1.68
   },
@@ -11071,7 +11071,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-greater_blood_demon-b-s.png",
-    "price_usd": 0.39,
+    "price_usd": 0.43,
     "rules_text": "Genesis \u2192 You lose 4 life.",
     "price": 1.2
   },
@@ -11097,7 +11097,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-grigori_rasputin-b-s.png",
-    "price_usd": 10.4,
+    "price_usd": 9.87,
     "rules_text": "Spellcaster\n\nBanish an Evil ally \u2192 Cast Rasputin from your cemetery to there. He adds their power and abilities to his own until he dies again.",
     "price": 10.79
   },
@@ -11110,7 +11110,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-guardian_angel-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "Airborne\n\nGenesis \u2192 Fly to a weaker allied minion to Ward it.",
     "price": 0.21
   },
@@ -11162,7 +11162,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-harvest_festival-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "Summon Eltham and Serava Townsfolk from your collection to an allied site.",
     "price": 0.21
   },
@@ -11201,7 +11201,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-heirloom_lost-b-s.png",
-    "price_usd": 0.7,
+    "price_usd": 0.64,
     "rules_text": "You may play this to replace any player's Elite or Unique site, under their control.",
     "price": 2.2
   },
@@ -11240,7 +11240,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-hellmouth-b-s.png",
-    "price_usd": 4.13,
+    "price_usd": 4.1,
     "rules_text": "Evil minions nearby or being summoned nearby have Burrowing.",
     "price": 13.43
   },
@@ -11266,7 +11266,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-hemogoblet-b-s.png",
-    "price_usd": 0.49,
+    "price_usd": 0.5,
     "rules_text": "Once on your turn, you may fill the goblet by sacrificing a minion here, or empty it if it's full. When you empty the goblet, you gain mana or heal life equal to that minion's power.",
     "price": 0.8
   },
@@ -11279,7 +11279,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-hemogoblin-b-s.png",
-    "price_usd": 0.69,
+    "price_usd": 0.68,
     "rules_text": "Genesis & Deathrite \u2192 Set players' maximum life to their current life.",
     "price": 1.66
   },
@@ -11331,7 +11331,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-hollow_one-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.02,
     "rules_text": "Disabled until a Mortal or Beast dies nearby.",
     "price": 0.19
   },
@@ -11383,7 +11383,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-homecoming-b-s.png",
-    "price_usd": 0.48,
+    "price_usd": 0.49,
     "rules_text": "Minions here have \"Tap \u2192 Gain (1).\"",
     "price": 0.99
   },
@@ -11422,7 +11422,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-hotwheel-b-s.png",
-    "price_usd": 0.12,
+    "price_usd": 0.1,
     "rules_text": "Genesis \u2192 Rolls forward two steps, striking another unit at each location it enters.",
     "price": 0.21
   },
@@ -11435,7 +11435,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-howl_from_beyond-b-s.png",
-    "price_usd": 4.99,
+    "price_usd": 4.4,
     "rules_text": "Deal out your top spells, one to each void in the outer columns. Draw any minions with Voidwalk or Monsters from among them and banish the rest.",
     "price": 12.25
   },
@@ -11500,7 +11500,7 @@
     "attack": 0,
     "defence": 0,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-imposter-b-s.png",
-    "price_usd": 17.0,
+    "price_usd": 14.0,
     "rules_text": "Tap \u2192 Play or draw a site.\n\n(3) \u2192 Banish an Avatar from your collection to mask yourself. Gain their abilities until damaged or until you put on a new mask.",
     "price": 24.99
   },
@@ -11513,7 +11513,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-infusion_factory-b-s.png",
-    "price_usd": 0.62,
+    "price_usd": 0.61,
     "rules_text": "Adjacent artifacts are Automatons with 2 power and their own bearer abilities.",
     "price": 1.5
   },
@@ -11526,7 +11526,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-innsmouth_dock-b-s.png",
-    "price_usd": 7.49,
+    "price_usd": 7.57,
     "rules_text": "Once on your turn, you may lure an adjacent minion to step here.",
     "price": 16.58
   },
@@ -11552,7 +11552,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-interrogator-b-s.png",
-    "price_usd": 0.61,
+    "price_usd": 0.6,
     "rules_text": "Tap \u2192 Play or draw a site.\n\nWhenever an ally strikes an enemy Avatar, draw a spell unless they pay 3 life.",
     "price": 1.99
   },
@@ -11565,7 +11565,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-into_the_abyss-b-s.png",
-    "price_usd": 0.65,
+    "price_usd": 0.63,
     "rules_text": "Submerge target minion, or pull it into a void it's adjacent to.",
     "price": 1.15
   },
@@ -11591,7 +11591,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-invigorate-b-s.png",
-    "price_usd": 0.17,
+    "price_usd": 0.15,
     "rules_text": "An ally gains +3 power this turn and you heal 3.",
     "price": 0.34
   },
@@ -11604,7 +11604,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-ironclad-b-s.png",
-    "price_usd": 0.5,
+    "price_usd": 0.78,
     "rules_text": "Tap \u2192 Play or draw a site.\n\nTakes 2 less damage.",
     "price": 4.64
   },
@@ -11643,7 +11643,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-key_to_the_city-b-s.png",
-    "price_usd": 29.5,
+    "price_usd": 23.69,
     "rules_text": "Provides (1).\n\nBearer ignores site abilities.",
     "price": 45.49
   },
@@ -11708,7 +11708,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-kor_crematory-b-s.png",
-    "price_usd": 5.5,
+    "price_usd": 5.49,
     "rules_text": "(F)(F)(F)(F) \u2014 If a card would be placed in a cemetery, banish it instead.",
     "price": 24.07
   },
@@ -11721,7 +11721,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-koscheis_egg-b-s.png",
-    "price_usd": 4.7,
+    "price_usd": 4.01,
     "rules_text": "Genesis \u2192 Avatar bearer hides its soul in Koschei's Egg, becoming immune to death blows. After three of your turns, or if the Egg leaves the realm, you lose.",
     "price": 14.61
   },
@@ -11786,7 +11786,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-legion_of_gall-b-s.png",
-    "price_usd": 0.76,
+    "price_usd": 0.75,
     "rules_text": "Airborne\n \nGenesis \u2192 Look at a collection and banish three cards from it.",
     "price": 2.0
   },
@@ -11799,7 +11799,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lesser_blood_demon-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.02,
     "rules_text": "Genesis \u2192 Lose 2 life.",
     "price": 0.15
   },
@@ -11812,7 +11812,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lifewish-b-f.png",
-    "price_usd": 3.5,
+    "price_usd": 3.39,
     "rules_text": "Fully heal each Avatar.",
     "price": 8.43
   },
@@ -11825,7 +11825,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lilith-b-s.png",
-    "price_usd": 25.97,
+    "price_usd": 28.69,
     "rules_text": "At the end of your turn, reveal opponent\u2019s top spell. If it\u2019s a minion, summon it here. Otherwise, put it at the bottom of the deck.",
     "price": 19.91
   },
@@ -11838,7 +11838,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-locusts_of_illyria-b-s.png",
-    "price_usd": 3.88,
+    "price_usd": 3.92,
     "rules_text": "Airborne\n\nAt the end of your turn, if no new Locusts have been summoned this turn, summon a tapped copy of this nearby.",
     "price": 14.0
   },
@@ -11864,7 +11864,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lord_of_fear-b-s.png",
-    "price_usd": 0.6,
+    "price_usd": 0.54,
     "rules_text": "Enemies can't defend alone.",
     "price": 0.99
   },
@@ -11877,7 +11877,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lord_of_greed-b-s.png",
-    "price_usd": 0.7,
+    "price_usd": 0.75,
     "rules_text": "Can't drop artifacts.\n\nAt the end of your turn, Lord of Greed snatches an artifact from elsewhere into his hands.",
     "price": 0.9
   },
@@ -11890,7 +11890,7 @@
     "attack": 6,
     "defence": 6,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lord_of_lies-b-s.png",
-    "price_usd": 0.99,
+    "price_usd": 1.08,
     "rules_text": "Once on your turn, you may have two target units at a nearby location fight.",
     "price": 1.99
   },
@@ -11903,7 +11903,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lucid_dreamers-b-s.png",
-    "price_usd": 0.69,
+    "price_usd": 0.71,
     "rules_text": "Voidwalk\n\nYou may cast minions to this void, granting them Voidwalk until they're no longer in the void.",
     "price": 1.0
   },
@@ -11916,7 +11916,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-lure-b-s.png",
-    "price_usd": 0.03,
+    "price_usd": 0.01,
     "rules_text": "An ally tempts an enemy minion at a nearby site into taking a step closer.",
     "price": 0.15
   },
@@ -11942,7 +11942,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-maiden_mother_crone-b-s.png",
-    "price_usd": 30.0,
+    "price_usd": 46.3,
     "rules_text": "Genesis \u2192 Heal 3.\n \n(3) \u2192 Draw a spell.\n \nDeathrite \u2192 Opponent loses 3 life.",
     "price": 14.72
   },
@@ -12020,7 +12020,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-mayor_of_milborne-b-s.png",
-    "price_usd": 0.47,
+    "price_usd": 0.44,
     "rules_text": "Other nearby Mortals have +1 power.",
     "price": 1.5
   },
@@ -12033,7 +12033,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-mazuj_ifrit-b-s.png",
-    "price_usd": 0.64,
+    "price_usd": 0.59,
     "rules_text": "Airborne\n \nAt the start of your turn, you lose 2 life.",
     "price": null
   },
@@ -12046,7 +12046,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-meat_hook-b-s.png",
-    "price_usd": 0.14,
+    "price_usd": 0.1,
     "rules_text": "Bearer has \"Tap \u2192 Shoot a projectile. If a unit is hit, drag it here, and bearer may fight it when it arrives.\"",
     "price": 0.22
   },
@@ -12072,7 +12072,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-mephistopheles-b-s.png",
-    "price_usd": 8.21,
+    "price_usd": 8.14,
     "rules_text": "Must be cast to your Avatar's location, taking their life and replacing them as your Avatar.\n\nOnce on your turn, you may summon an Evil minion from your hand to an adjacent site.",
     "price": 18.24
   },
@@ -12085,7 +12085,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-mesmer_demon-b-s.png",
-    "price_usd": 0.02,
+    "price_usd": 0.01,
     "rules_text": "Genesis \u2192 Tap target adjacent enemy minion and make it step closer.",
     "price": 0.15
   },
@@ -12189,7 +12189,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-mountain_peaks-b-s.png",
-    "price_usd": 0.54,
+    "price_usd": 0.5,
     "rules_text": "",
     "price": 0.56
   },
@@ -12202,7 +12202,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-mount_ussar_sanctuary-b-s.png",
-    "price_usd": 14.03,
+    "price_usd": 14.0,
     "rules_text": "(E)(E)(E)(E) \u2014 When your Avatar arrives at Death's Door, they flee here and gain Ward.",
     "price": 17.93
   },
@@ -12228,7 +12228,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-muddy_pigs-b-s.png",
-    "price_usd": 0.02,
+    "price_usd": 0.01,
     "rules_text": "Deathrite \u2192 You heal 3.",
     "price": 0.15
   },
@@ -12254,7 +12254,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-murder_of_crows-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Deal 1 damage to all enemy minions on the surface. You may cast this spell from your cemetery, banishing it afterward.",
     "price": 0.15
   },
@@ -12358,7 +12358,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-no_mans_land-b-s.png",
-    "price_usd": 0.88,
+    "price_usd": 0.87,
     "rules_text": "Players can't summon minions to this site or to the one directly in front of it.",
     "price": 1.25
   },
@@ -12384,7 +12384,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-nosferatu-b-s.png",
-    "price_usd": 6.98,
+    "price_usd": 6.75,
     "rules_text": "Airborne, Burrowing\n\nDeathrite \u2192 Resummon Nosferatu beneath your starting square. If he dies again this turn, banish him instead.",
     "price": 14.7
   },
@@ -12423,7 +12423,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-old_mortimers_den-b-s.png",
-    "price_usd": 3.99,
+    "price_usd": 3.65,
     "rules_text": "When a minion enters here, kill it, then return this site to hand, leaving Rubble behind.",
     "price": 9.67
   },
@@ -12449,7 +12449,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-onslaught-b-f.png",
-    "price_usd": 0.14,
+    "price_usd": 0.1,
     "rules_text": "This turn, allies gain +1 power, Charge, and can't be immobilized, silenced, or disabled.",
     "price": 0.23
   },
@@ -12553,7 +12553,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-orpheus_crossing-b-s.png",
-    "price_usd": 8.9,
+    "price_usd": 6.85,
     "rules_text": "Genesis \u2192 You're on Death's Door until your next turn. Summon a dead minion here.",
     "price": 5.89
   },
@@ -12566,7 +12566,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-overflow-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.08,
     "rules_text": "Draw a site. You may play a water site.",
     "price": 0.15
   },
@@ -12670,7 +12670,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-pied_piper_of_hameln-b-s.png",
-    "price_usd": 8.44,
+    "price_usd": 11.0,
     "rules_text": "You control all minions with 1 or less power.",
     "price": 18.14
   },
@@ -12722,7 +12722,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-plague_pits-b-s.png",
-    "price_usd": 0.71,
+    "price_usd": 0.68,
     "rules_text": "Genesis \u2192 If there are three or more dead minions, banish all cemeteries.",
     "price": 1.55
   },
@@ -12748,7 +12748,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-plate_of_the_whale-b-s.png",
-    "price_usd": 3.99,
+    "price_usd": 3.9,
     "rules_text": "Bearer is immobile if it has less than 3 power. If it has more than 3 power, prevent the first instance of damage it would take each turn.",
     "price": 11.99
   },
@@ -12761,7 +12761,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-powerwish-b-s.png",
-    "price_usd": 5.0,
+    "price_usd": 4.59,
     "rules_text": "Each Avatar sacrifices all of their minions, permanently gaining +1 power for each.",
     "price": 5.65
   },
@@ -12787,7 +12787,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-purgatory-b-s.png",
-    "price_usd": 2.25,
+    "price_usd": 2.24,
     "rules_text": "Whenever an Evil minion dies nearby, its controller loses 1 life.",
     "price": 9.19
   },
@@ -12800,7 +12800,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-putrid_presence-b-s.png",
-    "price_usd": 8.16,
+    "price_usd": 6.9,
     "rules_text": "Submerge, Burrowing\n\nThe subsurface of nearby sites can be attacked.",
     "price": 19.98
   },
@@ -12813,7 +12813,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-raise_militia-b-s.png",
-    "price_usd": 0.08,
+    "price_usd": 0.07,
     "rules_text": "Summon a Skeleton token to each allied site that borders an enemy site.",
     "price": 0.15
   },
@@ -12839,7 +12839,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-ravenous_werewolf-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.02,
     "rules_text": "Charge, Movement +1",
     "price": 0.15
   },
@@ -12865,7 +12865,7 @@
     "attack": 1,
     "defence": 1,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-realm_eater-b-s.png",
-    "price_usd": 16.47,
+    "price_usd": 13.99,
     "rules_text": "Tap \u2192 Play, draw, or digest a site.\n\nDestroys sites it successfully attacks, then becomes immobile until it digests.",
     "price": 24.42
   },
@@ -12878,7 +12878,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-redmane_hyena-b-s.png",
-    "price_usd": 0.14,
+    "price_usd": 0.1,
     "rules_text": "Genesis \u2192 Banish up to three cards from cemeteries. If any are Demons, this becomes one and gains +2 power permanently.",
     "price": 0.23
   },
@@ -12956,7 +12956,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-return_to_nature-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.03,
     "rules_text": "Return up to three cards from a cemetery to the bottom of their decks. Draw a spell.",
     "price": 0.15
   },
@@ -13021,7 +13021,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-sacred_stag-b-s.png",
-    "price_usd": 0.37,
+    "price_usd": 0.4,
     "rules_text": "Ward\n\nDeathrite \u2192 You may Ward this site.",
     "price": 0.58
   },
@@ -13034,7 +13034,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-saint_of_redemption-b-s.png",
-    "price_usd": 6.26,
+    "price_usd": 5.45,
     "rules_text": "Ward\n\nNo minion is Evil, but all enter the realm tapped.",
     "price": 15.99
   },
@@ -13047,7 +13047,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-saintweald-b-s.png",
-    "price_usd": 7.22,
+    "price_usd": 7.19,
     "rules_text": "Deathrite abilities here are also Genesis abilities.",
     "price": 5.59
   },
@@ -13060,7 +13060,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-salt_the_earth-b-s.png",
-    "price_usd": 8.75,
+    "price_usd": 7.96,
     "rules_text": "Conjure Salt the Earth to a single site, destroying it.\n\nSites can't be played here.",
     "price": 16.89
   },
@@ -13190,7 +13190,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-second_wind-b-s.png",
-    "price_usd": 0.02,
+    "price_usd": 0.01,
     "rules_text": "An allied minion takes a step.\n\nYou may cast this spell from your cemetery, banishing it afterward.",
     "price": 0.15
   },
@@ -13242,7 +13242,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-serava_townsfolk-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.02,
     "rules_text": "",
     "price": 0.15
   },
@@ -13268,7 +13268,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-shackled_demon-b-s.png",
-    "price_usd": 0.34,
+    "price_usd": 0.3,
     "rules_text": "Disabled until an adjacent Spellcaster taps to release him.",
     "price": 1.3
   },
@@ -13281,7 +13281,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-shallow_grave-b-s.png",
-    "price_usd": 0.13,
+    "price_usd": 0.1,
     "rules_text": "Genesis \u2192 Discard your top two spells.",
     "price": 0.23
   },
@@ -13333,7 +13333,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-silver_bullet-b-s.png",
-    "price_usd": 3.99,
+    "price_usd": 3.58,
     "rules_text": "Bearer has \"Tap, Sacrifice Silver Bullet -> This unit may cast an Exceptional spell from your collection.\"",
     "price": 4.5
   },
@@ -13372,7 +13372,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-sister_stefania-b-s.png",
-    "price_usd": 15.61,
+    "price_usd": 16.69,
     "rules_text": "Ward\n\nOther nearby minions are silenced.",
     "price": null
   },
@@ -13437,7 +13437,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-smite-b-s.png",
-    "price_usd": 0.02,
+    "price_usd": 0.01,
     "rules_text": "May be cast by any ally.\n\nStrike target adjacent enemy. If it's Evil, banish it instead.",
     "price": 0.15
   },
@@ -13463,7 +13463,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-sold_out_cemetery-b-s.png",
-    "price_usd": 0.74,
+    "price_usd": 0.7,
     "rules_text": "Whenever Undead enter this site, push another Undead here away one step.",
     "price": 0.99
   },
@@ -13489,7 +13489,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-sphere_of_animosity-b-s.png",
-    "price_usd": 5.09,
+    "price_usd": 4.73,
     "rules_text": "Avatars here can't leave, heal, or be defended.",
     "price": 1.07
   },
@@ -13593,7 +13593,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-sturmgeist-b-s.png",
-    "price_usd": 0.98,
+    "price_usd": 1.08,
     "rules_text": "Airborne\n\nWhenever an enemy casts magic, Sturmgeist steps closer then strikes it if adjacent.",
     "price": 1.45
   },
@@ -13658,7 +13658,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-temple_of_moloch-b-s.png",
-    "price_usd": 22.8,
+    "price_usd": 22.65,
     "rules_text": "Once on each player's turn, they may sacrifice a minion here to gain (2).",
     "price": 40.39
   },
@@ -13684,7 +13684,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-the_apex_of_babel-b-s.png",
-    "price_usd": 10.25,
+    "price_usd": 7.0,
     "rules_text": "When the Tower of Babel is built, draw a card, then you may cast a spell for free.",
     "price": 17.93
   },
@@ -13723,7 +13723,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-the_empyrean-b-s.png",
-    "price_usd": 3.65,
+    "price_usd": 3.6,
     "rules_text": "Provides (A)(E)(F)(W) if you control a nearby Angel or Ward.",
     "price": 22.5
   },
@@ -13736,7 +13736,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-the_flood-b-s.png",
-    "price_usd": 5.0,
+    "price_usd": 13.0,
     "rules_text": "Permanently flood the entire realm, including voids. Submerge everything except one minion of each type.",
     "price": 10.99
   },
@@ -13749,7 +13749,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-the_hexham_haunts-b-s.png",
-    "price_usd": 15.0,
+    "price_usd": 14.94,
     "rules_text": "Airborne, Burrowing\n\nMust be cast burrowed, but may be cast from the cemetery.",
     "price": 6.5
   },
@@ -13762,7 +13762,7 @@
     "attack": 3,
     "defence": 3,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-the_inquisition-b-s.png",
-    "price_usd": 9.44,
+    "price_usd": 8.98,
     "rules_text": "When an opponent can see this card in your hand or spellbook, you may summon it.\n \nGenesis \u2192 Target opponent reveals their hand. You may banish a card from it.",
     "price": 9.22
   },
@@ -13775,7 +13775,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-the_malleus_maleficarum-b-s.png",
-    "price_usd": 8.5,
+    "price_usd": 8.0,
     "rules_text": "Once on your turn, bearer may cast a magic from your collection that targets an enemy Spellcaster, or their location or site.",
     "price": 4.89
   },
@@ -13788,7 +13788,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-the_manor_at_daperyll_hill-b-s.png",
-    "price_usd": 10.57,
+    "price_usd": 10.23,
     "rules_text": "(A)(A)(A)(A) \u2014 Once on your turn, this may deal 3 damage to target enemy here to heal you 3.",
     "price": 13.79
   },
@@ -13827,7 +13827,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-the_void-b-s.png",
-    "price_usd": 19.85,
+    "price_usd": 19.0,
     "rules_text": "This site is also void.",
     "price": 26.18
   },
@@ -13905,7 +13905,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-toolbox-b-s.png",
-    "price_usd": 2.49,
+    "price_usd": 2.3,
     "rules_text": "Sacrifice \u2192 Bearer may cast an Ordinary spell from your collection.",
     "price": 0.62
   },
@@ -13931,7 +13931,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-torrid_omphalos-b-s.png",
-    "price_usd": 27.9,
+    "price_usd": 28.2,
     "rules_text": "Earth and Fire Spellcaster\n\nAt the end of your turn, this Omphalos draws a spell, which only it can cast. Minions it casts must be summoned here.",
     "price": 30.0
   },
@@ -14009,7 +14009,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-twilight_bloom-b-s.png",
-    "price_usd": 0.08,
+    "price_usd": 0.07,
     "rules_text": "Genesis \u2192 Provides (E)(F)(W) this turn.",
     "price": 0.15
   },
@@ -14022,7 +14022,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-undead_ambush-b-s.png",
-    "price_usd": 0.16,
+    "price_usd": 0.15,
     "rules_text": "Summon a Skeleton token to each other site adjacent to target enemy.",
     "price": 0.21
   },
@@ -14074,7 +14074,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-varistus_the_evictor-b-s.png",
-    "price_usd": 4.5,
+    "price_usd": 4.49,
     "rules_text": "Voidwalk\n\nWhenever Varistus enters a void location, he kills all enemies there.",
     "price": 10.69
   },
@@ -14139,7 +14139,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-watery_grave-b-s.png",
-    "price_usd": 5.68,
+    "price_usd": 5.99,
     "rules_text": "Whenever an enemy drowns nearby, summon a Skeleton token atop that site.",
     "price": 13.15
   },
@@ -14178,7 +14178,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-wiccan_tools-b-s.png",
-    "price_usd": 0.07,
+    "price_usd": 0.06,
     "rules_text": "Sacrifice \u2192 Draw a spell. This turn, bearer gains Spellcaster and their spells require no threshold.",
     "price": 0.15
   },
@@ -14243,7 +14243,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-wreathed_in_righteousness-b-s.png",
-    "price_usd": 0.09,
+    "price_usd": 0.1,
     "rules_text": "Ward all minions at target location. Then deal damage to minions at affected locations:",
     "price": 0.21
   },
@@ -14256,7 +14256,7 @@
     "attack": null,
     "defence": null,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-wuthering_heights-b-s.png",
-    "price_usd": 1.89,
+    "price_usd": 1.9,
     "rules_text": "Once on your turn, you may fly a minion atop here onto a nearby site.",
     "price": 2.45
   },
@@ -14269,7 +14269,7 @@
     "attack": 10,
     "defence": 10,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-yog_sothoth-b-s.png",
-    "price_usd": 2.64,
+    "price_usd": 2.62,
     "rules_text": "Occupies all locations safely.\n\nIs banished without five voids.\n\nIgnores the abilities of sites.",
     "price": 4.0
   },
@@ -14282,7 +14282,7 @@
     "attack": 2,
     "defence": 2,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-young_master_damion-b-s.png",
-    "price_usd": 13.15,
+    "price_usd": 15.5,
     "rules_text": "Genesis \u2192 Summon two Ghouls from your collection here. They can't die while nearby.",
     "price": 8.25
   },
@@ -14321,7 +14321,7 @@
     "attack": 4,
     "defence": 4,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-zombie_bruiser-b-s.png",
-    "price_usd": 0.1,
+    "price_usd": 0.11,
     "rules_text": "(4), Sacrifice a Skeleton token \u2192 Summon Zombie Bruiser from your cemetery there.",
     "price": 0.2
   },
@@ -14334,7 +14334,7 @@
     "attack": 5,
     "defence": 5,
     "image_url": "https://sorcery-proxy-images.s3.us-east-2.amazonaws.com/got-zombie_horde-b-s.png",
-    "price_usd": 0.04,
+    "price_usd": 0.02,
     "rules_text": "Can't move to defend.",
     "price": 0.15
   },
